@@ -1,0 +1,11 @@
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\bin\Debug\posMate.exe.config
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\bin\Debug\posMate.exe
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\bin\Debug\posMate.pdb
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\posMate.csproj.AssemblyReference.cache
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\posMate.Form1.resources
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\posMate.Properties.Resources.resources
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\posMate.csproj.GenerateResource.cache
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\posMate.csproj.CoreCompileInputs.cache
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\posMate.exe
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\posMate.pdb
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\posMate.Resource1.resources
