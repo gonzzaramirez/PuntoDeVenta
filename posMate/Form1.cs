@@ -119,5 +119,10 @@ namespace posMate
             SidePanel.Height = btnCategorias.Height;
             SidePanel.Top = btnCategorias.Top;
         }
+
+        private void iconMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

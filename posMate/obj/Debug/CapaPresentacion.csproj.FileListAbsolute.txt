@@ -1,0 +1,13 @@
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\bin\Debug\CapaPresentacion.exe.config
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\bin\Debug\CapaPresentacion.exe
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\bin\Debug\CapaPresentacion.pdb
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\posMate.Form1.resources
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\CapaPresentacion.Resource1.resources
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\CapaPresentacion.exe
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\CapaPresentacion.pdb
