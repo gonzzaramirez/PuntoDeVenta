@@ -11,3 +11,4 @@ C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\Ca
 C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\CapaPresentacion.exe
 C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\CapaPresentacion.pdb
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\CapaPresentacion.login.resources
