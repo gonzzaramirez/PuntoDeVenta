@@ -230,7 +230,7 @@
             this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = " PosMate";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
