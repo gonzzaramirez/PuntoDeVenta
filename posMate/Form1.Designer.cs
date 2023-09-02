@@ -213,9 +213,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(8, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 18);
+            this.label1.Size = new System.Drawing.Size(73, 18);
             this.label1.TabIndex = 0;
-            this.label1.Text = "postMATE";
+            this.label1.Text = "posMATE";
             // 
             // btnCategorias
             // 
