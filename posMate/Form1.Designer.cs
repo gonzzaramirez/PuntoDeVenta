@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
-            this.btnDescuentos = new System.Windows.Forms.Button();
+            this.btnCompras = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnProveedores = new System.Windows.Forms.Button();
@@ -41,6 +41,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnCategorias = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -48,10 +49,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.btnCategorias);
             this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.btnDescuentos);
             this.panel1.Controls.Add(this.btnReportes);
+            this.panel1.Controls.Add(this.btnCompras);
             this.panel1.Controls.Add(this.btnProductos);
             this.panel1.Controls.Add(this.btnProveedores);
             this.panel1.Controls.Add(this.btnVentas);
@@ -84,19 +86,21 @@
             this.button8.TabIndex = 7;
             this.button8.Text = "Cerrar Sesion";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
             // 
-            // btnDescuentos
+            // btnCompras
             // 
-            this.btnDescuentos.FlatAppearance.BorderSize = 0;
-            this.btnDescuentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDescuentos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDescuentos.ForeColor = System.Drawing.Color.White;
-            this.btnDescuentos.Location = new System.Drawing.Point(0, 386);
-            this.btnDescuentos.Name = "btnDescuentos";
-            this.btnDescuentos.Size = new System.Drawing.Size(172, 54);
-            this.btnDescuentos.TabIndex = 6;
-            this.btnDescuentos.Text = "Descuentos";
-            this.btnDescuentos.UseVisualStyleBackColor = true;
+            this.btnCompras.FlatAppearance.BorderSize = 0;
+            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompras.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompras.ForeColor = System.Drawing.Color.White;
+            this.btnCompras.Location = new System.Drawing.Point(0, 326);
+            this.btnCompras.Name = "btnCompras";
+            this.btnCompras.Size = new System.Drawing.Size(172, 54);
+            this.btnCompras.TabIndex = 6;
+            this.btnCompras.Text = "Compras";
+            this.btnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.Click += new System.EventHandler(this.btnDescuentos_Click_1);
             // 
             // btnReportes
             // 
@@ -104,12 +108,13 @@
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportes.ForeColor = System.Drawing.Color.White;
-            this.btnReportes.Location = new System.Drawing.Point(3, 326);
+            this.btnReportes.Location = new System.Drawing.Point(0, 447);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(172, 54);
             this.btnReportes.TabIndex = 5;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click_1);
             // 
             // btnProductos
             // 
@@ -123,6 +128,7 @@
             this.btnProductos.TabIndex = 4;
             this.btnProductos.Text = "Productos";
             this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click_1);
             // 
             // btnProveedores
             // 
@@ -136,6 +142,7 @@
             this.btnProveedores.TabIndex = 3;
             this.btnProveedores.Text = "Proveedores";
             this.btnProveedores.UseVisualStyleBackColor = true;
+            this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click_1);
             // 
             // btnVentas
             // 
@@ -149,6 +156,7 @@
             this.btnVentas.TabIndex = 2;
             this.btnVentas.Text = "Ventas";
             this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click_1);
             // 
             // btnBackup
             // 
@@ -209,6 +217,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "postMATE";
             // 
+            // btnCategorias
+            // 
+            this.btnCategorias.FlatAppearance.BorderSize = 0;
+            this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategorias.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategorias.ForeColor = System.Drawing.Color.White;
+            this.btnCategorias.Location = new System.Drawing.Point(0, 387);
+            this.btnCategorias.Name = "btnCategorias";
+            this.btnCategorias.Size = new System.Drawing.Size(172, 54);
+            this.btnCategorias.TabIndex = 8;
+            this.btnCategorias.Text = "Categorias";
+            this.btnCategorias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCategorias.UseVisualStyleBackColor = true;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,12 +261,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button btnDescuentos;
+        private System.Windows.Forms.Button btnCompras;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Button btnProveedores;
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnBackup;
+        private System.Windows.Forms.Button btnCategorias;
     }
 }
 
