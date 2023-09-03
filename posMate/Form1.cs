@@ -7,13 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaEntidad;
+using CapaPresentacion;
+using FontAwesome.Sharp;
 
 namespace posMate
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private static Usuario usuarioActual;
+       
+        public Form1(Usuario objUsuario)
         {
+            usuarioActual = objUsuario;
+
             InitializeComponent();
         }
 
@@ -24,10 +31,38 @@ namespace posMate
 
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
+            // ver en que menu estamos
             SidePanel.Height = btnUsuario.Height;
             SidePanel.Top = btnUsuario.Top;
+
+            // Verificar si el formulario ya está abierto en el panel
+            if (Application.OpenForms["frmUsuarios"] == null)
+            {
+                // Si no está abierto, crear una instancia del formulario frmUsuarios
+                frmUsuarios formUsuarios = new frmUsuarios();
+
+                // Establecer el formulario frmUsuarios como un formulario secundario
+                formUsuarios.TopLevel = false;
+                formUsuarios.FormBorderStyle = FormBorderStyle.None;
+                formUsuarios.Dock = DockStyle.Fill;
+
+                // Limpiar el panel contenedor antes de agregar el formulario
+                contenedor.Controls.Clear();
+
+                // Agregar el formulario frmUsuarios al panel
+                contenedor.Controls.Add(formUsuarios);
+
+                // Mostrar el formulario frmUsuarios
+                formUsuarios.Show();
+            }
+            else
+            {
+                // Si el formulario ya está abierto, simplemente traerlo al frente
+                Application.OpenForms["frmUsuarios"].BringToFront();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -123,6 +158,11 @@ namespace posMate
         private void iconMenuItem1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            lblUsuario.Text = usuarioActual.Nombre;
         }
     }
 }

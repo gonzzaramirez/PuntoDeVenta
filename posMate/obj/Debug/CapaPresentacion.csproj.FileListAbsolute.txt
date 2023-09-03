@@ -18,3 +18,4 @@ C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\bin\Debug\Ca
 C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\bin\Debug\CapaEntidad.pdb
 C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\bin\Debug\CapaNegocio.pdb
 C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\bin\Debug\CapaDatos.pdb
+C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\posMate\obj\Debug\CapaPresentacion.frmUsuarios.resources
