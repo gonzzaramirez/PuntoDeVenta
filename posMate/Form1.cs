@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CapaEntidad;
 using CapaPresentacion;
 using FontAwesome.Sharp;
+using CapaNegocio;
 
 namespace posMate
 {
@@ -162,6 +163,23 @@ namespace posMate
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            List<Permiso> ListaPermisos = new CN_Permiso().Listar(usuarioActual.IdUsuario);
+
+
+            foreach (Control control in panel1.Controls)
+            {
+                bool encontrado = ListaPermisos.Any(m => m.NombreMenu == control.Name);
+                if (!encontrado && control is Button)
+                {
+                    Button boton = (Button)control;
+                    boton.Enabled = false; // Deshabilitar el botón
+                }
+            }
+
+
+
+
             lblUsuario.Text = usuarioActual.Nombre;
         }
     }
