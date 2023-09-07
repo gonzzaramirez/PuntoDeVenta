@@ -63,7 +63,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(218, 561);
+            this.panel1.Size = new System.Drawing.Size(218, 582);
             this.panel1.TabIndex = 0;
             // 
             // btnCategorias
@@ -96,7 +96,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(12, 507);
+            this.button8.Location = new System.Drawing.Point(12, 528);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(172, 54);
             this.button8.TabIndex = 7;
@@ -211,7 +211,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(218, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(774, 35);
+            this.panel2.Size = new System.Drawing.Size(805, 35);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -242,14 +242,14 @@
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(218, 35);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(774, 526);
+            this.contenedor.Size = new System.Drawing.Size(805, 547);
             this.contenedor.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(992, 561);
+            this.ClientSize = new System.Drawing.Size(1023, 582);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

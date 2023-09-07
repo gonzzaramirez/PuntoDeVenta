@@ -18,9 +18,20 @@ namespace posMate
     {
         private static Usuario usuarioActual;
        
-        public Form1(Usuario objUsuario)
+        public Form1(Usuario objUsuario = null)
         {
-            usuarioActual = objUsuario;
+            if(objUsuario == null)  usuarioActual = new Usuario()
+            { Nombre = "ADMIN", IdUsuario = 1};
+            else
+            {
+                usuarioActual = objUsuario;
+            }
+
+
+
+
+
+           
 
             InitializeComponent();
         }
