@@ -50,5 +50,10 @@ namespace CapaPresentacion
 
         }
 
+        //btn guardar
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            dgvData.Rows.Add(new object[] { "", txtId.Text, txtDNI.Text, txtNombre.Text, txtApellido.Text, txtClave.Text, txtEmail.Text, txtDireccion.Text, dtpFecha.Value, txtTelefono.Text, ((OpcionCombo)cboRol.SelectedItem).Texto.ToString(), ((OpcionCombo)cboEstado.SelectedItem).Texto.ToString() });
+        }
     }
 }

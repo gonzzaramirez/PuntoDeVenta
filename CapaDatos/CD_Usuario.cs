@@ -21,10 +21,11 @@ namespace CapaDatos
             {
                 try
                 {
-                    string query = "SELECT IdUsuario, DNI, Nombre, Apellido, Email, Clave, Estado FROM usuario";
+                    string query = "SELECT IdUsuario, DNI, Nombre, Apellido, Email, Clave, Direccion, FechaNacimiento, Telefono, Estado FROM usuarios";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.CommandType = CommandType.Text;
                     con.Open();
+
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
@@ -37,6 +38,9 @@ namespace CapaDatos
                                 Apellido = reader["Apellido"].ToString(),
                                 Email = reader["Email"].ToString(),
                                 Clave = reader["Clave"].ToString(),
+                                Direccion = reader["Direccion"].ToString(),
+                                FechaNacimiento = (DateTime)(reader["FechaNacimiento"] != DBNull.Value ? Convert.ToDateTime(reader["FechaNacimiento"]) : (DateTime?)null),
+                                Telefono = reader["Telefono"].ToString(),
                                 Estado = Convert.ToBoolean(reader["Estado"])
                             });
                         }
@@ -44,12 +48,18 @@ namespace CapaDatos
                 }
                 catch (Exception ex)
                 {
-                    // Manejo de errores aquí
+                    // Manejo de errores aquí (puedes registrar el error o lanzar una excepción según tu necesidad)
                     lista = new List<Usuario>();
                 }
+                finally
+                {
+                    con.Close(); // Asegúrate de cerrar la conexión en caso de excepción.
+                }
             }
+
             return lista;
         }
     }
-
 }
+
+
