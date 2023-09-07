@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using CapaPresentacion.Utilidades;
 using CapaEntidad;
 using CapaNegocio;
+using System.Net;
+
 namespace CapaPresentacion
 {
     public partial class frmUsuarios : Form
@@ -103,23 +105,53 @@ namespace CapaPresentacion
                 Estado = Convert.ToInt32(((OpcionCombo)cboEstado.SelectedItem).Valor) == 1 ? true : false,
             };
 
-            int idusuariogenerado = new CN_Usuario().Registrar(usuario, out mensaje);
-            
-            if( idusuariogenerado != 0)
+            if(usuario.IdUsuario == 0)
             {
-                dgvData.Rows.Add(new object[] { "", idusuariogenerado, txtDNI.Text, txtNombre.Text, txtApellido.Text, txtClave.Text, txtEmail.Text, txtDireccion.Text, dtpFecha.Value, txtTelefono.Text, ((OpcionCombo)cboRol.SelectedItem).Texto.ToString(), ((OpcionCombo)cboEstado.SelectedItem).Texto.ToString() });
-                limpiar();
+                int idusuariogenerado = new CN_Usuario().Registrar(usuario, out mensaje);
+
+                if (idusuariogenerado != 0)
+                {
+                    dgvData.Rows.Add(new object[] { "", idusuariogenerado, txtDNI.Text, txtNombre.Text, txtApellido.Text, txtClave.Text, txtEmail.Text, txtDireccion.Text, dtpFecha.Value, txtTelefono.Text, ((OpcionCombo)cboRol.SelectedItem).Texto.ToString(), ((OpcionCombo)cboEstado.SelectedItem).Texto.ToString() });
+                    limpiar();
+                }
+                else
+                {
+                    MessageBox.Show(mensaje);
+                }
             }
             else
             {
-                MessageBox.Show(mensaje);
+                bool resultado = new CN_Usuario().Editar(usuario, out mensaje);
+                if (resultado)
+                {
+                    DataGridViewRow row = dgvData.Rows[Convert.ToInt32(txtIndice.Text)];
+                    row.Cells["Id"].Value = txtId.Text;
+                    row.Cells["Nombre"].Value = txtNombre.Text;
+                    row.Cells["Apellido"].Value = txtApellido.Text;
+                    row.Cells["Clave"].Value = txtClave.Text;
+                    row.Cells["Email"].Value = txtEmail.Text;
+                    row.Cells["Documento"].Value = txtDNI.Text;
+                    row.Cells["Direccion"].Value = txtDireccion.Text;
+                    row.Cells["FechaNacimiento"].Value = dtpFecha.Value;
+                    row.Cells["Telefono"].Value = txtTelefono.Text;
+                    row.Cells["Estado"].Value = ((OpcionCombo)cboEstado.SelectedItem).Texto.ToString();
+                    row.Cells["Rol"].Value = ((OpcionCombo)cboRol.SelectedItem).Texto.ToString();
+                    limpiar();
+                }
+                else
+                {
+                    MessageBox.Show(mensaje);
+                }
+
             }
-            
-            
+
+
         }
 
         private void limpiar()
         {
+            txtDNI.Focus();
+            txtIndice.Text = "-1";
             txtId.Clear();
             txtDNI.Clear();
             txtNombre.Clear();
@@ -133,10 +165,28 @@ namespace CapaPresentacion
             cboEstado.SelectedIndex = -1;
         }
 
+
+        //BOTON BUSCAR DGV
         private void iconButton1_Click_1(object sender, EventArgs e)
         {
+            string columnaFiltro = ((OpcionCombo)cboBusqueda.SelectedItem).Valor.ToString();
 
+            if (dgvData.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgvData.Rows)
+                {
+                    if (row.Cells[columnaFiltro].Value != null && row.Cells[columnaFiltro].Value.ToString().IndexOf(txtBusqueda.Text, StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                        row.Visible = true;
+                    }
+                    else
+                    {
+                        row.Visible = false;
+                    }
+                }
+            }
         }
+
 
         private void dgvData_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
@@ -165,6 +215,7 @@ namespace CapaPresentacion
                 int indice = e.RowIndex;
                 if (indice >= 0)
                 {
+                    txtIndice.Text = indice.ToString();
                     txtId.Text = dgvData.Rows[indice].Cells["id"].Value.ToString();
                     txtDNI.Text = dgvData.Rows[indice].Cells["Documento"].Value.ToString();
                     txtNombre.Text = dgvData.Rows[indice].Cells["Nombre"].Value.ToString();
@@ -187,5 +238,24 @@ namespace CapaPresentacion
             }
         }
 
+        private void btnlimpiarCampos_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            
+            txtBusqueda.Clear();
+
+            
+            if (dgvData.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgvData.Rows)
+                {
+                    row.Visible = true;
+                }
+            }
+        }
     }
 }
