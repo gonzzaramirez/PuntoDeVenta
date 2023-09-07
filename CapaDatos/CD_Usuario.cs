@@ -21,39 +21,47 @@ namespace CapaDatos
             {
                 try
                 {
-                    string query = "SELECT IdUsuario, DNI, Nombre, Apellido, Email, Clave, Direccion, FechaNacimiento, Telefono, Estado FROM usuarios";
-                    SqlCommand cmd = new SqlCommand(query, con);
-                    cmd.CommandType = CommandType.Text;
-                    con.Open();
+                    con.Open(); // Abre la conexión aquí
 
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    string query = @"
+                        SELECT u.IdUsuario, u.DNI, u.Nombre, u.Apellido, u.Email, u.Clave, u.Direccion, 
+                               ISNULL(u.FechaNacimiento, '') AS FechaNacimiento, u.Telefono, u.Estado, 
+                               r.IdRol, r.Descripcion 
+                        FROM usuario u
+                        INNER JOIN rol r ON r.IdRol = u.IdRol";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        while (reader.Read())
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            lista.Add(new Usuario()
+                            while (reader.Read())
                             {
-                                IdUsuario = Convert.ToInt32(reader["IdUsuario"]),
-                                DNI = reader["DNI"].ToString(),
-                                Nombre = reader["Nombre"].ToString(),
-                                Apellido = reader["Apellido"].ToString(),
-                                Email = reader["Email"].ToString(),
-                                Clave = reader["Clave"].ToString(),
-                                Direccion = reader["Direccion"].ToString(),
-                                FechaNacimiento = (DateTime)(reader["FechaNacimiento"] != DBNull.Value ? Convert.ToDateTime(reader["FechaNacimiento"]) : (DateTime?)null),
-                                Telefono = reader["Telefono"].ToString(),
-                                Estado = Convert.ToBoolean(reader["Estado"])
-                            });
+                                lista.Add(new Usuario()
+                                {
+                                    IdUsuario = Convert.ToInt32(reader["IdUsuario"]),
+                                    DNI = reader["DNI"].ToString(),
+                                    Nombre = reader["Nombre"].ToString(),
+                                    Apellido = reader["Apellido"].ToString(),
+                                    Email = reader["Email"].ToString(),
+                                    Clave = reader["Clave"].ToString(),
+                                    Direccion = reader["Direccion"].ToString(),
+                                    FechaNacimiento = (DateTime)(reader["FechaNacimiento"] as DateTime?),
+                                    Telefono = reader["Telefono"].ToString(),
+                                    Estado = Convert.ToBoolean(reader["Estado"]),
+                                    oRol = new Rol()
+                                    {
+                                        IdRol = Convert.ToInt32(reader["IdRol"]),
+                                        Descripcion = reader["Descripcion"].ToString()
+                                    }
+                                });
+                            }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    // Manejo de errores aquí (puedes registrar el error o lanzar una excepción según tu necesidad)
-                    lista = new List<Usuario>();
-                }
-                finally
-                {
-                    con.Close(); // Asegúrate de cerrar la conexión en caso de excepción.
+                    // Aquí puedes manejar la excepción, registrarla o lanzarla nuevamente
+                    throw ex;
                 }
             }
 

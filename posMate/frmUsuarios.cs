@@ -48,12 +48,68 @@ namespace CapaPresentacion
             cboRol.ValueMember = "Valor";
             cboRol.SelectedIndex = 0;
 
+
+            foreach(DataGridViewColumn columna in dgvData.Columns)
+            {
+                if(columna.Visible == true && columna.Name != "btnseleccionar")
+                {
+                  cboBusqueda.Items.Add(new OpcionCombo() { Valor = columna.Name, Texto = columna.HeaderText });
+                }
+                
+            }
+            cboBusqueda.DisplayMember = "Texto";
+            cboBusqueda.ValueMember = "Valor";
+            cboBusqueda.SelectedIndex = 0;
+
+            //Mostrar usuarios
+            List<Usuario> listaUsuario = new CN_Usuario().Listar();
+
+            foreach (Usuario usuario in listaUsuario)
+            {
+                dgvData.Rows.Add(
+                    "", 
+                    usuario.IdUsuario,
+                    usuario.DNI,
+                    usuario.Nombre,
+                    usuario.Apellido,
+                    usuario.Clave,
+                    usuario.Email,
+                    usuario.Direccion,
+                    usuario.FechaNacimiento,
+                    usuario.Telefono,
+                    usuario.Estado ? "Activo" : "Inactivo",
+                    usuario.oRol.Descripcion
+                );
+            }
+
         }
 
         //btn guardar
         private void iconButton1_Click(object sender, EventArgs e)
         {
+            
             dgvData.Rows.Add(new object[] { "", txtId.Text, txtDNI.Text, txtNombre.Text, txtApellido.Text, txtClave.Text, txtEmail.Text, txtDireccion.Text, dtpFecha.Value, txtTelefono.Text, ((OpcionCombo)cboRol.SelectedItem).Texto.ToString(), ((OpcionCombo)cboEstado.SelectedItem).Texto.ToString() });
+            limpar();
+        }
+
+        private void limpar()
+        {
+            txtId.Clear();
+            txtDNI.Clear();
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtClave.Clear();
+            txtEmail.Clear();
+            txtDireccion.Clear();
+            dtpFecha.Value = DateTime.Now; 
+            txtTelefono.Clear();
+            cboRol.SelectedIndex = -1; 
+            cboEstado.SelectedIndex = -1;
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
