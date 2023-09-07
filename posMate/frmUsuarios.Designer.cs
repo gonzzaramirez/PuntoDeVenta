@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.cboRol = new System.Windows.Forms.ComboBox();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnlimpiarCampos = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -259,23 +259,23 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // iconButton2
+            // btnlimpiarCampos
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.SkyBlue;
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 20;
-            this.iconButton2.Location = new System.Drawing.Point(353, 175);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(89, 36);
-            this.iconButton2.TabIndex = 21;
-            this.iconButton2.Text = "Editar";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.btnlimpiarCampos.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnlimpiarCampos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlimpiarCampos.ForeColor = System.Drawing.Color.White;
+            this.btnlimpiarCampos.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.btnlimpiarCampos.IconColor = System.Drawing.Color.White;
+            this.btnlimpiarCampos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnlimpiarCampos.IconSize = 20;
+            this.btnlimpiarCampos.Location = new System.Drawing.Point(473, 175);
+            this.btnlimpiarCampos.Name = "btnlimpiarCampos";
+            this.btnlimpiarCampos.Size = new System.Drawing.Size(89, 36);
+            this.btnlimpiarCampos.TabIndex = 21;
+            this.btnlimpiarCampos.Text = "Limpiar";
+            this.btnlimpiarCampos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnlimpiarCampos.UseVisualStyleBackColor = false;
             // 
             // iconButton3
             // 
@@ -287,7 +287,7 @@
             this.iconButton3.IconColor = System.Drawing.Color.White;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 20;
-            this.iconButton3.Location = new System.Drawing.Point(448, 175);
+            this.iconButton3.Location = new System.Drawing.Point(374, 175);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(89, 36);
             this.iconButton3.TabIndex = 22;
@@ -316,14 +316,14 @@
             this.dgvData.MultiSelect = false;
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvData.Size = new System.Drawing.Size(761, 244);
             this.dgvData.TabIndex = 23;
             this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
@@ -475,7 +475,7 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.iconButton3);
-            this.Controls.Add(this.iconButton2);
+            this.Controls.Add(this.btnlimpiarCampos);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.cboEstado);
             this.Controls.Add(this.cboRol);
@@ -529,7 +529,7 @@
         private System.Windows.Forms.ComboBox cboRol;
         private System.Windows.Forms.ComboBox cboEstado;
         private FontAwesome.Sharp.IconButton btnGuardar;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btnlimpiarCampos;
         private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.TextBox txtId;

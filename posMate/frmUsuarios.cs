@@ -87,12 +87,38 @@ namespace CapaPresentacion
         //btn guardar
         private void iconButton1_Click(object sender, EventArgs e)
         {
+            string mensaje = string.Empty;
+            Usuario usuario = new Usuario()
+            {
+                IdUsuario = Convert.ToInt32(txtId.Text),
+                Nombre = txtNombre.Text,
+                Apellido = txtApellido.Text,
+                Clave = txtClave.Text,
+                Email = txtEmail.Text,
+                DNI = txtDNI.Text,
+                Direccion = txtDireccion.Text,
+                FechaNacimiento = dtpFecha.Value,
+                Telefono = txtTelefono.Text,
+                oRol = new Rol() { IdRol = Convert.ToInt32(((OpcionCombo)cboRol.SelectedItem).Valor) },
+                Estado = Convert.ToInt32(((OpcionCombo)cboEstado.SelectedItem).Valor) == 1 ? true : false,
+            };
+
+            int idusuariogenerado = new CN_Usuario().Registrar(usuario, out mensaje);
             
-            dgvData.Rows.Add(new object[] { "", txtId.Text, txtDNI.Text, txtNombre.Text, txtApellido.Text, txtClave.Text, txtEmail.Text, txtDireccion.Text, dtpFecha.Value, txtTelefono.Text, ((OpcionCombo)cboRol.SelectedItem).Texto.ToString(), ((OpcionCombo)cboEstado.SelectedItem).Texto.ToString() });
-            limpar();
+            if( idusuariogenerado != 0)
+            {
+                dgvData.Rows.Add(new object[] { "", idusuariogenerado, txtDNI.Text, txtNombre.Text, txtApellido.Text, txtClave.Text, txtEmail.Text, txtDireccion.Text, dtpFecha.Value, txtTelefono.Text, ((OpcionCombo)cboRol.SelectedItem).Texto.ToString(), ((OpcionCombo)cboEstado.SelectedItem).Texto.ToString() });
+                limpiar();
+            }
+            else
+            {
+                MessageBox.Show(mensaje);
+            }
+            
+            
         }
 
-        private void limpar()
+        private void limpiar()
         {
             txtId.Clear();
             txtDNI.Clear();
@@ -134,10 +160,10 @@ namespace CapaPresentacion
 
         private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvData.Columns[e.ColumnIndex].Name == "btnseleccionar")
+            if (e.ColumnIndex == dgvData.Columns["btnseleccionar"].Index && e.RowIndex >= 0)
             {
                 int indice = e.RowIndex;
-                if(indice >= 0)
+                if (indice >= 0)
                 {
                     txtId.Text = dgvData.Rows[indice].Cells["id"].Value.ToString();
                     txtDNI.Text = dgvData.Rows[indice].Cells["Documento"].Value.ToString();
@@ -148,10 +174,18 @@ namespace CapaPresentacion
                     txtDireccion.Text = dgvData.Rows[indice].Cells["Direccion"].Value.ToString();
                     dtpFecha.Value = Convert.ToDateTime(dgvData.Rows[indice].Cells["FechaNacimiento"].Value);
                     txtTelefono.Text = dgvData.Rows[indice].Cells["Telefono"].Value.ToString();
-                    cboRol.Text = dgvData.Rows[indice].Cells["Rol"].Value.ToString();
-                    cboEstado.Text = dgvData.Rows[indice].Cells["Estado"].Value.ToString();
+                    
+                    string rolEnDataGrid = dgvData.Rows[indice].Cells["Rol"].Value.ToString();    
+                    cboRol.SelectedIndex = cboRol.FindStringExact(rolEnDataGrid);
+
+               
+                    string estadoEnDataGrid = dgvData.Rows[indice].Cells["Estado"].Value.ToString();
+
+                  
+                    cboEstado.SelectedIndex = cboEstado.FindStringExact(estadoEnDataGrid);
                 }
             }
         }
+
     }
 }

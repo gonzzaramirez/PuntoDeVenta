@@ -20,12 +20,9 @@ namespace posMate
        
         public Form1(Usuario objUsuario = null)
         {
-            if(objUsuario == null)  usuarioActual = new Usuario()
-            { Nombre = "ADMIN", IdUsuario = 1};
-            else
-            {
+           
                 usuarioActual = objUsuario;
-            }
+            
 
 
 
