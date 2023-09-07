@@ -19,6 +19,7 @@ namespace CapaPresentacion
         public frmUsuarios()
         {
             InitializeComponent();
+            txtBusqueda.TextChanged += new EventHandler(txtBusqueda_TextChanged);
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
@@ -166,27 +167,29 @@ namespace CapaPresentacion
         }
 
 
-        //BOTON BUSCAR DGV
-        private void iconButton1_Click_1(object sender, EventArgs e)
+        //Busqueda del dgv tiempo real
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
+            // Obtiene la columna de filtro seleccionada desde el ComboBox
             string columnaFiltro = ((OpcionCombo)cboBusqueda.SelectedItem).Valor.ToString();
+            // Obtiene el texto de búsqueda del cuadro de texto y lo convierte a mayúsculas
+            string textoBusqueda = txtBusqueda.Text.Trim().ToUpper();
 
             if (dgvData.Rows.Count > 0)
             {
                 foreach (DataGridViewRow row in dgvData.Rows)
                 {
-                    if (row.Cells[columnaFiltro].Value != null && row.Cells[columnaFiltro].Value.ToString().IndexOf(txtBusqueda.Text, StringComparison.OrdinalIgnoreCase) >= 0)
-                    {
-                        row.Visible = true;
-                    }
-                    else
-                    {
-                        row.Visible = false;
-                    }
+                    // Obtiene el valor de la celda en la columna de filtro, si no es nulo
+                    string valorCelda = row.Cells[columnaFiltro].Value != null ? row.Cells[columnaFiltro].Value.ToString().ToUpper() : "";
+
+                    // Comprueba si el valor de la celda contiene el texto de búsqueda
+                    bool filaVisible = valorCelda.Contains(textoBusqueda);
+
+                    // Configura la visibilidad de la fila en función del resultado de la búsqueda
+                    row.Visible = filaVisible;
                 }
             }
         }
-
 
         private void dgvData_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
