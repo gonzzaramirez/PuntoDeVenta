@@ -111,5 +111,47 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void dgvData_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+            {
+                return;
+            }
+
+            // Verifica si la celda actual es la columna con el botón (reemplaza "btnseleccionar" con el nombre real de tu columna de botón)
+            if (dgvData.Columns[e.ColumnIndex].Name == "btnseleccionar")
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                var w = Properties.Resources._299110_check_sign_icon.Width;
+                var h = Properties.Resources._299110_check_sign_icon.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+                e.Graphics.DrawImage(Properties.Resources._299110_check_sign_icon, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
+        }
+
+        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvData.Columns[e.ColumnIndex].Name == "btnseleccionar")
+            {
+                int indice = e.RowIndex;
+                if(indice >= 0)
+                {
+                    txtId.Text = dgvData.Rows[indice].Cells["id"].Value.ToString();
+                    txtDNI.Text = dgvData.Rows[indice].Cells["Documento"].Value.ToString();
+                    txtNombre.Text = dgvData.Rows[indice].Cells["Nombre"].Value.ToString();
+                    txtApellido.Text = dgvData.Rows[indice].Cells["Apellido"].Value.ToString();
+                    txtClave.Text = dgvData.Rows[indice].Cells["Clave"].Value.ToString();
+                    txtEmail.Text = dgvData.Rows[indice].Cells["Email"].Value.ToString();
+                    txtDireccion.Text = dgvData.Rows[indice].Cells["Direccion"].Value.ToString();
+                    dtpFecha.Value = Convert.ToDateTime(dgvData.Rows[indice].Cells["FechaNacimiento"].Value);
+                    txtTelefono.Text = dgvData.Rows[indice].Cells["Telefono"].Value.ToString();
+                    cboRol.Text = dgvData.Rows[indice].Cells["Rol"].Value.ToString();
+                    cboEstado.Text = dgvData.Rows[indice].Cells["Estado"].Value.ToString();
+                }
+            }
+        }
     }
 }

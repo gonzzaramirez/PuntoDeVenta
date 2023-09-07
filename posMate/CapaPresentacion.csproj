@@ -168,5 +168,11 @@
       <Name>CapaNegocio</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6586128_delete_remove_uncheck_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\299110_check_sign_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
