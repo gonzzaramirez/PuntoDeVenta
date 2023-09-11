@@ -16,8 +16,8 @@ namespace CapaEntidad
         public string Email {  get; set; }
         public string DNI { get; set; }
         public string Direccion {  get; set; }
-        public String FechaNacimiento { get; set; }
-        public string telefono { get; set; }
+        public DateTime FechaNacimiento { get; set; }
+        public string Telefono { get; set; }
         public bool Estado { get; set; }
         public Rol oRol { get; set; }
     }

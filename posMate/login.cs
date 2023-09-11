@@ -47,7 +47,7 @@ namespace CapaPresentacion
 
             if (oUsuario != null)
             {
-                Form1 form1 = new Form1();
+                Form1 form1 = new Form1(oUsuario);
                 form1.Show();
                 this.Hide();
                 form1.FormClosing += frm_closing;
