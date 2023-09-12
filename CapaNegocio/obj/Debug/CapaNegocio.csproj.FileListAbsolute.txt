@@ -31,3 +31,14 @@ C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaNegocio\obj\
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaNegocio\obj\Debug\CapaNegocio.dll
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\obj\Debug\CapaNegocio.pdb

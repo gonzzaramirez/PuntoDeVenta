@@ -34,6 +34,8 @@ namespace CapaPresentacion
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dB_PosnetDataSet.USUARIO' table. You can move, or remove it, as needed.
+            this.uSUARIOTableAdapter.Fill(this.dB_PosnetDataSet.USUARIO);
             cboEstado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
             cboEstado.Items.Add(new OpcionCombo() { Valor = 0, Texto = "No Activo" });
             cboEstado.DisplayMember = "Texto";
@@ -259,6 +261,11 @@ namespace CapaPresentacion
                     row.Visible = true;
                 }
             }
+        }
+
+        private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
