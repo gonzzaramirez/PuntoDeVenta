@@ -69,7 +69,7 @@ namespace CapaPresentacion
             this.dgvData = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.btnseleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -396,11 +396,11 @@ namespace CapaPresentacion
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvData.ColumnHeadersHeight = 25;
+            this.dgvData.ColumnHeadersHeight = 40;
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnseleccionar,
             this.id,
-            this.NroDocumento,
+            this.Documento,
             this.Nombre,
             this.Apellido,
             this.Clave,
@@ -464,11 +464,11 @@ namespace CapaPresentacion
             this.id.Name = "id";
             this.id.ReadOnly = true;
             // 
-            // NroDocumento
+            // Documento
             // 
-            this.NroDocumento.HeaderText = "Documento";
-            this.NroDocumento.Name = "NroDocumento";
-            this.NroDocumento.ReadOnly = true;
+            this.Documento.HeaderText = "Documento";
+            this.Documento.Name = "Documento";
+            this.Documento.ReadOnly = true;
             // 
             // Nombre
             // 
@@ -607,7 +607,7 @@ namespace CapaPresentacion
         private Bunifu.UI.WinForms.BunifuDataGridView dgvData;
         private System.Windows.Forms.DataGridViewButtonColumn btnseleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NroDocumento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Clave;
