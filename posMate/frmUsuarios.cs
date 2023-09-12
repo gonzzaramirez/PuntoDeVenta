@@ -230,14 +230,14 @@ namespace CapaPresentacion
                     txtDireccion.Text = dgvData.Rows[indice].Cells["Direccion"].Value.ToString();
                     dtpFecha.Value = Convert.ToDateTime(dgvData.Rows[indice].Cells["FechaNacimiento"].Value);
                     txtTelefono.Text = dgvData.Rows[indice].Cells["Telefono"].Value.ToString();
-                    
-                    string rolEnDataGrid = dgvData.Rows[indice].Cells["Rol"].Value.ToString();    
+
+                    string rolEnDataGrid = dgvData.Rows[indice].Cells["Rol"].Value.ToString();
                     cboRol.SelectedIndex = cboRol.FindStringExact(rolEnDataGrid);
 
-               
+
                     string estadoEnDataGrid = dgvData.Rows[indice].Cells["Estado"].Value.ToString();
 
-                  
+
                     cboEstado.SelectedIndex = cboEstado.FindStringExact(estadoEnDataGrid);
                 }
             }
@@ -266,6 +266,36 @@ namespace CapaPresentacion
        
 
         private void bunifuDataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgvData.Columns["btnseleccionar"].Index && e.RowIndex >= 0)
+            {
+                int indice = e.RowIndex;
+                if (indice >= 0)
+                {
+                    txtIndice.Text = indice.ToString();
+                    txtId.Text = dgvData.Rows[indice].Cells["id"].Value.ToString();
+                    txtDNI.Text = dgvData.Rows[indice].Cells["Documento"].Value.ToString();
+                    txtNombre.Text = dgvData.Rows[indice].Cells["Nombre"].Value.ToString();
+                    txtApellido.Text = dgvData.Rows[indice].Cells["Apellido"].Value.ToString();
+                    txtClave.Text = dgvData.Rows[indice].Cells["Clave"].Value.ToString();
+                    txtEmail.Text = dgvData.Rows[indice].Cells["Email"].Value.ToString();
+                    txtDireccion.Text = dgvData.Rows[indice].Cells["Direccion"].Value.ToString();
+                    dtpFecha.Value = Convert.ToDateTime(dgvData.Rows[indice].Cells["FechaNacimiento"].Value);
+                    txtTelefono.Text = dgvData.Rows[indice].Cells["Telefono"].Value.ToString();
+
+                    string rolEnDataGrid = dgvData.Rows[indice].Cells["Rol"].Value.ToString();
+                    cboRol.SelectedIndex = cboRol.FindStringExact(rolEnDataGrid);
+
+
+                    string estadoEnDataGrid = dgvData.Rows[indice].Cells["Estado"].Value.ToString();
+
+
+                    cboEstado.SelectedIndex = cboEstado.FindStringExact(estadoEnDataGrid);
+                }
+            }
+        }
+
+        private void dgvData_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dgvData.Columns["btnseleccionar"].Index && e.RowIndex >= 0)
             {
