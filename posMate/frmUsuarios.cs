@@ -193,25 +193,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void dgvData_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if (e.RowIndex < 0 || e.ColumnIndex < 0)
-            {
-                return;
-            }
-
-            // Verifica si la celda actual es la columna con el botón (reemplaza "btnseleccionar" con el nombre real de tu columna de botón)
-            if (dgvData.Columns[e.ColumnIndex].Name == "btnseleccionar")
-            {
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-                var w = Properties.Resources._299110_check_sign_icon.Width;
-                var h = Properties.Resources._299110_check_sign_icon.Height;
-                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
-                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
-                e.Graphics.DrawImage(Properties.Resources._299110_check_sign_icon, new Rectangle(x, y, w, h));
-                e.Handled = true;
-            }
-        }
+        
 
         //private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         //{
