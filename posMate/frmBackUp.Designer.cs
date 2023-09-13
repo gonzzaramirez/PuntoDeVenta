@@ -41,6 +41,10 @@
             this.txtRutaCarpeta = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnRealizarBackup = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.cmbBasesDeDatos = new System.Windows.Forms.ComboBox();
+            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuLabel1
@@ -51,7 +55,7 @@
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(113, 12);
+            this.bunifuLabel1.Location = new System.Drawing.Point(115, 12);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(266, 56);
@@ -68,7 +72,7 @@
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.bunifuLabel2.Location = new System.Drawing.Point(385, 12);
+            this.bunifuLabel2.Location = new System.Drawing.Point(387, 12);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(292, 56);
@@ -124,7 +128,7 @@
             this.bunifuButton21.IdleIconLeftImage = null;
             this.bunifuButton21.IdleIconRightImage = null;
             this.bunifuButton21.IndicateFocus = false;
-            this.bunifuButton21.Location = new System.Drawing.Point(385, 164);
+            this.bunifuButton21.Location = new System.Drawing.Point(447, 186);
             this.bunifuButton21.Name = "bunifuButton21";
             this.bunifuButton21.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton21.OnDisabledState.BorderRadius = 1;
@@ -196,7 +200,7 @@
             this.txtRutaCarpeta.IconRight = null;
             this.txtRutaCarpeta.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRutaCarpeta.Lines = new string[0];
-            this.txtRutaCarpeta.Location = new System.Drawing.Point(108, 168);
+            this.txtRutaCarpeta.Location = new System.Drawing.Point(209, 192);
             this.txtRutaCarpeta.MaxLength = 32767;
             this.txtRutaCarpeta.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtRutaCarpeta.Modified = false;
@@ -226,13 +230,13 @@
             this.txtRutaCarpeta.PasswordChar = '\0';
             this.txtRutaCarpeta.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtRutaCarpeta.PlaceholderText = "";
-            this.txtRutaCarpeta.ReadOnly = false;
+            this.txtRutaCarpeta.ReadOnly = true;
             this.txtRutaCarpeta.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtRutaCarpeta.SelectedText = "";
             this.txtRutaCarpeta.SelectionLength = 0;
             this.txtRutaCarpeta.SelectionStart = 0;
             this.txtRutaCarpeta.ShortcutsEnabled = true;
-            this.txtRutaCarpeta.Size = new System.Drawing.Size(271, 23);
+            this.txtRutaCarpeta.Size = new System.Drawing.Size(234, 23);
             this.txtRutaCarpeta.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtRutaCarpeta.TabIndex = 6;
             this.txtRutaCarpeta.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -251,7 +255,7 @@
             this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel3.Location = new System.Drawing.Point(177, 147);
+            this.bunifuLabel3.Location = new System.Drawing.Point(255, 171);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(126, 15);
@@ -307,7 +311,7 @@
             this.btnRealizarBackup.IdleIconLeftImage = null;
             this.btnRealizarBackup.IdleIconRightImage = null;
             this.btnRealizarBackup.IndicateFocus = false;
-            this.btnRealizarBackup.Location = new System.Drawing.Point(553, 164);
+            this.btnRealizarBackup.Location = new System.Drawing.Point(615, 186);
             this.btnRealizarBackup.Name = "btnRealizarBackup";
             this.btnRealizarBackup.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnRealizarBackup.OnDisabledState.BorderRadius = 1;
@@ -350,23 +354,68 @@
             this.btnRealizarBackup.UseDefaultRadiusAndThickness = true;
             this.btnRealizarBackup.Click += new System.EventHandler(this.btnRealizarBackup_Click_1);
             // 
+            // cmbBasesDeDatos
+            // 
+            this.cmbBasesDeDatos.FormattingEnabled = true;
+            this.cmbBasesDeDatos.Location = new System.Drawing.Point(43, 192);
+            this.cmbBasesDeDatos.Name = "cmbBasesDeDatos";
+            this.cmbBasesDeDatos.Size = new System.Drawing.Size(147, 21);
+            this.cmbBasesDeDatos.TabIndex = 9;
+            // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AllowParentOverrides = false;
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuLabel4.Location = new System.Drawing.Point(43, 171);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel4.Size = new System.Drawing.Size(138, 15);
+            this.bunifuLabel4.TabIndex = 10;
+            this.bunifuLabel4.Text = "Seleccionar base de datos:";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.BorderRadius = 1;
+            this.bunifuGradientPanel1.Controls.Add(this.btnRealizarBackup);
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuLabel4);
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuButton21);
+            this.bunifuGradientPanel1.Controls.Add(this.txtRutaCarpeta);
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuLabel3);
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuLabel1);
+            this.bunifuGradientPanel1.Controls.Add(this.cmbBasesDeDatos);
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuLabel2);
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Gray;
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(789, 526);
+            this.bunifuGradientPanel1.TabIndex = 11;
+            // 
             // frmBackUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 526);
-            this.Controls.Add(this.btnRealizarBackup);
-            this.Controls.Add(this.bunifuLabel3);
-            this.Controls.Add(this.txtRutaCarpeta);
-            this.Controls.Add(this.bunifuButton21);
-            this.Controls.Add(this.bunifuLabel2);
-            this.Controls.Add(this.bunifuLabel1);
+            this.Controls.Add(this.bunifuGradientPanel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.Name = "frmBackUp";
             this.Text = "frmBackUp";
             this.Load += new System.EventHandler(this.frmBackUp_Load);
+            this.bunifuGradientPanel1.ResumeLayout(false);
+            this.bunifuGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -377,5 +426,8 @@
         private Bunifu.UI.WinForms.BunifuTextBox txtRutaCarpeta;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnRealizarBackup;
+        private System.Windows.Forms.ComboBox cmbBasesDeDatos;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
+        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
     }
 }

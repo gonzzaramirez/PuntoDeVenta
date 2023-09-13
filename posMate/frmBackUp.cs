@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaNegocio;
+using CapaDatos;
 
 namespace CapaPresentacion
 {
@@ -20,13 +21,29 @@ namespace CapaPresentacion
 
         private void frmBackUp_Load(object sender, EventArgs e)
         {
-
+            CargarBasesDeDatos();
         }
 
-   
+        private void CargarBasesDeDatos()
+        {
+            try
+            {
+                // Obtener la lista de bases de datos desde la capa de datos
+                DataTable dtBasesDeDatos = BaseDatosDAL.ObtenerBasesDeDatos();
 
-       
-        
+                // Enlazar la lista al ComboBox
+                cmbBasesDeDatos.DisplayMember = "name";
+                cmbBasesDeDatos.DataSource = dtBasesDeDatos;
+            }
+            catch (Exception ex)
+            {
+                // Manejar excepciones o propagarlas según sea necesario
+                MessageBox.Show("Error al cargar la lista de bases de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
 
         private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -40,8 +57,16 @@ namespace CapaPresentacion
             try
             {
                 string rutaCarpeta = txtRutaCarpeta.Text;
+                string baseDeDatosSeleccionada = cmbBasesDeDatos.Text;
 
-                if (CN_Backup.RealizarBackup(rutaCarpeta))
+                // Verificar si se ha seleccionado una base de datos
+                if (string.IsNullOrEmpty(baseDeDatosSeleccionada))
+                {
+                    MessageBox.Show("Selecciona una base de datos antes de realizar el respaldo.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (CN_Backup.RealizarBackup(baseDeDatosSeleccionada, rutaCarpeta))
                 {
                     // Muestra un mensaje de éxito
                     MessageBox.Show("Copia de seguridad realizada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);

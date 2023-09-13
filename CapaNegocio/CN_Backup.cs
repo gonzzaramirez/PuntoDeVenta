@@ -11,21 +11,26 @@ namespace CapaNegocio
 {
     public class CN_Backup
     {
-        public static bool RealizarBackup(string rutaCarpeta)
+        public static bool RealizarBackup(string nombreBaseDeDatos, string rutaCarpeta)
         {
             try
             {
                 // Obtiene la cadena de conexión desde la clase Conexion en la capa de datos
                 string connectionString = Conexion.cadena;
-                // Nombre del archivo de backup 
-                string backupFileName = rutaCarpeta + "\\Backup_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".bak";            
+
+                // Nombre del archivo de backup (puedes personalizarlo)
+                string backupFileName = rutaCarpeta + "\\Backup_" + nombreBaseDeDatos + "_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".bak";
+
+                // Crea una instancia de SqlConnection
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    connection.Open();              
+                    connection.Open();
+
+                    // Crea un comando para ejecutar el backup
                     using (SqlCommand cmd = new SqlCommand())
                     {
                         cmd.Connection = connection;
-                        cmd.CommandText = $"BACKUP DATABASE [DB_posnet] TO DISK = '{backupFileName}'";
+                        cmd.CommandText = $"BACKUP DATABASE [{nombreBaseDeDatos}] TO DISK = '{backupFileName}'";
 
                         // Ejecuta el comando
                         cmd.ExecuteNonQuery();
