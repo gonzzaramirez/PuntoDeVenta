@@ -188,3 +188,4 @@ C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debu
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.exe.licenses
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.csproj.Fody.CopyLocal.cache
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.Inicio.resources
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.frmBackUp.resources
