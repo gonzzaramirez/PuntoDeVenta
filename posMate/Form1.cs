@@ -20,112 +20,13 @@ namespace posMate
        
         public Form1(Usuario objUsuario = null)
         {
-           
-                usuarioActual = objUsuario;
-            
-
-
-
-
-
-           
-
-            InitializeComponent();
+            usuarioActual = objUsuario;
+            InitializeComponent(); 
         }
 
 
 
         private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-        
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            SidePanel.Height = btnBackup.Height;
-            SidePanel.Top = btnBackup.Top;
-        }
-
-        private void btnVentas_Click(object sender, EventArgs e)
-        {
-            SidePanel.Height = btnVentas.Height;
-            SidePanel.Top = btnVentas.Top;
-        }
-
-        private void btnProveedores_Click(object sender, EventArgs e)
-        {
-            SidePanel.Height = btnProveedores.Height;
-            SidePanel.Top = btnProveedores.Top;
-        }
-
-        private void btnProductos_Click(object sender, EventArgs e)
-        {
-            SidePanel.Height = btnProductos.Height;
-            SidePanel.Top = btnProductos.Top;
-        }
-
-        private void btnReportes_Click(object sender, EventArgs e)
-        {
-            SidePanel.Height = btnReportes.Height;
-            SidePanel.Top = btnReportes.Top;
-        }
-
-       
-
-
-
-        private void btnVentas_Click_1(object sender, EventArgs e)
-        {
-            SidePanel.Height = btnVentas.Height;
-            SidePanel.Top = btnVentas.Top;
-        }
-
-        private void btnProveedores_Click_1(object sender, EventArgs e)
-        {
-            SidePanel.Height = btnProveedores.Height;
-            SidePanel.Top = btnProveedores.Top;
-        }
-
-        private void btnProductos_Click_1(object sender, EventArgs e)
-        {
-            SidePanel.Height = btnProductos.Height;
-            SidePanel.Top = btnProductos.Top;
-        }
-
-       
-
-        private void btnReportes_Click_1(object sender, EventArgs e)
-        {
-            SidePanel.Height = btnReportes.Height;
-            SidePanel.Top = btnReportes.Top;
-        }
-
-        private void btnDescuentos_Click_1(object sender, EventArgs e)
-        {
-            SidePanel.Height = btnCompras.Height;
-            SidePanel.Top = btnCompras.Top;
-        }
-
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
-        {
-            SidePanel.Height = btnCerrarSesion.Height;
-            SidePanel.Top = btnCerrarSesion.Top;
-        }
-
-       
-
-       
-
-        private void btnCategorias_Click(object sender, EventArgs e)
-        {
-            SidePanel.Height = btnCategorias.Height;
-            SidePanel.Top = btnCategorias.Top;
-        }
-
-        private void iconMenuItem1_Click(object sender, EventArgs e)
         {
 
         }
@@ -145,11 +46,15 @@ namespace posMate
                     boton.Enabled = false; // Deshabilitar el botón
                 }
             }
-
-
-
-
             lblUsuario.Text = usuarioActual.Nombre;
+
+            Inicio Inicio = new Inicio();
+            Inicio.TopLevel = false;
+            Inicio.FormBorderStyle = FormBorderStyle.None;
+            Inicio.Dock = DockStyle.Fill;
+            contenedor.Controls.Clear();
+            contenedor.Controls.Add(Inicio);    
+            Inicio.Show();
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
@@ -184,35 +89,12 @@ namespace posMate
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            // ver en que menu estamos
-            SidePanel.Height = btnUsuario.Height;
             SidePanel.Top = btnUsuario.Top;
+            // Crea una instancia del formulario 
+            frmUsuarios frmUsuario = new frmUsuarios();
 
-            // Verificar si el formulario ya está abierto en el panel
-            if (Application.OpenForms["frmUsuarios"] == null)
-            {
-                // Si no está abierto, crear una instancia del formulario frmUsuarios
-                frmUsuarios formUsuarios = new frmUsuarios();
-
-                // Establecer el formulario frmUsuarios como un formulario secundario
-                formUsuarios.TopLevel = false;
-                formUsuarios.FormBorderStyle = FormBorderStyle.None;
-                formUsuarios.Dock = DockStyle.Fill;
-
-                // Limpiar el panel contenedor antes de agregar el formulario
-                contenedor.Controls.Clear();
-
-                // Agregar el formulario frmUsuarios al panel
-                contenedor.Controls.Add(formUsuarios);
-
-                // Mostrar el formulario frmUsuarios
-                formUsuarios.Show();
-            }
-            else
-            {
-                // Si el formulario ya está abierto, simplemente traerlo al frente
-                Application.OpenForms["frmUsuarios"].BringToFront();
-            }
+            // Llama al método para mostrar el formulario en el "contenedor"
+            MostrarFormularioEnContenedor(frmUsuario);
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
@@ -250,7 +132,7 @@ namespace posMate
         {
             SidePanel.Top = btnCerrarSesion.Top;
             // Mostrar un cuadro de diálogo de confirmación
-            DialogResult resultado = MessageBox.Show("¿Está seguro de que desea cerrar la sesión?", "Confirmar cierre de sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show("¿Está seguro de que desea cerrar la sesión?", "Confirmar cierre de sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
             // Verificar la respuesta del usuario
             if (resultado == DialogResult.Yes)
@@ -259,6 +141,31 @@ namespace posMate
                 this.Close();
             }
         }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+
+            // Crea una instancia del formulario
+            Inicio frmInicio = new Inicio();
+
+            // Llama al método para mostrar el formulario en el "contenedor"
+            MostrarFormularioEnContenedor(frmInicio);
+        }
+
+        private void MostrarFormularioEnContenedor(Form formulario)
+        {
+            // Borra cualquier control existente en el panel "contenedor"
+            contenedor.Controls.Clear();
+            // Establece las propiedades del formulario secundario
+            formulario.TopLevel = false;
+            formulario.FormBorderStyle = FormBorderStyle.None;
+            formulario.Dock = DockStyle.Fill;
+            // Agrega el formulario secundario al panel "contenedor"
+            contenedor.Controls.Add(formulario);
+            // Muestra el formulario secundario
+            formulario.Show();
+        }
+
     }
 }
 
