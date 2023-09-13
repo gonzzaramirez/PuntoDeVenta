@@ -306,5 +306,53 @@ namespace CapaPresentacion
                 }
             }
         }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBaja_Click(object sender, EventArgs e)
+        {
+            FiltrarUsuarios(false);
+        }
+
+        private void btnAlta_Click(object sender, EventArgs e)
+        {
+            FiltrarUsuarios(true);
+        }
+
+        private void FiltrarUsuarios(bool estadoActivo)
+        {
+            // Limpia el cuadro de búsqueda
+            txtBusqueda.Clear();
+
+            // Recorre las filas del DataGridView y muestra/oculta según el estado
+            foreach (DataGridViewRow row in dgvData.Rows)
+            {
+                bool estadoFila = row.Cells["Estado"].Value.ToString() == "Activo";
+
+                if (estadoActivo && estadoFila)
+                {
+                    // Mostrar usuarios activos
+                    row.Visible = true;
+                }
+                else if (!estadoActivo && !estadoFila)
+                {
+                    // Mostrar usuarios inactivos (dados de baja)
+                    row.Visible = true;
+                }
+                else
+                {
+                    // Ocultar otros usuarios
+                    row.Visible = false;
+                }
+            }
+        }
     }
 }
