@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaNegocio;
 using CapaDatos;
+using System.IO;
+using System.Security.AccessControl;
+using System.Security.Principal;
 
 namespace CapaPresentacion
 {
@@ -50,7 +53,7 @@ namespace CapaPresentacion
 
         }
 
-        
+
 
         private void btnRealizarBackup_Click_1(object sender, EventArgs e)
         {
@@ -66,6 +69,35 @@ namespace CapaPresentacion
                     return;
                 }
 
+                // Verificar si la carpeta existe
+                if (!Directory.Exists(rutaCarpeta))
+                {
+                    MessageBox.Show("La carpeta de destino no existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Verificar y configurar permisos de escritura en la carpeta seleccionada
+                try
+                {
+                    DirectorySecurity directorySecurity = Directory.GetAccessControl(rutaCarpeta);
+                    FileSystemAccessRule accessRule = new FileSystemAccessRule(
+                        new SecurityIdentifier(WellKnownSidType.WorldSid, null),
+                        FileSystemRights.Write,
+                        InheritanceFlags.ObjectInherit | InheritanceFlags.ContainerInherit,
+                        PropagationFlags.None,
+                        AccessControlType.Allow
+                    );
+
+                    directorySecurity.AddAccessRule(accessRule);
+                    Directory.SetAccessControl(rutaCarpeta, directorySecurity);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al configurar los permisos en la carpeta: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Realizar la copia de seguridad
                 if (CN_Backup.RealizarBackup(baseDeDatosSeleccionada, rutaCarpeta))
                 {
                     // Muestra un mensaje de éxito
