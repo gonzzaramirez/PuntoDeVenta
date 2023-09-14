@@ -4,3 +4,15 @@ C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\CapaEntidad\obj\Debu
 C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\Gonza\Desktop\PROYECTO DE TALLER\postMate-.grupo11\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\Gonza\Desktop\Proyecto taller\Trabajo_Integrador_Grupo11\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\Gonza\Desktop\Proyecto taller\Trabajo_Integrador_Grupo11\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\Gonza\Desktop\Proyecto taller\Trabajo_Integrador_Grupo11\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\Gonza\Desktop\Proyecto taller\Trabajo_Integrador_Grupo11\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\Gonza\Desktop\Proyecto taller\Trabajo_Integrador_Grupo11\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\Gonza\Desktop\Proyecto taller\Trabajo_Integrador_Grupo11\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaEntidad\obj\Debug\CapaEntidad.pdb
