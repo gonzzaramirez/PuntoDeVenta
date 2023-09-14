@@ -34,6 +34,8 @@ namespace CapaPresentacion
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dB_PosnetDataSet.USUARIO' table. You can move, or remove it, as needed.
+            
             cboEstado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
             cboEstado.Items.Add(new OpcionCombo() { Valor = 0, Texto = "No Activo" });
             cboEstado.DisplayMember = "Texto";
@@ -191,55 +193,37 @@ namespace CapaPresentacion
             }
         }
 
-        private void dgvData_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if (e.RowIndex < 0 || e.ColumnIndex < 0)
-            {
-                return;
-            }
+        
 
-            // Verifica si la celda actual es la columna con el botón (reemplaza "btnseleccionar" con el nombre real de tu columna de botón)
-            if (dgvData.Columns[e.ColumnIndex].Name == "btnseleccionar")
-            {
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-                var w = Properties.Resources._299110_check_sign_icon.Width;
-                var h = Properties.Resources._299110_check_sign_icon.Height;
-                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
-                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
-                e.Graphics.DrawImage(Properties.Resources._299110_check_sign_icon, new Rectangle(x, y, w, h));
-                e.Handled = true;
-            }
-        }
+        //private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    if (e.ColumnIndex == dgvData.Columns["btnseleccionar"].Index && e.RowIndex >= 0)
+        //    {
+        //        int indice = e.RowIndex;
+        //        if (indice >= 0)
+        //        {
+        //            txtIndice.Text = indice.ToString();
+        //            txtId.Text = dgvData.Rows[indice].Cells["id"].Value.ToString();
+        //            txtDNI.Text = dgvData.Rows[indice].Cells["Documento"].Value.ToString();
+        //            txtNombre.Text = dgvData.Rows[indice].Cells["Nombre"].Value.ToString();
+        //            txtApellido.Text = dgvData.Rows[indice].Cells["Apellido"].Value.ToString();
+        //            txtClave.Text = dgvData.Rows[indice].Cells["Clave"].Value.ToString();
+        //            txtEmail.Text = dgvData.Rows[indice].Cells["Email"].Value.ToString();
+        //            txtDireccion.Text = dgvData.Rows[indice].Cells["Direccion"].Value.ToString();
+        //            dtpFecha.Value = Convert.ToDateTime(dgvData.Rows[indice].Cells["FechaNacimiento"].Value);
+        //            txtTelefono.Text = dgvData.Rows[indice].Cells["Telefono"].Value.ToString();
 
-        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == dgvData.Columns["btnseleccionar"].Index && e.RowIndex >= 0)
-            {
-                int indice = e.RowIndex;
-                if (indice >= 0)
-                {
-                    txtIndice.Text = indice.ToString();
-                    txtId.Text = dgvData.Rows[indice].Cells["id"].Value.ToString();
-                    txtDNI.Text = dgvData.Rows[indice].Cells["Documento"].Value.ToString();
-                    txtNombre.Text = dgvData.Rows[indice].Cells["Nombre"].Value.ToString();
-                    txtApellido.Text = dgvData.Rows[indice].Cells["Apellido"].Value.ToString();
-                    txtClave.Text = dgvData.Rows[indice].Cells["Clave"].Value.ToString();
-                    txtEmail.Text = dgvData.Rows[indice].Cells["Email"].Value.ToString();
-                    txtDireccion.Text = dgvData.Rows[indice].Cells["Direccion"].Value.ToString();
-                    dtpFecha.Value = Convert.ToDateTime(dgvData.Rows[indice].Cells["FechaNacimiento"].Value);
-                    txtTelefono.Text = dgvData.Rows[indice].Cells["Telefono"].Value.ToString();
-                    
-                    string rolEnDataGrid = dgvData.Rows[indice].Cells["Rol"].Value.ToString();    
-                    cboRol.SelectedIndex = cboRol.FindStringExact(rolEnDataGrid);
+        //            string rolEnDataGrid = dgvData.Rows[indice].Cells["Rol"].Value.ToString();
+        //            cboRol.SelectedIndex = cboRol.FindStringExact(rolEnDataGrid);
 
-               
-                    string estadoEnDataGrid = dgvData.Rows[indice].Cells["Estado"].Value.ToString();
 
-                  
-                    cboEstado.SelectedIndex = cboEstado.FindStringExact(estadoEnDataGrid);
-                }
-            }
-        }
+        //            string estadoEnDataGrid = dgvData.Rows[indice].Cells["Estado"].Value.ToString();
+
+
+        //            cboEstado.SelectedIndex = cboEstado.FindStringExact(estadoEnDataGrid);
+        //        }
+        //    }
+        //}
 
         private void btnlimpiarCampos_Click(object sender, EventArgs e)
         {
@@ -259,6 +243,131 @@ namespace CapaPresentacion
                     row.Visible = true;
                 }
             }
+        }
+
+       
+
+        //private void bunifuDataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    if (e.ColumnIndex == dgvData.Columns["btnseleccionar"].Index && e.RowIndex >= 0)
+        //    {
+        //        int indice = e.RowIndex;
+        //        if (indice >= 0)
+        //        {
+        //            txtIndice.Text = indice.ToString();
+        //            txtId.Text = dgvData.Rows[indice].Cells["id"].Value.ToString();
+        //            txtDNI.Text = dgvData.Rows[indice].Cells["Documento"].Value.ToString();
+        //            txtNombre.Text = dgvData.Rows[indice].Cells["Nombre"].Value.ToString();
+        //            txtApellido.Text = dgvData.Rows[indice].Cells["Apellido"].Value.ToString();
+        //            txtClave.Text = dgvData.Rows[indice].Cells["Clave"].Value.ToString();
+        //            txtEmail.Text = dgvData.Rows[indice].Cells["Email"].Value.ToString();
+        //            txtDireccion.Text = dgvData.Rows[indice].Cells["Direccion"].Value.ToString();
+        //            dtpFecha.Value = Convert.ToDateTime(dgvData.Rows[indice].Cells["FechaNacimiento"].Value);
+        //            txtTelefono.Text = dgvData.Rows[indice].Cells["Telefono"].Value.ToString();
+
+        //            string rolEnDataGrid = dgvData.Rows[indice].Cells["Rol"].Value.ToString();
+        //            cboRol.SelectedIndex = cboRol.FindStringExact(rolEnDataGrid);
+
+
+        //            string estadoEnDataGrid = dgvData.Rows[indice].Cells["Estado"].Value.ToString();
+
+
+        //            cboEstado.SelectedIndex = cboEstado.FindStringExact(estadoEnDataGrid);
+        //        }
+        //    }
+        //}
+
+        private void dgvData_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgvData.Columns["btnseleccionar"].Index && e.RowIndex >= 0)
+            {
+                int indice = e.RowIndex;
+                if (indice >= 0)
+                {
+                    txtIndice.Text = indice.ToString();
+                    txtId.Text = dgvData.Rows[indice].Cells["id"].Value.ToString();
+                    txtDNI.Text = dgvData.Rows[indice].Cells["Documento"].Value.ToString();
+                    txtNombre.Text = dgvData.Rows[indice].Cells["Nombre"].Value.ToString();
+                    txtApellido.Text = dgvData.Rows[indice].Cells["Apellido"].Value.ToString();
+                    txtClave.Text = dgvData.Rows[indice].Cells["Clave"].Value.ToString();
+                    txtEmail.Text = dgvData.Rows[indice].Cells["Email"].Value.ToString();
+                    txtDireccion.Text = dgvData.Rows[indice].Cells["Direccion"].Value.ToString();
+                    dtpFecha.Value = Convert.ToDateTime(dgvData.Rows[indice].Cells["FechaNacimiento"].Value);
+                    txtTelefono.Text = dgvData.Rows[indice].Cells["Telefono"].Value.ToString();
+
+                    string rolEnDataGrid = dgvData.Rows[indice].Cells["Rol"].Value.ToString();
+                    cboRol.SelectedIndex = cboRol.FindStringExact(rolEnDataGrid);
+
+
+                    string estadoEnDataGrid = dgvData.Rows[indice].Cells["Estado"].Value.ToString();
+
+
+                    cboEstado.SelectedIndex = cboEstado.FindStringExact(estadoEnDataGrid);
+                }
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBaja_Click(object sender, EventArgs e)
+        {
+            FiltrarUsuarios(false);
+        }
+
+        private void btnAlta_Click(object sender, EventArgs e)
+        {
+            FiltrarUsuarios(true);
+        }
+
+        private void FiltrarUsuarios(bool estadoActivo)
+        {
+            // Limpia el cuadro de búsqueda
+            txtBusqueda.Clear();
+
+            // Recorre las filas del DataGridView y muestra/oculta según el estado
+            foreach (DataGridViewRow row in dgvData.Rows)
+            {
+                bool estadoFila = row.Cells["Estado"].Value.ToString() == "Activo";
+
+                if (estadoActivo && estadoFila)
+                {
+                    // Mostrar usuarios activos
+                    row.Visible = true;
+                }
+                else if (!estadoActivo && !estadoFila)
+                {
+                    // Mostrar usuarios inactivos (dados de baja)
+                    row.Visible = true;
+                }
+                else
+                {
+                    // Ocultar otros usuarios
+                    row.Visible = false;
+                }
+            }
+        }
+
+        private void bunifuGradientPanel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

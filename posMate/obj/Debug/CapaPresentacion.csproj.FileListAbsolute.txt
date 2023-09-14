@@ -43,13 +43,6 @@ C:\Users\Gonza\Desktop\Proyecto taller\Trabajo_Integrador_Grupo11\posMate\obj\De
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\CapaPresentacion.exe.config
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\CapaPresentacion.exe
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\CapaPresentacion.pdb
-C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\CapaEntidad.dll
-C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\CapaNegocio.dll
-C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\FontAwesome.Sharp.dll
-C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\CapaDatos.dll
-C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\CapaEntidad.pdb
-C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\CapaNegocio.pdb
-C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\CapaDatos.pdb
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\posMate.Form1.resources
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.frmUsuarios.resources
@@ -61,3 +54,140 @@ C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debu
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.exe
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.pdb
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\CapaPresentacion.exe.config
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\CapaPresentacion.exe
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\CapaPresentacion.pdb
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\obj\Debug\posMate.Form1.resources
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.frmUsuarios.resources
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.login.resources
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.Resource1.resources
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.exe
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.pdb
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Bunifu.Dataviz.WinForms.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Bunifu.UI.WinForms.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Microsoft.Win32.Registry.AccessControl.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Microsoft.Win32.SystemEvents.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\RestSharp.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Buffers.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.CodeDom.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Data.Odbc.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Data.OleDb.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Diagnostics.EventLog.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Diagnostics.PerformanceCounter.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Drawing.Common.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.IO.FileSystem.AccessControl.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.IO.Packaging.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.IO.Ports.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Memory.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.AccessControl.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.Cryptography.Cng.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.Cryptography.Pkcs.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.Cryptography.Xml.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.Permissions.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.ServiceModel.Syndication.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.ServiceProcess.ServiceController.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Text.Encoding.CodePages.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Threading.AccessControl.xml
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.exe.licenses
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.csproj.Fody.CopyLocal.cache
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\CapaPresentacion.exe.config
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\CapaPresentacion.exe
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\CapaPresentacion.pdb
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Bunifu.Dataviz.WinForms.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Bunifu.UI.WinForms.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Microsoft.Win32.Registry.AccessControl.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Microsoft.Win32.SystemEvents.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\RestSharp.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Buffers.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.CodeDom.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Data.Odbc.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Data.OleDb.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Diagnostics.EventLog.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Diagnostics.PerformanceCounter.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Drawing.Common.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.IO.FileSystem.AccessControl.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.IO.Packaging.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.IO.Ports.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Memory.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.AccessControl.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.Cryptography.Cng.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.Cryptography.Pkcs.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.Cryptography.Xml.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.Permissions.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.ServiceModel.Syndication.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.ServiceProcess.ServiceController.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Text.Encoding.CodePages.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Threading.AccessControl.xml
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\obj\Debug\posMate.Form1.resources
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.frmUsuarios.resources
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.login.resources
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.Resource1.resources
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.exe.licenses
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.csproj.Fody.CopyLocal.cache
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.exe
+C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.pdb
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Bunifu.Dataviz.WinForms.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Bunifu.UI.WinForms.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Microsoft.Win32.Registry.AccessControl.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Microsoft.Win32.SystemEvents.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\RestSharp.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Buffers.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.CodeDom.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Data.Odbc.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Data.OleDb.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Diagnostics.EventLog.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Diagnostics.PerformanceCounter.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Drawing.Common.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.IO.FileSystem.AccessControl.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.IO.Packaging.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.IO.Ports.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Memory.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.AccessControl.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.Cryptography.Cng.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.Cryptography.Pkcs.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.Cryptography.Xml.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.Permissions.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.ServiceModel.Syndication.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.ServiceProcess.ServiceController.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Text.Encoding.CodePages.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\System.Threading.AccessControl.xml
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.exe.licenses
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.csproj.Fody.CopyLocal.cache
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.Inicio.resources
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.frmBackUp.resources
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.frmBackUp.resources
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.Inicio.resources
