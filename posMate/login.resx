@@ -117,4 +117,54 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <metadata name="bunifuButton22.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuButton22.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAE8AAAAnCAYAAABOkxWxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMtSURBVGhD7ZoxSBtRGMdvEBINGk+jOYWAEJEiDoJLwUUE
+        oVNxKbhZt1ro1kFE0CFDh0C2CkUQQXCo1KnYqdIpY4YOhQ6VQiGlrZytbVMM971+/3fvhsQY7xKlTe79
+        4B3cM3l59/d77/ve953RKMIwZrhtkGk+p/7+Ahrfi/+9eXPFvPl+g9u8eqSbhQzjthQrEvlNU1O2WF8X
+        YntbiKMjt7UC3lwxb8x/bu6UOjrKLOjLGxGSBx2hROI1jY/b8kdtW82kTSiVhNjbc4V0V9CkevTmoIGB
+        LA0N2eLgQP1SmwOrTKdP+blfsIhRJUMw8EVKJl/RysqZ/M+EDGdr65ws6y3rYClJ/CGX6eDge2d391yN
+        FU7yeUHDw0Xfy1haHAsnCgU1QsgpFgWlUl9gUEqiy+Gl+sbZ3w+3xVXDhiQNqt4eKJ0D9jjNBWBQMCwl
+        VSVY187Y2LcwOgffcCjDOl2MBRHHhSYcaRQsX9P8oCRzYTVn5IlBcyW0uPiDYrFHSjq2OhxNEGFrrgbh
+        S1/fOykcPAhFoyW91/mHt7gz1m0Eh/07ND2tl2wAaGnpF+v2wKB4fEdsbqpujS/YscLBai/bCN6+hwtu
+        NAE4PhbU3f3VwAU3moDA1+KiaQCIR11d35E50AREisfHDZ1+CgjSVGx08LZ5cXioejW+8M64sgSHoo7G
+        P2xsMDo4jPu0sKBzeAGgtbUyRSIZiNdLnZ1/VL/GD+k08npuXUPWKlulaP2v8QJkDxxycdhVf9bUwclk
+        ytTTk1PSueiQxQcIURIJVNJ6lWwu3DEvc/SaS6Hl5Z8UjT5WklWi9746YK8zTRTAa5cfpedNJj/pREEV
+        ti1odPQz63NLSVUbfEB+sN3ehGoCmp09EfH4PSVRfXj53pU13LBbICyOhSPLeqik8Qdb4CSlUh9DmyjF
+        HjcxUfRtcdWwgBYyzahVhiZtBWtbXS3Jvf86XnJEkZfi8RMM2rZLmY3DyWbL7FFttrYnLFxlLNcMPFgU
+        g8q0Pd6c5MOxDGtaVUzMG/PP5QReF0Z+jlfZs2sVrRYwZ2QVEBdKMbmr1RrmLecfiz3Fi+rq0QJgGH8B
+        wSW42E/Cwp8AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="bunifuButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAE8AAAAnCAYAAABOkxWxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANPSURBVGhD7Zo9SBthGMdv7OjYsWO3NImiRs2np9VBK1gX
+        l+JiLXTr4GaFIh0KBRGROlVwEioIQgZp6CBFTHIfsTVkEAXTtJoQjVob03K9f/IYGhvjXaK0yb0/uEDO
+        y91zf5/3fZ+PlysX67rVaQ6YnztF54Jbcgs4LAGL8r8f57bCbthv9Vsf0CvdLBa/pQkPbQw2fh/cHEzO
+        fJlRluJLij/lzx7VwLmtsBv2j0RGDuqD9RlV0OUbEdIkmO64JNf7/k/9STw09TNFptQG6V9pxZvwZoWE
+        V5rWTPfo1SvDI3ledcgdSV/SR4+qbeCVPRs9B+p7v3P4HLdIBn3gh7zMeyd3J4/wnzEai3uLZ6rThBrW
+        Gm6TJNrAMFWVjyzvL5/RvQyJfCwrnXJnTPMwhsdBuPBJmG5hbOJncaU71L0HhyKJLqddbv+wklgxtMdd
+        BI4Ehyo5B2JxwBxHv2H8ARwKjkVSFYJx3RfqixtxcdAKQpmisSDiOKOEI+WC4euUnFskWQ6kWsgY6BpG
+        Cca2x1K2gO0pScdxSE0QYTOuBuGLS3RtZoXDCtIUbDplc512PKLnKBu6mAPm+0PhITZkdTC+PX5iXjc/
+        5hyS4+3C3gKdZmgBCysWWLbKlkF+3sMHvjC0E01HlVahdZ/DB74w9IGqNIcPhn6y4tkE2yEqBwx9ZMVD
+        usHKT/qAs8HpOLfo/rh6uEqnGVrI57johqGpw9AOnA1Oh3bio9GtUVbD08F0dDqjprQv0K+oaw42/6Dz
+        DA2gu5bva6BXWS1N639NPkA+B0kukl36O6MEs9HZjF20vybpcrCQ5WoQoqijFJ20OpItB2rzqNHTdYwi
+        TOxMHKvrwzOSrBA2910O5jo1rItd2n6EO/Iyv8sKBYVgY1PvRu9XdXTeJamKgwtwYa3thKqE4chwwiE4
+        HpJEpXFJrh70cI3ugXAgCMdL/BOSRhsIArvkrh2jFkrhOAOfB2KaPe4i2F6FSjN6lUYpW8HbpqJTp5j7
+        r2WTI5q8dsGewE1rdSjDOeZicxl1RU22iW0v/4rlKgFLNG6K1AS5HZJjhDXVKibshv3z3+YVbBdGfU4V
+        7s21ilYMuDOqCogLISaqqtV2wG7Y3yK0TGOjOr2aDjjuN7bl6Bo3b0TsAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

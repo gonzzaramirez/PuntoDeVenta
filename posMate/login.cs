@@ -25,16 +25,45 @@ namespace CapaPresentacion
 
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+     
 
       
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+       
+
+        private void frm_closing(object sender, FormClosingEventArgs e)
         {
-            // Validar que los campos no estén vacíos
+            txtDNI.Text = "";
+            txtClave.Text = "";
+            this.Show();
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+       
+
+      
+
+       
+       
+
+       
+
+        
+
+        private void bunifuButton21_Click(object sender, EventArgs e)
+        {
             if (string.IsNullOrWhiteSpace(txtDNI.Text) || string.IsNullOrWhiteSpace(txtClave.Text))
             {
                 MessageBox.Show("Por favor, complete todos los campos.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -58,24 +87,9 @@ namespace CapaPresentacion
             }
         }
 
-        private void frm_closing(object sender, FormClosingEventArgs e)
+        private void bunifuButton22_Click(object sender, EventArgs e)
         {
-            txtDNI.Text = "";
-            txtClave.Text = "";
-            this.Show();
-        }
-
-        private void login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            this.Close();
         }
     }
 }
