@@ -64,7 +64,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(218, 600);
+            this.panel1.Size = new System.Drawing.Size(191, 729);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -148,7 +148,7 @@
             this.btnCategorias.IconColor = System.Drawing.Color.White;
             this.btnCategorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCategorias.IconSize = 37;
-            this.btnCategorias.Location = new System.Drawing.Point(15, 396);
+            this.btnCategorias.Location = new System.Drawing.Point(12, 392);
             this.btnCategorias.Name = "btnCategorias";
             this.btnCategorias.Size = new System.Drawing.Size(172, 54);
             this.btnCategorias.TabIndex = 6;
@@ -264,9 +264,9 @@
             this.panel2.Controls.Add(this.lblUsuario);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(218, 0);
+            this.panel2.Location = new System.Drawing.Point(191, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(805, 35);
+            this.panel2.Size = new System.Drawing.Size(817, 35);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -279,7 +279,7 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(772, 6);
+            this.iconButton1.Location = new System.Drawing.Point(812, 6);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(22, 23);
             this.iconButton1.TabIndex = 0;
@@ -291,7 +291,7 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblUsuario.Location = new System.Drawing.Point(683, 9);
+            this.lblUsuario.Location = new System.Drawing.Point(720, 9);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(72, 16);
             this.lblUsuario.TabIndex = 1;
@@ -303,7 +303,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(625, 9);
+            this.label1.Location = new System.Drawing.Point(661, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 16);
             this.label1.TabIndex = 0;
@@ -313,9 +313,9 @@
             // contenedor
             // 
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenedor.Location = new System.Drawing.Point(218, 35);
+            this.contenedor.Location = new System.Drawing.Point(191, 35);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(805, 565);
+            this.contenedor.Size = new System.Drawing.Size(817, 694);
             this.contenedor.TabIndex = 2;
             this.contenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.contenedor_Paint);
             // 
@@ -323,11 +323,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1023, 600);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
