@@ -64,7 +64,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(191, 729);
+            this.panel1.Size = new System.Drawing.Size(191, 599);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -266,7 +266,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(191, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(817, 35);
+            this.panel2.Size = new System.Drawing.Size(883, 35);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -315,7 +315,7 @@
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(191, 35);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(817, 694);
+            this.contenedor.Size = new System.Drawing.Size(883, 564);
             this.contenedor.TabIndex = 2;
             this.contenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.contenedor_Paint);
             // 
@@ -323,7 +323,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.ClientSize = new System.Drawing.Size(1074, 599);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

@@ -51,18 +51,7 @@ namespace CapaPresentacion
             }
         }
 
-       
-
-      
-
-       
-       
-
-       
-
-        
-
-        private void bunifuButton21_Click(object sender, EventArgs e)
+        private void iconButton1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtDNI.Text) || string.IsNullOrWhiteSpace(txtClave.Text))
             {
@@ -87,7 +76,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void bunifuButton22_Click(object sender, EventArgs e)
+        private void iconButton2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
