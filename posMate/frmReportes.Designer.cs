@@ -154,7 +154,7 @@
             this.bunifuButton21.ButtonTextMarginLeft = 0;
             this.bunifuButton21.ColorContrastOnClick = 45;
             this.bunifuButton21.ColorContrastOnHover = 45;
-            this.bunifuButton21.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton21.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -168,12 +168,12 @@
             this.bunifuButton21.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuButton21.ForeColor = System.Drawing.Color.White;
             this.bunifuButton21.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuButton21.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton21.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuButton21.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
             this.bunifuButton21.IconMarginLeft = 11;
             this.bunifuButton21.IconPadding = 10;
             this.bunifuButton21.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuButton21.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton21.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuButton21.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.bunifuButton21.IconSize = 25;
             this.bunifuButton21.IdleBorderColor = System.Drawing.Color.Black;
@@ -243,7 +243,7 @@
             this.bunifuButton22.ButtonTextMarginLeft = 0;
             this.bunifuButton22.ColorContrastOnClick = 45;
             this.bunifuButton22.ColorContrastOnHover = 45;
-            this.bunifuButton22.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton22.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges2.BottomLeft = true;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = true;
@@ -257,12 +257,12 @@
             this.bunifuButton22.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuButton22.ForeColor = System.Drawing.Color.White;
             this.bunifuButton22.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuButton22.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton22.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuButton22.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
             this.bunifuButton22.IconMarginLeft = 11;
             this.bunifuButton22.IconPadding = 10;
             this.bunifuButton22.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuButton22.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton22.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuButton22.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.bunifuButton22.IconSize = 25;
             this.bunifuButton22.IdleBorderColor = System.Drawing.Color.Black;

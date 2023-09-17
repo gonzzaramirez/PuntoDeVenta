@@ -163,7 +163,8 @@ namespace CapaPresentacion
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dgvData.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvData.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -176,7 +177,7 @@ namespace CapaPresentacion
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvData.ColumnHeadersHeight = 40;
+            this.dgvData.ColumnHeadersHeight = 25;
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnseleccionar,
             this.id,
@@ -221,7 +222,7 @@ namespace CapaPresentacion
             this.dgvData.HeaderBackColor = System.Drawing.Color.Maroon;
             this.dgvData.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvData.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvData.Location = new System.Drawing.Point(1, 107);
+            this.dgvData.Location = new System.Drawing.Point(1, 112);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -233,12 +234,14 @@ namespace CapaPresentacion
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvData.RowHeadersVisible = false;
+            this.dgvData.RowHeadersWidth = 30;
             this.dgvData.RowTemplate.Height = 40;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(696, 434);
+            this.dgvData.Size = new System.Drawing.Size(721, 434);
             this.dgvData.TabIndex = 31;
             this.dgvData.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Maroon;
             this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick_1);
+            this.dgvData.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvData_CellFormatting);
             // 
             // bunifuGradientPanel1
             // 
@@ -263,10 +266,10 @@ namespace CapaPresentacion
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.WhiteSmoke;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.DarkGray;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Gainsboro;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(678, 0);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(690, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(211, 655);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(199, 655);
             this.bunifuGradientPanel1.TabIndex = 33;
             // 
             // btnlimpiarCampos
@@ -1139,10 +1142,11 @@ namespace CapaPresentacion
             this.btnseleccionar.FillWeight = 864.9746F;
             this.btnseleccionar.Frozen = true;
             this.btnseleccionar.HeaderText = "";
-            this.btnseleccionar.MinimumWidth = 30;
+            this.btnseleccionar.MinimumWidth = 60;
             this.btnseleccionar.Name = "btnseleccionar";
             this.btnseleccionar.ReadOnly = true;
-            this.btnseleccionar.Width = 30;
+            this.btnseleccionar.Visible = false;
+            this.btnseleccionar.Width = 60;
             // 
             // id
             // 
@@ -1151,6 +1155,7 @@ namespace CapaPresentacion
             this.id.Name = "id";
             this.id.ReadOnly = true;
             this.id.Visible = false;
+            this.id.Width = 81;
             // 
             // Documento
             // 
@@ -1158,6 +1163,7 @@ namespace CapaPresentacion
             this.Documento.HeaderText = "Documento";
             this.Documento.Name = "Documento";
             this.Documento.ReadOnly = true;
+            this.Documento.Width = 94;
             // 
             // Nombre
             // 
@@ -1165,6 +1171,7 @@ namespace CapaPresentacion
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 74;
             // 
             // Apellido
             // 
@@ -1172,6 +1179,7 @@ namespace CapaPresentacion
             this.Apellido.HeaderText = "Apellido";
             this.Apellido.Name = "Apellido";
             this.Apellido.ReadOnly = true;
+            this.Apellido.Width = 74;
             // 
             // Clave
             // 
@@ -1179,6 +1187,7 @@ namespace CapaPresentacion
             this.Clave.HeaderText = "Clave";
             this.Clave.Name = "Clave";
             this.Clave.ReadOnly = true;
+            this.Clave.Width = 58;
             // 
             // Email
             // 
@@ -1186,6 +1195,7 @@ namespace CapaPresentacion
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
+            this.Email.Width = 59;
             // 
             // Direccion
             // 
@@ -1193,13 +1203,15 @@ namespace CapaPresentacion
             this.Direccion.HeaderText = "Direccion";
             this.Direccion.Name = "Direccion";
             this.Direccion.ReadOnly = true;
+            this.Direccion.Width = 81;
             // 
             // FechaNacimiento
             // 
             this.FechaNacimiento.FillWeight = 30.45685F;
-            this.FechaNacimiento.HeaderText = "FechaNacimiento";
+            this.FechaNacimiento.HeaderText = "Nacimiento";
             this.FechaNacimiento.Name = "FechaNacimiento";
             this.FechaNacimiento.ReadOnly = true;
+            this.FechaNacimiento.Width = 92;
             // 
             // Telefono
             // 
@@ -1207,6 +1219,7 @@ namespace CapaPresentacion
             this.Telefono.HeaderText = "Telefono";
             this.Telefono.Name = "Telefono";
             this.Telefono.ReadOnly = true;
+            this.Telefono.Width = 76;
             // 
             // Estado
             // 
@@ -1214,6 +1227,7 @@ namespace CapaPresentacion
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
+            this.Estado.Width = 65;
             // 
             // Rol
             // 
@@ -1221,6 +1235,7 @@ namespace CapaPresentacion
             this.Rol.HeaderText = "Rol";
             this.Rol.Name = "Rol";
             this.Rol.ReadOnly = true;
+            this.Rol.Width = 47;
             // 
             // frmUsuarios
             // 
