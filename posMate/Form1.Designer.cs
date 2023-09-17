@@ -64,7 +64,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(191, 599);
+            this.panel1.Size = new System.Drawing.Size(169, 599);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -79,7 +79,7 @@
             this.btnCerrarSesion.IconColor = System.Drawing.Color.White;
             this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrarSesion.IconSize = 37;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(15, 530);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(10, 530);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(172, 54);
             this.btnCerrarSesion.TabIndex = 8;
@@ -108,7 +108,7 @@
             this.btnReportes.IconColor = System.Drawing.Color.White;
             this.btnReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReportes.IconSize = 37;
-            this.btnReportes.Location = new System.Drawing.Point(15, 460);
+            this.btnReportes.Location = new System.Drawing.Point(10, 460);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(172, 54);
             this.btnReportes.TabIndex = 7;
@@ -128,7 +128,7 @@
             this.btnUsuario.IconColor = System.Drawing.Color.White;
             this.btnUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUsuario.IconSize = 37;
-            this.btnUsuario.Location = new System.Drawing.Point(15, 12);
+            this.btnUsuario.Location = new System.Drawing.Point(10, 12);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(172, 54);
             this.btnUsuario.TabIndex = 0;
@@ -148,7 +148,7 @@
             this.btnCategorias.IconColor = System.Drawing.Color.White;
             this.btnCategorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCategorias.IconSize = 37;
-            this.btnCategorias.Location = new System.Drawing.Point(12, 392);
+            this.btnCategorias.Location = new System.Drawing.Point(7, 392);
             this.btnCategorias.Name = "btnCategorias";
             this.btnCategorias.Size = new System.Drawing.Size(172, 54);
             this.btnCategorias.TabIndex = 6;
@@ -168,7 +168,7 @@
             this.btnBackup.IconColor = System.Drawing.Color.White;
             this.btnBackup.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBackup.IconSize = 37;
-            this.btnBackup.Location = new System.Drawing.Point(15, 76);
+            this.btnBackup.Location = new System.Drawing.Point(10, 76);
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Size = new System.Drawing.Size(172, 54);
             this.btnBackup.TabIndex = 1;
@@ -188,7 +188,7 @@
             this.btnCompras.IconColor = System.Drawing.Color.White;
             this.btnCompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCompras.IconSize = 37;
-            this.btnCompras.Location = new System.Drawing.Point(15, 332);
+            this.btnCompras.Location = new System.Drawing.Point(10, 332);
             this.btnCompras.Name = "btnCompras";
             this.btnCompras.Size = new System.Drawing.Size(172, 54);
             this.btnCompras.TabIndex = 5;
@@ -208,7 +208,7 @@
             this.btnVentas.IconColor = System.Drawing.Color.White;
             this.btnVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVentas.IconSize = 37;
-            this.btnVentas.Location = new System.Drawing.Point(12, 140);
+            this.btnVentas.Location = new System.Drawing.Point(7, 140);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(172, 54);
             this.btnVentas.TabIndex = 2;
@@ -228,7 +228,7 @@
             this.btnProductos.IconColor = System.Drawing.Color.White;
             this.btnProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnProductos.IconSize = 37;
-            this.btnProductos.Location = new System.Drawing.Point(15, 268);
+            this.btnProductos.Location = new System.Drawing.Point(10, 268);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(172, 54);
             this.btnProductos.TabIndex = 4;
@@ -248,7 +248,7 @@
             this.btnProveedores.IconColor = System.Drawing.Color.White;
             this.btnProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnProveedores.IconSize = 37;
-            this.btnProveedores.Location = new System.Drawing.Point(22, 204);
+            this.btnProveedores.Location = new System.Drawing.Point(17, 204);
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.Size = new System.Drawing.Size(172, 54);
             this.btnProveedores.TabIndex = 3;
@@ -264,9 +264,9 @@
             this.panel2.Controls.Add(this.lblUsuario);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(191, 0);
+            this.panel2.Location = new System.Drawing.Point(169, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(883, 35);
+            this.panel2.Size = new System.Drawing.Size(905, 35);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -279,7 +279,7 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(812, 6);
+            this.iconButton1.Location = new System.Drawing.Point(880, 6);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(22, 23);
             this.iconButton1.TabIndex = 0;
@@ -291,7 +291,7 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblUsuario.Location = new System.Drawing.Point(720, 9);
+            this.lblUsuario.Location = new System.Drawing.Point(802, 9);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(72, 16);
             this.lblUsuario.TabIndex = 1;
@@ -303,7 +303,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(661, 9);
+            this.label1.Location = new System.Drawing.Point(743, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 16);
             this.label1.TabIndex = 0;
@@ -313,9 +313,9 @@
             // contenedor
             // 
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenedor.Location = new System.Drawing.Point(191, 35);
+            this.contenedor.Location = new System.Drawing.Point(169, 35);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(883, 564);
+            this.contenedor.Size = new System.Drawing.Size(905, 564);
             this.contenedor.TabIndex = 2;
             this.contenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.contenedor_Paint);
             // 

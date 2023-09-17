@@ -316,6 +316,9 @@
     <EmbeddedResource Include="frmBackUp.resx">
       <DependentUpon>frmBackUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>

@@ -34,6 +34,7 @@ namespace CapaPresentacion
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -73,18 +74,6 @@ namespace CapaPresentacion
             this.dB_PosnetDataSet = new CapaPresentacion.DB_PosnetDataSet();
             this.uSUARIOTableAdapter = new CapaPresentacion.DB_PosnetDataSetTableAdapters.USUARIOTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnseleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dgvData = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.btnlimpiarCampos = new FontAwesome.Sharp.IconButton();
@@ -106,6 +95,18 @@ namespace CapaPresentacion
             this.btnLimpiar = new FontAwesome.Sharp.IconButton();
             this.btnAlta = new FontAwesome.Sharp.IconButton();
             this.btnBaja = new FontAwesome.Sharp.IconButton();
+            this.btnseleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_PosnetDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
@@ -151,96 +152,8 @@ namespace CapaPresentacion
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(832, 0);
+            this.panel1.Size = new System.Drawing.Size(889, 0);
             this.panel1.TabIndex = 32;
-            // 
-            // Rol
-            // 
-            this.Rol.FillWeight = 30.45685F;
-            this.Rol.HeaderText = "Rol";
-            this.Rol.Name = "Rol";
-            this.Rol.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.FillWeight = 30.45685F;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            // 
-            // Telefono
-            // 
-            this.Telefono.FillWeight = 30.45685F;
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            // 
-            // FechaNacimiento
-            // 
-            this.FechaNacimiento.FillWeight = 30.45685F;
-            this.FechaNacimiento.HeaderText = "FechaNacimiento";
-            this.FechaNacimiento.Name = "FechaNacimiento";
-            this.FechaNacimiento.ReadOnly = true;
-            // 
-            // Direccion
-            // 
-            this.Direccion.FillWeight = 30.45685F;
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.Name = "Direccion";
-            this.Direccion.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.FillWeight = 30.45685F;
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // Clave
-            // 
-            this.Clave.FillWeight = 30.45685F;
-            this.Clave.HeaderText = "Clave";
-            this.Clave.Name = "Clave";
-            this.Clave.ReadOnly = true;
-            // 
-            // Apellido
-            // 
-            this.Apellido.FillWeight = 30.45685F;
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.FillWeight = 30.45685F;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Documento
-            // 
-            this.Documento.FillWeight = 30.45685F;
-            this.Documento.HeaderText = "Documento";
-            this.Documento.Name = "Documento";
-            this.Documento.ReadOnly = true;
-            // 
-            // id
-            // 
-            this.id.FillWeight = 30.45685F;
-            this.id.HeaderText = "IdUsuario";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // btnseleccionar
-            // 
-            this.btnseleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.btnseleccionar.FillWeight = 864.9746F;
-            this.btnseleccionar.Frozen = true;
-            this.btnseleccionar.HeaderText = "";
-            this.btnseleccionar.MinimumWidth = 30;
-            this.btnseleccionar.Name = "btnseleccionar";
-            this.btnseleccionar.ReadOnly = true;
-            this.btnseleccionar.Width = 30;
             // 
             // dgvData
             // 
@@ -257,7 +170,7 @@ namespace CapaPresentacion
             this.dgvData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -308,13 +221,21 @@ namespace CapaPresentacion
             this.dgvData.HeaderBackColor = System.Drawing.Color.Maroon;
             this.dgvData.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvData.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvData.Location = new System.Drawing.Point(243, 145);
+            this.dgvData.Location = new System.Drawing.Point(1, 107);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvData.RowHeadersVisible = false;
             this.dgvData.RowTemplate.Height = 40;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(582, 396);
+            this.dgvData.Size = new System.Drawing.Size(696, 434);
             this.dgvData.TabIndex = 31;
             this.dgvData.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Maroon;
             this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick_1);
@@ -337,12 +258,12 @@ namespace CapaPresentacion
             this.bunifuGradientPanel1.Controls.Add(this.txtClave);
             this.bunifuGradientPanel1.Controls.Add(this.txtApellido);
             this.bunifuGradientPanel1.Controls.Add(this.txtNombre);
-            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Silver;
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Silver;
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.DarkGray;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.DarkGray;
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.WhiteSmoke;
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.DarkGray;
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Gainsboro;
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(678, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(211, 655);
@@ -351,6 +272,7 @@ namespace CapaPresentacion
             // btnlimpiarCampos
             // 
             this.btnlimpiarCampos.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnlimpiarCampos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnlimpiarCampos.FlatAppearance.BorderSize = 0;
             this.btnlimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlimpiarCampos.ForeColor = System.Drawing.Color.White;
@@ -359,17 +281,19 @@ namespace CapaPresentacion
             this.btnlimpiarCampos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnlimpiarCampos.IconSize = 28;
             this.btnlimpiarCampos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnlimpiarCampos.Location = new System.Drawing.Point(12, 509);
+            this.btnlimpiarCampos.Location = new System.Drawing.Point(15, 523);
             this.btnlimpiarCampos.Name = "btnlimpiarCampos";
             this.btnlimpiarCampos.Size = new System.Drawing.Size(180, 32);
             this.btnlimpiarCampos.TabIndex = 13;
             this.btnlimpiarCampos.Text = "Limpiar campos";
             this.btnlimpiarCampos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnlimpiarCampos.UseVisualStyleBackColor = false;
+            this.btnlimpiarCampos.Click += new System.EventHandler(this.btnlimpiarCampos_Click_1);
             // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
@@ -378,13 +302,14 @@ namespace CapaPresentacion
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 28;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.Location = new System.Drawing.Point(12, 471);
+            this.btnGuardar.Location = new System.Drawing.Point(15, 485);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(180, 32);
             this.btnGuardar.TabIndex = 12;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // cboEstado
             // 
@@ -422,7 +347,7 @@ namespace CapaPresentacion
             this.cboEstado.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.cboEstado.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cboEstado.ItemTopMargin = 3;
-            this.cboEstado.Location = new System.Drawing.Point(12, 431);
+            this.cboEstado.Location = new System.Drawing.Point(15, 431);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(180, 32);
             this.cboEstado.TabIndex = 11;
@@ -466,7 +391,7 @@ namespace CapaPresentacion
             this.cboRol.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.cboRol.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cboRol.ItemTopMargin = 3;
-            this.cboRol.Location = new System.Drawing.Point(12, 381);
+            this.cboRol.Location = new System.Drawing.Point(15, 381);
             this.cboRol.Name = "cboRol";
             this.cboRol.Size = new System.Drawing.Size(180, 32);
             this.cboRol.TabIndex = 10;
@@ -495,7 +420,7 @@ namespace CapaPresentacion
             this.dtpFecha.IconColor = System.Drawing.Color.DarkGray;
             this.dtpFecha.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtpFecha.LeftTextMargin = 5;
-            this.dtpFecha.Location = new System.Drawing.Point(12, 292);
+            this.dtpFecha.Location = new System.Drawing.Point(15, 292);
             this.dtpFecha.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(180, 32);
@@ -531,7 +456,7 @@ namespace CapaPresentacion
             this.txtTelefono.IconRight = null;
             this.txtTelefono.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelefono.Lines = new string[0];
-            this.txtTelefono.Location = new System.Drawing.Point(12, 337);
+            this.txtTelefono.Location = new System.Drawing.Point(15, 337);
             this.txtTelefono.MaxLength = 32767;
             this.txtTelefono.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTelefono.Modified = false;
@@ -577,6 +502,7 @@ namespace CapaPresentacion
             this.txtTelefono.TextPlaceholder = "Telefono";
             this.txtTelefono.UseSystemPasswordChar = false;
             this.txtTelefono.WordWrap = true;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtDireccion
             // 
@@ -607,7 +533,7 @@ namespace CapaPresentacion
             this.txtDireccion.IconRight = null;
             this.txtDireccion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDireccion.Lines = new string[0];
-            this.txtDireccion.Location = new System.Drawing.Point(12, 247);
+            this.txtDireccion.Location = new System.Drawing.Point(15, 247);
             this.txtDireccion.MaxLength = 32767;
             this.txtDireccion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDireccion.Modified = false;
@@ -683,7 +609,7 @@ namespace CapaPresentacion
             this.txtDNI.IconRight = null;
             this.txtDNI.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDNI.Lines = new string[0];
-            this.txtDNI.Location = new System.Drawing.Point(12, 202);
+            this.txtDNI.Location = new System.Drawing.Point(15, 202);
             this.txtDNI.MaxLength = 32767;
             this.txtDNI.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDNI.Modified = false;
@@ -729,6 +655,7 @@ namespace CapaPresentacion
             this.txtDNI.TextPlaceholder = "DNI";
             this.txtDNI.UseSystemPasswordChar = false;
             this.txtDNI.WordWrap = true;
+            this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
             // 
             // txtEmail
             // 
@@ -759,7 +686,7 @@ namespace CapaPresentacion
             this.txtEmail.IconRight = null;
             this.txtEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(12, 157);
+            this.txtEmail.Location = new System.Drawing.Point(15, 157);
             this.txtEmail.MaxLength = 32767;
             this.txtEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEmail.Modified = false;
@@ -835,7 +762,7 @@ namespace CapaPresentacion
             this.txtClave.IconRight = null;
             this.txtClave.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtClave.Lines = new string[0];
-            this.txtClave.Location = new System.Drawing.Point(12, 112);
+            this.txtClave.Location = new System.Drawing.Point(15, 112);
             this.txtClave.MaxLength = 32767;
             this.txtClave.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtClave.Modified = false;
@@ -911,7 +838,7 @@ namespace CapaPresentacion
             this.txtApellido.IconRight = null;
             this.txtApellido.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtApellido.Lines = new string[0];
-            this.txtApellido.Location = new System.Drawing.Point(12, 67);
+            this.txtApellido.Location = new System.Drawing.Point(15, 67);
             this.txtApellido.MaxLength = 32767;
             this.txtApellido.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtApellido.Modified = false;
@@ -987,7 +914,7 @@ namespace CapaPresentacion
             this.txtNombre.IconRight = null;
             this.txtNombre.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombre.Lines = new string[0];
-            this.txtNombre.Location = new System.Drawing.Point(12, 22);
+            this.txtNombre.Location = new System.Drawing.Point(15, 22);
             this.txtNombre.MaxLength = 32767;
             this.txtNombre.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNombre.Modified = false;
@@ -1042,7 +969,7 @@ namespace CapaPresentacion
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(425, 12);
+            this.bunifuLabel1.Location = new System.Drawing.Point(214, 0);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(122, 39);
@@ -1059,7 +986,7 @@ namespace CapaPresentacion
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.bunifuLabel2.Location = new System.Drawing.Point(553, 12);
+            this.bunifuLabel2.Location = new System.Drawing.Point(342, 0);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(132, 39);
@@ -1071,7 +998,7 @@ namespace CapaPresentacion
             // cboBusqueda
             // 
             this.cboBusqueda.FormattingEnabled = true;
-            this.cboBusqueda.Location = new System.Drawing.Point(535, 119);
+            this.cboBusqueda.Location = new System.Drawing.Point(354, 84);
             this.cboBusqueda.Name = "cboBusqueda";
             this.cboBusqueda.Size = new System.Drawing.Size(95, 21);
             this.cboBusqueda.TabIndex = 37;
@@ -1105,7 +1032,7 @@ namespace CapaPresentacion
             this.txtBusqueda.IconRight = null;
             this.txtBusqueda.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBusqueda.Lines = new string[0];
-            this.txtBusqueda.Location = new System.Drawing.Point(633, 119);
+            this.txtBusqueda.Location = new System.Drawing.Point(455, 84);
             this.txtBusqueda.MaxLength = 32767;
             this.txtBusqueda.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtBusqueda.Modified = false;
@@ -1155,6 +1082,7 @@ namespace CapaPresentacion
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
@@ -1163,48 +1091,142 @@ namespace CapaPresentacion
             this.btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiar.IconSize = 18;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpiar.Location = new System.Drawing.Point(801, 119);
+            this.btnLimpiar.Location = new System.Drawing.Point(626, 86);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(24, 20);
             this.btnLimpiar.TabIndex = 14;
             this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
             // 
             // btnAlta
             // 
             this.btnAlta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnAlta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlta.FlatAppearance.BorderSize = 0;
             this.btnAlta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlta.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAlta.IconColor = System.Drawing.Color.Black;
             this.btnAlta.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAlta.Location = new System.Drawing.Point(243, 117);
+            this.btnAlta.Location = new System.Drawing.Point(12, 82);
             this.btnAlta.Name = "btnAlta";
             this.btnAlta.Size = new System.Drawing.Size(101, 23);
             this.btnAlta.TabIndex = 38;
             this.btnAlta.Text = "Usuarios activos";
             this.btnAlta.UseVisualStyleBackColor = false;
+            this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
             // 
             // btnBaja
             // 
             this.btnBaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnBaja.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBaja.FlatAppearance.BorderSize = 0;
             this.btnBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBaja.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnBaja.IconColor = System.Drawing.Color.Black;
             this.btnBaja.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBaja.Location = new System.Drawing.Point(350, 117);
+            this.btnBaja.Location = new System.Drawing.Point(119, 82);
             this.btnBaja.Name = "btnBaja";
             this.btnBaja.Size = new System.Drawing.Size(101, 23);
             this.btnBaja.TabIndex = 39;
             this.btnBaja.Text = "Usuarios inactivos";
             this.btnBaja.UseVisualStyleBackColor = false;
+            this.btnBaja.Click += new System.EventHandler(this.btnBaja_Click);
+            // 
+            // btnseleccionar
+            // 
+            this.btnseleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.btnseleccionar.FillWeight = 864.9746F;
+            this.btnseleccionar.Frozen = true;
+            this.btnseleccionar.HeaderText = "";
+            this.btnseleccionar.MinimumWidth = 30;
+            this.btnseleccionar.Name = "btnseleccionar";
+            this.btnseleccionar.ReadOnly = true;
+            this.btnseleccionar.Width = 30;
+            // 
+            // id
+            // 
+            this.id.FillWeight = 30.45685F;
+            this.id.HeaderText = "IdUsuario";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // Documento
+            // 
+            this.Documento.FillWeight = 30.45685F;
+            this.Documento.HeaderText = "Documento";
+            this.Documento.Name = "Documento";
+            this.Documento.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.FillWeight = 30.45685F;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Apellido
+            // 
+            this.Apellido.FillWeight = 30.45685F;
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            // 
+            // Clave
+            // 
+            this.Clave.FillWeight = 30.45685F;
+            this.Clave.HeaderText = "Clave";
+            this.Clave.Name = "Clave";
+            this.Clave.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.FillWeight = 30.45685F;
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Direccion
+            // 
+            this.Direccion.FillWeight = 30.45685F;
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
+            // 
+            // FechaNacimiento
+            // 
+            this.FechaNacimiento.FillWeight = 30.45685F;
+            this.FechaNacimiento.HeaderText = "FechaNacimiento";
+            this.FechaNacimiento.Name = "FechaNacimiento";
+            this.FechaNacimiento.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.FillWeight = 30.45685F;
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.FillWeight = 30.45685F;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
+            // Rol
+            // 
+            this.Rol.FillWeight = 30.45685F;
+            this.Rol.HeaderText = "Rol";
+            this.Rol.Name = "Rol";
+            this.Rol.ReadOnly = true;
             // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 655);
+            this.ClientSize = new System.Drawing.Size(889, 655);
             this.Controls.Add(this.btnBaja);
             this.Controls.Add(this.btnAlta);
             this.Controls.Add(this.btnLimpiar);
@@ -1237,18 +1259,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.BindingSource uSUARIOBindingSource;
         private DB_PosnetDataSetTableAdapters.USUARIOTableAdapter uSUARIOTableAdapter;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaNacimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewButtonColumn btnseleccionar;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvData;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.UI.WinForms.BunifuDatePicker dtpFecha;
@@ -1270,5 +1280,17 @@ namespace CapaPresentacion
         private FontAwesome.Sharp.IconButton btnLimpiar;
         private FontAwesome.Sharp.IconButton btnAlta;
         private FontAwesome.Sharp.IconButton btnBaja;
+        private System.Windows.Forms.DataGridViewButtonColumn btnseleccionar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Clave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaNacimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
     }
 }

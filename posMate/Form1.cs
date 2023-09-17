@@ -108,7 +108,10 @@ namespace posMate
         private void btnReportes_Click_2(object sender, EventArgs e)
         {
             SidePanel.Top = btnReportes.Top;
+            frmReportes formularioRP = new frmReportes();
+            MostrarFormularioEnContenedor(formularioRP);
         }
+
 
         private void btnProveedores_Click_2(object sender, EventArgs e)
         {
