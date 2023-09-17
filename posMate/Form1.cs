@@ -123,6 +123,8 @@ namespace posMate
         private void btnProductos_Click_2(object sender, EventArgs e)
         {
             SidePanel.Top = btnProductos.Top;
+            frmProductos formularioPD = new frmProductos();
+            MostrarFormularioEnContenedor(formularioPD);
         }
 
         private void btnCompras_Click(object sender, EventArgs e)
@@ -133,6 +135,8 @@ namespace posMate
         private void btnCategorias_Click_1(object sender, EventArgs e)
         {
             SidePanel.Top = btnCategorias.Top;
+            frmCategorias formularioCG = new frmCategorias();
+            MostrarFormularioEnContenedor(formularioCG);
         }
 
         private void btnCerrarSesion_Click_1(object sender, EventArgs e)

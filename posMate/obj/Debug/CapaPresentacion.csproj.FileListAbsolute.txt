@@ -193,3 +193,5 @@ C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_
 C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.Inicio.resources
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.frmReportes.resources
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.frmProveedores.resources
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.frmCategorias.resources
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.frmProductos.resources
