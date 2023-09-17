@@ -546,7 +546,7 @@
             this.dgvData.HeaderBackColor = System.Drawing.Color.Maroon;
             this.dgvData.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvData.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvData.Location = new System.Drawing.Point(184, 120);
+            this.dgvData.Location = new System.Drawing.Point(172, 111);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
