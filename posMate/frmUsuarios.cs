@@ -92,23 +92,23 @@ namespace CapaPresentacion
 
         }
 
-       
+
 
 
         private void limpiar()
         {
             txtDNI.Focus();
             txtIndice.Text = "-1";
-            txtId.Clear();
+            txtId.Clear(); // Borra el campo ID al agregar un nuevo usuario
             txtDNI.Clear();
             txtNombre.Clear();
             txtApellido.Clear();
             txtClave.Clear();
             txtEmail.Clear();
             txtDireccion.Clear();
-            dtpFecha.Value = DateTime.Now; 
+            dtpFecha.Value = DateTime.Now;
             txtTelefono.Clear();
-            cboRol.SelectedIndex = -1; 
+            cboRol.SelectedIndex = -1;
             cboEstado.SelectedIndex = -1;
         }
 
@@ -254,9 +254,21 @@ namespace CapaPresentacion
             }
 
             string mensaje = string.Empty;
+            int idUsuario = 0;
+
+            if (!string.IsNullOrEmpty(txtId.Text))
+            {
+                // Si el campo txtId no está vacío, intenta convertirlo a un entero
+                if (!int.TryParse(txtId.Text, out idUsuario))
+                {
+                    MessageBox.Show("El campo ID no contiene un valor numérico válido.");
+                    return;
+                }
+            }
+
             Usuario usuario = new Usuario()
             {
-                IdUsuario = Convert.ToInt32(txtId.Text),
+                IdUsuario = idUsuario,
                 Nombre = txtNombre.Text,
                 Apellido = txtApellido.Text,
                 Clave = txtClave.Text,
@@ -285,34 +297,26 @@ namespace CapaPresentacion
             }
             else
             {
-                // Validación del índice antes de acceder a la fila
-                if (int.TryParse(txtIndice.Text, out int rowIndex) && rowIndex >= 0 && rowIndex < dgvData.Rows.Count)
+                bool resultado = new CN_Usuario().Editar(usuario, out mensaje);
+                if (resultado)
                 {
-                    bool resultado = new CN_Usuario().Editar(usuario, out mensaje);
-                    if (resultado)
-                    {
-                        DataGridViewRow row = dgvData.Rows[rowIndex];
-                        row.Cells["Id"].Value = txtId.Text;
-                        row.Cells["Nombre"].Value = txtNombre.Text;
-                        row.Cells["Apellido"].Value = txtApellido.Text;
-                        row.Cells["Clave"].Value = txtClave.Text;
-                        row.Cells["Email"].Value = txtEmail.Text;
-                        row.Cells["Documento"].Value = txtDNI.Text;
-                        row.Cells["Direccion"].Value = txtDireccion.Text;
-                        row.Cells["FechaNacimiento"].Value = dtpFecha.Value;
-                        row.Cells["Telefono"].Value = txtTelefono.Text;
-                        row.Cells["Estado"].Value = ((OpcionCombo)cboEstado.SelectedItem).Texto.ToString();
-                        row.Cells["Rol"].Value = ((OpcionCombo)cboRol.SelectedItem).Texto.ToString();
-                        limpiar();
-                    }
-                    else
-                    {
-                        MessageBox.Show(mensaje);
-                    }
+                    DataGridViewRow row = dgvData.Rows[int.Parse(txtIndice.Text)];
+                    row.Cells["Id"].Value = txtId.Text;
+                    row.Cells["Nombre"].Value = txtNombre.Text;
+                    row.Cells["Apellido"].Value = txtApellido.Text;
+                    row.Cells["Clave"].Value = txtClave.Text;
+                    row.Cells["Email"].Value = txtEmail.Text;
+                    row.Cells["Documento"].Value = txtDNI.Text;
+                    row.Cells["Direccion"].Value = txtDireccion.Text;
+                    row.Cells["FechaNacimiento"].Value = dtpFecha.Value;
+                    row.Cells["Telefono"].Value = txtTelefono.Text;
+                    row.Cells["Estado"].Value = ((OpcionCombo)cboEstado.SelectedItem).Texto.ToString();
+                    row.Cells["Rol"].Value = ((OpcionCombo)cboRol.SelectedItem).Texto.ToString();
+                    limpiar();
                 }
                 else
                 {
-                    MessageBox.Show("El índice no es válido.");
+                    MessageBox.Show(mensaje);
                 }
             }
         }
