@@ -115,7 +115,7 @@ namespace CapaPresentacion
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(808, 0);
+            this.txtId.Location = new System.Drawing.Point(131, 12);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(24, 20);
             this.txtId.TabIndex = 24;
@@ -124,11 +124,10 @@ namespace CapaPresentacion
             // 
             // txtIndice
             // 
-            this.txtIndice.Location = new System.Drawing.Point(808, 0);
+            this.txtIndice.Location = new System.Drawing.Point(101, 12);
             this.txtIndice.Name = "txtIndice";
             this.txtIndice.Size = new System.Drawing.Size(24, 20);
             this.txtIndice.TabIndex = 30;
-            this.txtIndice.Text = "-1";
             this.txtIndice.Visible = false;
             // 
             // uSUARIOBindingSource
@@ -262,7 +261,7 @@ namespace CapaPresentacion
             this.id.Name = "id";
             this.id.ReadOnly = true;
             this.id.Visible = false;
-            this.id.Width = 81;
+            this.id.Width = 103;
             // 
             // Documento
             // 
