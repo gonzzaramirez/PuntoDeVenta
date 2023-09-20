@@ -36,5 +36,6 @@ namespace CapaDatos
                 throw ex;
             }
         }
+
     }
 }
