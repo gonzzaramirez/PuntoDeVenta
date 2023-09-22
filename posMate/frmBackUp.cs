@@ -76,7 +76,7 @@ namespace CapaPresentacion
                 // Verificar si la carpeta existe
                 if (!Directory.Exists(rutaCarpeta))
                 {
-                    MessageBox.Show("La carpeta de destino no existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("La carpeta de destino fue seleccionada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 

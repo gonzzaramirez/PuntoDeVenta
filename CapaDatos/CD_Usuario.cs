@@ -5,24 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using CapaEntidad;
-
-
+using CapaEntidad;  
 
 namespace CapaDatos
 {
     public class CD_Usuario
     {
+        // Método para listar usuarios desde la base de datos
         public List<Usuario> Listar()
         {
             List<Usuario> lista = new List<Usuario>();
 
+            // bloque 'using' para asegurarse de que se cierre la conexión correctamente
             using (SqlConnection con = new SqlConnection(Conexion.cadena))
             {
                 try
                 {
-                    con.Open(); // Abre la conexión aquí
+                    con.Open(); // Abre la conexión 
 
+                    // Consulta SQL para seleccionar datos de usuarios y roles
                     string query = @"
                         SELECT u.IdUsuario, u.DNI, u.Nombre, u.Apellido, u.Email, u.Clave, u.Direccion, 
                                ISNULL(u.FechaNacimiento, '') AS FechaNacimiento, u.Telefono, u.Estado, 
@@ -36,6 +37,7 @@ namespace CapaDatos
                         {
                             while (reader.Read())
                             {
+                                // Agrega objetos de Usuario a la lista, leyendo datos desde el SqlDataReader
                                 lista.Add(new Usuario()
                                 {
                                     IdUsuario = Convert.ToInt32(reader["IdUsuario"]),
@@ -60,7 +62,7 @@ namespace CapaDatos
                 }
                 catch (Exception ex)
                 {
-                    // Aquí puedes manejar la excepción, registrarla o lanzarla nuevamente
+                   
                     throw ex;
                 }
             }
@@ -68,7 +70,8 @@ namespace CapaDatos
             return lista;
         }
 
-        public int Registrar(Usuario obj , out string Mensaje)
+        // Método para registrar un usuario en la base de datos
+        public int Registrar(Usuario obj, out string Mensaje)
         {
             int idUsuarioGenerado = 0;
             Mensaje = string.Empty;
@@ -77,6 +80,7 @@ namespace CapaDatos
             {
                 using (SqlConnection con = new SqlConnection(Conexion.cadena))
                 {
+                    // Creación de un comando SQL para ejecutar un procedimiento almacenado
                     SqlCommand cmd = new SqlCommand("SP_REGISTRARUSUARIO", con);
                     cmd.Parameters.AddWithValue("Nombre", obj.Nombre);
                     cmd.Parameters.AddWithValue("Apellido", obj.Apellido);
@@ -89,11 +93,12 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("IdRol", obj.oRol.IdRol);
                     cmd.Parameters.AddWithValue("@Estado", obj.@Estado);
                     cmd.Parameters.Add("IdUsuarioResultado", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar,500).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
 
                     cmd.CommandType = CommandType.StoredProcedure;
                     con.Open();
 
+                    // Ejecutar el procedimiento almacenado
                     cmd.ExecuteNonQuery();
 
                     idUsuarioGenerado = Convert.ToInt32(cmd.Parameters["IdUsuarioResultado"].Value);
@@ -104,18 +109,12 @@ namespace CapaDatos
             {
                 idUsuarioGenerado = 0;
                 Mensaje = ex.Message;
-
-                
             }
-
-
-
-
 
             return idUsuarioGenerado;
         }
 
-
+        // Método para editar un usuario en la base de datos
         public bool Editar(Usuario obj, out string Mensaje)
         {
             bool respuesta = false;
@@ -125,6 +124,7 @@ namespace CapaDatos
             {
                 using (SqlConnection con = new SqlConnection(Conexion.cadena))
                 {
+                    // Creación de un comando SQL para ejecutar un procedimiento almacenado 
                     SqlCommand cmd = new SqlCommand("SP_EDITARUSUARIO", con);
                     cmd.Parameters.AddWithValue("IdUsuario", obj.IdUsuario);
                     cmd.Parameters.AddWithValue("Nombre", obj.Nombre);
@@ -138,11 +138,12 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("IdRol", obj.oRol.IdRol);
                     cmd.Parameters.AddWithValue("@Estado", obj.@Estado);
                     cmd.Parameters.Add("Respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar,500).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
 
                     cmd.CommandType = CommandType.StoredProcedure;
                     con.Open();
 
+                    // Ejecutar el procedimiento almacenado de edición
                     cmd.ExecuteNonQuery();
 
                     respuesta = Convert.ToBoolean(cmd.Parameters["Respuesta"].Value);
@@ -153,17 +154,9 @@ namespace CapaDatos
             {
                 respuesta = false;
                 Mensaje = ex.Message;
-
-
             }
-
-
-
-
 
             return respuesta;
         }
     }
 }
-
-

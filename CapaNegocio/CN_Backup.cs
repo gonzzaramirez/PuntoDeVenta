@@ -61,8 +61,7 @@ namespace CapaNegocio
                 }
                 else
                 {
-                    // No se pudieron cerrar las conexiones activas, muestra un mensaje o maneja el error según sea necesario.
-                    // Puedes agregar un MessageBox o registrar el error en un archivo de registro, por ejemplo.
+                    
                     return false;
                 }
             }

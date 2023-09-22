@@ -36,7 +36,7 @@ namespace posMate
 
             List<Permiso> ListaPermisos = new CN_Permiso().Listar(usuarioActual.IdUsuario);
 
-
+            //Recorre los permisos para habilitar menus
             foreach (Control control in panel1.Controls)
             {
                 bool encontrado = ListaPermisos.Any(m => m.NombreMenu == control.Name);
@@ -49,12 +49,7 @@ namespace posMate
             lblUsuario.Text = usuarioActual.Nombre;
 
             Inicio Inicio = new Inicio();
-            Inicio.TopLevel = false;
-            Inicio.FormBorderStyle = FormBorderStyle.None;
-            Inicio.Dock = DockStyle.Fill;
-            contenedor.Controls.Clear();
-            contenedor.Controls.Add(Inicio);    
-            Inicio.Show();
+            MostrarFormularioEnContenedor(Inicio);
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
@@ -87,13 +82,14 @@ namespace posMate
 
         }
 
+
         private void iconButton1_Click(object sender, EventArgs e)
         {
             SidePanel.Top = btnUsuario.Top;
             // Crea una instancia del formulario 
             frmUsuarios frmUsuario = new frmUsuarios();
 
-            // Llama al método para mostrar el formulario en el "contenedor"
+            // Llama al método para mostrar el formulario en el contenedor
             MostrarFormularioEnContenedor(frmUsuario);
         }
 
