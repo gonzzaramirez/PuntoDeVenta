@@ -61,7 +61,7 @@ namespace CapaPresentacion
 
             List<Usuario> usuarios = new CN_Usuario().Listar();
 
-            Usuario oUsuario = usuarios.FirstOrDefault(u => u.DNI == txtDNI.Text && u.Clave == txtClave.Text);
+            Usuario oUsuario = usuarios.FirstOrDefault(u => u.DNI == txtDNI.Text && u.Clave == txtClave.Text && u.Estado != false);
 
             if (oUsuario != null)
             {

@@ -189,7 +189,7 @@ namespace CapaPresentacion
 
         }
 
-    
+
 
         private void FiltrarUsuarios(bool estadoActivo)
         {
@@ -201,14 +201,10 @@ namespace CapaPresentacion
             {
                 bool estadoFila = row.Cells["Estado"].Value.ToString() == "Activo";
 
-                if (estadoActivo && estadoFila)
+                if ((estadoActivo && estadoFila) || (!estadoActivo && !estadoFila))
                 {
-                    // Mostrar usuarios activos
-                    row.Visible = true;
-                }
-                else if (!estadoActivo && !estadoFila)
-                {
-                    // Mostrar usuarios inactivos (dados de baja)
+                    // Mostrar usuarios activos si estadoActivo es true
+                    // Mostrar usuarios inactivos si estadoActivo es false
                     row.Visible = true;
                 }
                 else
@@ -218,6 +214,7 @@ namespace CapaPresentacion
                 }
             }
         }
+
 
         private void bunifuGradientPanel1_Click(object sender, EventArgs e)
         {

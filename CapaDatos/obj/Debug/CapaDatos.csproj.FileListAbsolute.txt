@@ -43,3 +43,12 @@ C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\CapaDatos\ob
 C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
 C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\Gonza\Desktop\Nueva carpeta (2)\Trabajo_Integrador_Grupo11\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaDatos\bin\Debug\CapaEntidad.dll
+C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaDatos\bin\Debug\CapaEntidad.pdb
+C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
+C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaDatos\obj\Debug\CapaDatos.pdb

@@ -45,7 +45,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(119, 12);
@@ -56,21 +56,22 @@
             // 
             // iconPictureBox1
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Store;
             this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 180;
-            this.iconPictureBox1.Location = new System.Drawing.Point(70, 34);
+            this.iconPictureBox1.Location = new System.Drawing.Point(64, 34);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(209, 180);
+            this.iconPictureBox1.Size = new System.Drawing.Size(182, 180);
             this.iconPictureBox1.TabIndex = 2;
             this.iconPictureBox1.TabStop = false;
             this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
             // txtDNI
             // 
+            this.txtDNI.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDNI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.txtDNI.Location = new System.Drawing.Point(41, 231);
@@ -82,6 +83,7 @@
             // 
             // txtClave
             // 
+            this.txtClave.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClave.Location = new System.Drawing.Point(42, 283);
             this.txtClave.Name = "txtClave";
@@ -171,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(308, 427);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
