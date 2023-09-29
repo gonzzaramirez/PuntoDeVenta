@@ -55,6 +55,9 @@ namespace posMate
         private void iconButton3_Click(object sender, EventArgs e)
         {
             SidePanel.Top = btnVentas.Top;
+            frmVentas formularioVT = new frmVentas();
+            MostrarFormularioEnContenedor(formularioVT);
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -126,6 +129,8 @@ namespace posMate
         private void btnCompras_Click(object sender, EventArgs e)
         {
             SidePanel.Top = btnCompras.Top;
+            frmCompras formularioCP = new frmCompras();
+            MostrarFormularioEnContenedor(formularioCP);
         }
 
         private void btnCategorias_Click_1(object sender, EventArgs e)

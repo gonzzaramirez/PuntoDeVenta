@@ -250,3 +250,5 @@ C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\D
 C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
 C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.csproj.Fody.CopyLocal.cache
 C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.frmCompras.resources
+C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.frmVentas.resources
