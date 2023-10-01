@@ -60,8 +60,11 @@
             this.txtApellido = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtNombre = new Bunifu.UI.WinForms.BunifuTextBox();
             this.dgvData = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.btnlimpiarCampos = new FontAwesome.Sharp.IconButton();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -245,6 +248,7 @@
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.BorderRadius = 1;
+            this.bunifuGradientPanel1.Controls.Add(this.btnlimpiarCampos);
             this.bunifuGradientPanel1.Controls.Add(this.btnGuardar);
             this.bunifuGradientPanel1.Controls.Add(this.cboEstado);
             this.bunifuGradientPanel1.Controls.Add(this.cboRol);
@@ -274,7 +278,7 @@
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 28;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.Location = new System.Drawing.Point(15, 367);
+            this.btnGuardar.Location = new System.Drawing.Point(15, 270);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(180, 32);
             this.btnGuardar.TabIndex = 12;
@@ -318,7 +322,7 @@
             this.cboEstado.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.cboEstado.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cboEstado.ItemTopMargin = 3;
-            this.cboEstado.Location = new System.Drawing.Point(15, 188);
+            this.cboEstado.Location = new System.Drawing.Point(16, 202);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(180, 32);
             this.cboEstado.TabIndex = 11;
@@ -362,7 +366,7 @@
             this.cboRol.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.cboRol.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cboRol.ItemTopMargin = 3;
-            this.cboRol.Location = new System.Drawing.Point(15, 146);
+            this.cboRol.Location = new System.Drawing.Point(16, 160);
             this.cboRol.Name = "cboRol";
             this.cboRol.Size = new System.Drawing.Size(180, 32);
             this.cboRol.TabIndex = 10;
@@ -391,7 +395,7 @@
             this.dtpFecha.IconColor = System.Drawing.Color.DarkGray;
             this.dtpFecha.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtpFecha.LeftTextMargin = 5;
-            this.dtpFecha.Location = new System.Drawing.Point(15, 102);
+            this.dtpFecha.Location = new System.Drawing.Point(15, 108);
             this.dtpFecha.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(180, 32);
@@ -456,7 +460,7 @@
             this.txtApellido.Padding = new System.Windows.Forms.Padding(3);
             this.txtApellido.PasswordChar = '\0';
             this.txtApellido.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtApellido.PlaceholderText = "Descripcion";
+            this.txtApellido.PlaceholderText = "Cantidad";
             this.txtApellido.ReadOnly = false;
             this.txtApellido.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtApellido.SelectedText = "";
@@ -470,7 +474,7 @@
             this.txtApellido.TextMarginBottom = 0;
             this.txtApellido.TextMarginLeft = 3;
             this.txtApellido.TextMarginTop = 1;
-            this.txtApellido.TextPlaceholder = "Descripcion";
+            this.txtApellido.TextPlaceholder = "Cantidad";
             this.txtApellido.UseSystemPasswordChar = false;
             this.txtApellido.WordWrap = true;
             // 
@@ -532,7 +536,7 @@
             this.txtNombre.Padding = new System.Windows.Forms.Padding(3);
             this.txtNombre.PasswordChar = '\0';
             this.txtNombre.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtNombre.PlaceholderText = "Nombre";
+            this.txtNombre.PlaceholderText = "Precio venta";
             this.txtNombre.ReadOnly = false;
             this.txtNombre.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtNombre.SelectedText = "";
@@ -546,7 +550,7 @@
             this.txtNombre.TextMarginBottom = 0;
             this.txtNombre.TextMarginLeft = 3;
             this.txtNombre.TextMarginTop = 1;
-            this.txtNombre.TextPlaceholder = "Nombre";
+            this.txtNombre.TextPlaceholder = "Precio venta";
             this.txtNombre.UseSystemPasswordChar = false;
             this.txtNombre.WordWrap = true;
             // 
@@ -575,6 +579,8 @@
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
             this.Descripcion,
+            this.PrecioVenta,
+            this.Cantidad,
             this.FechaRegistro,
             this.Categoria,
             this.Estado});
@@ -627,6 +633,26 @@
             this.dgvData.TabIndex = 55;
             this.dgvData.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Maroon;
             // 
+            // btnlimpiarCampos
+            // 
+            this.btnlimpiarCampos.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnlimpiarCampos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlimpiarCampos.FlatAppearance.BorderSize = 0;
+            this.btnlimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlimpiarCampos.ForeColor = System.Drawing.Color.White;
+            this.btnlimpiarCampos.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.btnlimpiarCampos.IconColor = System.Drawing.Color.White;
+            this.btnlimpiarCampos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnlimpiarCampos.IconSize = 28;
+            this.btnlimpiarCampos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnlimpiarCampos.Location = new System.Drawing.Point(15, 320);
+            this.btnlimpiarCampos.Name = "btnlimpiarCampos";
+            this.btnlimpiarCampos.Size = new System.Drawing.Size(180, 32);
+            this.btnlimpiarCampos.TabIndex = 14;
+            this.btnlimpiarCampos.Text = "Limpiar campos";
+            this.btnlimpiarCampos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnlimpiarCampos.UseVisualStyleBackColor = false;
+            // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
@@ -638,6 +664,18 @@
             this.Descripcion.HeaderText = "Descripcion";
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
+            // 
+            // PrecioVenta
+            // 
+            this.PrecioVenta.HeaderText = "PrecioVenta";
+            this.PrecioVenta.Name = "PrecioVenta";
+            this.PrecioVenta.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
             // 
             // FechaRegistro
             // 
@@ -697,8 +735,11 @@
         private Bunifu.UI.WinForms.BunifuTextBox txtApellido;
         private Bunifu.UI.WinForms.BunifuTextBox txtNombre;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvData;
+        private FontAwesome.Sharp.IconButton btnlimpiarCampos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
