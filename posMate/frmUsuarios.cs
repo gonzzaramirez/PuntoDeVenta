@@ -158,7 +158,7 @@ namespace CapaPresentacion
             if (e.RowIndex >= 0)
             {
                 int indice = e.RowIndex;
-
+                btnGuardar.Text = "Actualizar datos";
                 // Muestra los datos en los TextBox
                 txtIndice.Text = indice.ToString(); // Establecer el índice de la fila seleccionada
                 txtId.Text = dgvData.Rows[indice].Cells["Id"].Value.ToString();
@@ -350,6 +350,7 @@ namespace CapaPresentacion
 
         private void btnlimpiarCampos_Click_1(object sender, EventArgs e)
         {
+            btnGuardar.Text = "Guardar";
             limpiar();
         }
 
