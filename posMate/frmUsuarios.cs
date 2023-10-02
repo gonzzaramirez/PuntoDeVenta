@@ -159,6 +159,7 @@ namespace CapaPresentacion
             {
                 int indice = e.RowIndex;
                 btnGuardar.Text = "Actualizar datos";
+
                 // Muestra los datos en los TextBox
                 txtIndice.Text = indice.ToString(); // Establecer el índice de la fila seleccionada
                 txtId.Text = dgvData.Rows[indice].Cells["Id"].Value.ToString();
