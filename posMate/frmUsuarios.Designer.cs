@@ -1190,14 +1190,14 @@ namespace CapaPresentacion
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.Rotate;
             this.btnLimpiar.IconColor = System.Drawing.Color.White;
             this.btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiar.IconSize = 18;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpiar.Location = new System.Drawing.Point(626, 86);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(24, 20);
+            this.btnLimpiar.Size = new System.Drawing.Size(28, 20);
             this.btnLimpiar.TabIndex = 14;
             this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpiar.UseVisualStyleBackColor = false;

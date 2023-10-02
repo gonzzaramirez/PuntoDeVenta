@@ -33,47 +33,60 @@ namespace CapaPresentacion
 
         }
 
+
+        // Carga el formulario y se ejecuta este metodo
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dB_PosnetDataSet.USUARIO' table. You can move, or remove it, as needed.
-            
+            // Agregar opciones "Activo" y "No Activo" al ComboBox cboEstado
             cboEstado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
             cboEstado.Items.Add(new OpcionCombo() { Valor = 0, Texto = "No Activo" });
+
+            // Configurar el ComboBox cboEstado para mostrar el texto y usar el valor al seleccionar
             cboEstado.DisplayMember = "Texto";
-            cboEstado.ValueMember =  "Valor";
+            cboEstado.ValueMember = "Valor";
+
+            // Establecer la opción seleccionada inicialmente como "Activo"
             cboEstado.SelectedIndex = 0;
 
-
+            // Obtener una lista de roles y agregarlos al ComboBox cboRol
             List<Rol> listaRol = new CN_Rol().Listar();
             foreach (var item in listaRol)
             {
                 cboRol.Items.Add(new OpcionCombo() { Valor = item.IdRol, Texto = item.Descripcion });
-               
             }
+
+            // Configurar el ComboBox cboRol para mostrar el texto y usar el valor al seleccionar
             cboRol.DisplayMember = "Texto";
             cboRol.ValueMember = "Valor";
+
+            // Establecer la opción seleccionada inicialmente como administrador
             cboRol.SelectedIndex = 0;
 
-
-            foreach(DataGridViewColumn columna in dgvData.Columns)
+            // Iterar a través de las columnas del DataGridView dgvData
+            foreach (DataGridViewColumn columna in dgvData.Columns)
             {
-                if(columna.Visible == true && columna.Name != "btnseleccionar")
+                //  agrega a cboBusqueda
+                if (columna.Visible == true && columna.Name != "btnseleccionar")
                 {
-                  cboBusqueda.Items.Add(new OpcionCombo() { Valor = columna.Name, Texto = columna.HeaderText });
+                    cboBusqueda.Items.Add(new OpcionCombo() { Valor = columna.Name, Texto = columna.HeaderText });
                 }
-                
             }
+
+            // Configurar el ComboBox cboBusqueda para mostrar el texto y usar el valor al seleccionar
             cboBusqueda.DisplayMember = "Texto";
             cboBusqueda.ValueMember = "Valor";
+
+            // Establecer la opción seleccionada inicialmente como la primera columna visible
             cboBusqueda.SelectedIndex = 0;
 
-            //Mostrar usuarios
+            // Obtener una lista de usuarios y mostrarlos en el dgv
             List<Usuario> listaUsuario = new CN_Usuario().Listar();
 
             foreach (Usuario usuario in listaUsuario)
             {
+                // Agregar una fila al DataGridView con los datos del usuario
                 dgvData.Rows.Add(
-                    "", 
+                    "",
                     usuario.IdUsuario,
                     usuario.DNI,
                     usuario.Nombre,
@@ -87,19 +100,19 @@ namespace CapaPresentacion
                     usuario.oRol.Descripcion
                 );
             }
+
+           
             FiltrarUsuarios(true);
-
-
         }
 
 
 
-
+        //limpia los campos
         private void limpiar()
         {
             txtDNI.Focus();
             txtIndice.Text = "-1";
-            txtId.Clear(); // Borra el campo ID al agregar un nuevo usuario
+            txtId.Clear(); 
             txtDNI.Clear();
             txtNombre.Clear();
             txtApellido.Clear();
@@ -139,7 +152,7 @@ namespace CapaPresentacion
 
 
 
-
+        //seleccionar de los items en el dgv
         private void dgvData_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -176,7 +189,7 @@ namespace CapaPresentacion
 
         }
 
-    
+
 
         private void FiltrarUsuarios(bool estadoActivo)
         {
@@ -188,14 +201,10 @@ namespace CapaPresentacion
             {
                 bool estadoFila = row.Cells["Estado"].Value.ToString() == "Activo";
 
-                if (estadoActivo && estadoFila)
+                if ((estadoActivo && estadoFila) || (!estadoActivo && !estadoFila))
                 {
-                    // Mostrar usuarios activos
-                    row.Visible = true;
-                }
-                else if (!estadoActivo && !estadoFila)
-                {
-                    // Mostrar usuarios inactivos (dados de baja)
+                    // Mostrar usuarios activos si estadoActivo es true
+                    // Mostrar usuarios inactivos si estadoActivo es false
                     row.Visible = true;
                 }
                 else
@@ -205,6 +214,7 @@ namespace CapaPresentacion
                 }
             }
         }
+
 
         private void bunifuGradientPanel1_Click(object sender, EventArgs e)
         {
@@ -220,9 +230,12 @@ namespace CapaPresentacion
         {
 
         }
+
         // ********GUARDAR *************
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            //** VALIDACIONES **
+
             // Validación de campos obligatorios
             if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
                 string.IsNullOrWhiteSpace(txtApellido.Text) ||
@@ -266,6 +279,12 @@ namespace CapaPresentacion
                 }
             }
 
+            if (!Regex.IsMatch(txtNombre.Text, "^[A-Za-z ]+$") || !Regex.IsMatch(txtApellido.Text, "^[A-Za-z ]+$"))
+            {
+                MessageBox.Show("Los nombres y apellidos solo deben contener letras y espacios.");
+                return;
+            }
+
             Usuario usuario = new Usuario()
             {
                 IdUsuario = idUsuario,
@@ -281,6 +300,7 @@ namespace CapaPresentacion
                 Estado = Convert.ToInt32(((OpcionCombo)cboEstado.SelectedItem).Valor) == 1 ? true : false,
             };
 
+            //si es usuario nuevo pasa esto
             if (usuario.IdUsuario == 0)
             {
                 int idusuariogenerado = new CN_Usuario().Registrar(usuario, out mensaje);
@@ -298,6 +318,7 @@ namespace CapaPresentacion
                     MessageBox.Show(mensaje);
                 }
             }
+            //si es usuario ya existente actualiza
             else
             {
                 bool resultado = new CN_Usuario().Editar(usuario, out mensaje);
