@@ -17,6 +17,7 @@ namespace CapaPresentacion
 {
     public partial class frmBackUp : Form
     {
+
         public frmBackUp()
         {
             InitializeComponent();
@@ -37,6 +38,9 @@ namespace CapaPresentacion
                 // Enlazar la lista al ComboBox
                 cmbBasesDeDatos.DisplayMember = "name";
                 cmbBasesDeDatos.DataSource = dtBasesDeDatos;
+
+
+
             }
             catch (Exception ex)
             {
@@ -72,7 +76,7 @@ namespace CapaPresentacion
                 // Verificar si la carpeta existe
                 if (!Directory.Exists(rutaCarpeta))
                 {
-                    MessageBox.Show("La carpeta de destino no existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("La carpeta de destino no fue seleccionada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -124,5 +128,58 @@ namespace CapaPresentacion
                 txtRutaCarpeta.Text = folderDialog.SelectedPath;
             }
         }
+
+        private void btnImportar_Click(object sender, EventArgs e)
+        {
+            // Mostrar la advertencia antes de buscar el archivo
+            DialogResult confirmacionInicial = MessageBox.Show("Antes de importar asegúrese de haber seleccionado la base de datos actual sobre la que trabaja el proyecto. ¿Desea continuar?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirmacionInicial == DialogResult.No)
+            {
+                return; // No se buscará el archivo
+            }
+
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Archivos de respaldo de bases de datos (*.bak)|*.bak";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Mostrar un segundo aviso antes de la restauración
+                    DialogResult confirmacionRestauracion = MessageBox.Show("Al seleccionar si, todos los registros actuales se reemplazarán por los que contenga el archivo de restauración. ¿Desea continuar?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (confirmacionRestauracion == DialogResult.No)
+                    {
+                        return; // No se realizará la restauración
+                    }
+
+                    string rutaArchivoRespaldo = openFileDialog.FileName;
+
+                    string baseDeDatosSeleccionada = cmbBasesDeDatos.Text; // Tiene que ser igual a la del proyecto db_posnet
+
+                    if (string.IsNullOrEmpty(baseDeDatosSeleccionada))
+                    {
+                        MessageBox.Show("Selecciona una base de datos antes de realizar la restauración.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    // Llama a la función para restaurar la base de datos
+                    if (CN_Backup.RestaurarBaseDeDatos(baseDeDatosSeleccionada, rutaArchivoRespaldo))
+                    {
+                        MessageBox.Show("Restauración de base de datos completada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo restaurar la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al restaurar la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

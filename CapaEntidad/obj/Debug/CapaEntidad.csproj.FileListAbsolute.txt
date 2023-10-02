@@ -16,3 +16,9 @@ C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaEntidad\obj\
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaEntidad\obj\Debug\CapaEntidad.pdb

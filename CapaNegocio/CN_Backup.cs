@@ -15,24 +15,16 @@ namespace CapaNegocio
         {
             try
             {
-                // Obtiene la cadena de conexión desde la clase Conexion en la capa de datos
                 string connectionString = Conexion.cadena;
-
-                // Nombre del archivo de backup (puedes personalizarlo)
                 string backupFileName = rutaCarpeta + "\\Backup_" + nombreBaseDeDatos + "_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".bak";
 
-                // Crea una instancia de SqlConnection
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-
-                    // Crea un comando para ejecutar el backup
                     using (SqlCommand cmd = new SqlCommand())
                     {
                         cmd.Connection = connection;
                         cmd.CommandText = $"BACKUP DATABASE [{nombreBaseDeDatos}] TO DISK = '{backupFileName}'";
-
-                        // Ejecuta el comando
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -41,10 +33,75 @@ namespace CapaNegocio
             }
             catch (Exception ex)
             {
-                // Puedes manejar las excepciones aquí o propagarlas según tu preferencia
                 throw ex;
             }
         }
+
+        public static bool RestaurarBaseDeDatos(string nombreBaseDeDatos, string rutaArchivoRespaldo)
+        {
+            try
+            {
+                string connectionString = Conexion.cadena;
+
+                // Intentar cerrar todas las conexiones activas a la base de datos
+                if (CerrarConexionesActivas(nombreBaseDeDatos, connectionString))
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        using (SqlCommand cmd = new SqlCommand())
+                        {
+                            cmd.Connection = connection;
+                            cmd.CommandText = $"USE master; RESTORE DATABASE [{nombreBaseDeDatos}] FROM DISK = '{rutaArchivoRespaldo}'";
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+
+                    return true;
+                }
+                else
+                {
+                    
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private static bool CerrarConexionesActivas(string nombreBaseDeDatos, string connectionString)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand())
+                    {
+                        cmd.Connection = connection;
+                        cmd.CommandText = $@"
+                    USE master;
+                    DECLARE @killCommand NVARCHAR(MAX) = '';
+                    SELECT @killCommand += 'KILL ' + CAST(session_id AS NVARCHAR(10)) + ';'
+                    FROM sys.dm_exec_sessions
+                    WHERE database_id = DB_ID('{nombreBaseDeDatos}')
+                    EXEC (@killCommand);
+                ";
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false; // No se pudieron cerrar todas las conexiones activas
+            }
+        }
+
+
     }
 }
    

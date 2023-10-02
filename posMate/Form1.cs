@@ -36,7 +36,7 @@ namespace posMate
 
             List<Permiso> ListaPermisos = new CN_Permiso().Listar(usuarioActual.IdUsuario);
 
-
+            //Recorre los permisos para habilitar menus
             foreach (Control control in panel1.Controls)
             {
                 bool encontrado = ListaPermisos.Any(m => m.NombreMenu == control.Name);
@@ -49,17 +49,15 @@ namespace posMate
             lblUsuario.Text = usuarioActual.Nombre;
 
             Inicio Inicio = new Inicio();
-            Inicio.TopLevel = false;
-            Inicio.FormBorderStyle = FormBorderStyle.None;
-            Inicio.Dock = DockStyle.Fill;
-            contenedor.Controls.Clear();
-            contenedor.Controls.Add(Inicio);    
-            Inicio.Show();
+            MostrarFormularioEnContenedor(Inicio);
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
             SidePanel.Top = btnVentas.Top;
+            frmVentas formularioVT = new frmVentas();
+            MostrarFormularioEnContenedor(formularioVT);
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -87,13 +85,14 @@ namespace posMate
 
         }
 
+
         private void iconButton1_Click(object sender, EventArgs e)
         {
             SidePanel.Top = btnUsuario.Top;
             // Crea una instancia del formulario 
             frmUsuarios frmUsuario = new frmUsuarios();
 
-            // Llama al método para mostrar el formulario en el "contenedor"
+            // Llama al método para mostrar el formulario en el contenedor
             MostrarFormularioEnContenedor(frmUsuario);
         }
 
@@ -108,26 +107,37 @@ namespace posMate
         private void btnReportes_Click_2(object sender, EventArgs e)
         {
             SidePanel.Top = btnReportes.Top;
+            frmReportes formularioRP = new frmReportes();
+            MostrarFormularioEnContenedor(formularioRP);
         }
+
 
         private void btnProveedores_Click_2(object sender, EventArgs e)
         {
             SidePanel.Top = btnProveedores.Top;
+            frmProveedores formularioPV = new frmProveedores();
+            MostrarFormularioEnContenedor(formularioPV);
         }
 
         private void btnProductos_Click_2(object sender, EventArgs e)
         {
             SidePanel.Top = btnProductos.Top;
+            frmProductos formularioPD = new frmProductos();
+            MostrarFormularioEnContenedor(formularioPD);
         }
 
         private void btnCompras_Click(object sender, EventArgs e)
         {
             SidePanel.Top = btnCompras.Top;
+            frmCompras formularioCP = new frmCompras();
+            MostrarFormularioEnContenedor(formularioCP);
         }
 
         private void btnCategorias_Click_1(object sender, EventArgs e)
         {
             SidePanel.Top = btnCategorias.Top;
+            frmCategorias formularioCG = new frmCategorias();
+            MostrarFormularioEnContenedor(formularioCG);
         }
 
         private void btnCerrarSesion_Click_1(object sender, EventArgs e)

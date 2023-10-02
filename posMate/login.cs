@@ -51,18 +51,7 @@ namespace CapaPresentacion
             }
         }
 
-       
-
-      
-
-       
-       
-
-       
-
-        
-
-        private void bunifuButton21_Click(object sender, EventArgs e)
+        private void iconButton1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtDNI.Text) || string.IsNullOrWhiteSpace(txtClave.Text))
             {
@@ -72,7 +61,7 @@ namespace CapaPresentacion
 
             List<Usuario> usuarios = new CN_Usuario().Listar();
 
-            Usuario oUsuario = usuarios.FirstOrDefault(u => u.DNI == txtDNI.Text && u.Clave == txtClave.Text);
+            Usuario oUsuario = usuarios.FirstOrDefault(u => u.DNI == txtDNI.Text && u.Clave == txtClave.Text && u.Estado != false);
 
             if (oUsuario != null)
             {
@@ -87,7 +76,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void bunifuButton22_Click(object sender, EventArgs e)
+        private void iconButton2_Click(object sender, EventArgs e)
         {
             this.Close();
         }

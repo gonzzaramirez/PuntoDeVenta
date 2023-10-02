@@ -16,5 +16,10 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void btnlimpiarCampos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
