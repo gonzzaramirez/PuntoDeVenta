@@ -351,7 +351,7 @@ namespace CapaPresentacion
 
         private void btnlimpiarCampos_Click_1(object sender, EventArgs e)
         {
-            btnGuardar.Text = "Gaurdar";
+            btnGuardar.Text = "Guardar";
             limpiar();
         }
 
