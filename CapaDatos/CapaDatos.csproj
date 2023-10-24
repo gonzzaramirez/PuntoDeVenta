@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDatosDAL.cs" />
+    <Compile Include="CD_Categoria.cs" />
     <Compile Include="CD_Permiso.cs" />
     <Compile Include="CD_Rol.cs" />
     <Compile Include="Conexion.cs" />
