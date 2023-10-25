@@ -35,7 +35,6 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -43,9 +42,8 @@
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnRealizarBackup = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.btnImportar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.cmbBasesDeDatos = new System.Windows.Forms.ComboBox();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.cmbBasesDeDatos = new System.Windows.Forms.ComboBox();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -364,7 +362,6 @@
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.BorderRadius = 1;
             this.bunifuGradientPanel1.Controls.Add(this.bunifuLabel4);
-            this.bunifuGradientPanel1.Controls.Add(this.btnImportar);
             this.bunifuGradientPanel1.Controls.Add(this.btnRealizarBackup);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuButton21);
             this.bunifuGradientPanel1.Controls.Add(this.txtRutaCarpeta);
@@ -383,104 +380,6 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(889, 525);
             this.bunifuGradientPanel1.TabIndex = 11;
             // 
-            // btnImportar
-            // 
-            this.btnImportar.AllowAnimations = true;
-            this.btnImportar.AllowMouseEffects = true;
-            this.btnImportar.AllowToggling = false;
-            this.btnImportar.AnimationSpeed = 200;
-            this.btnImportar.AutoGenerateColors = false;
-            this.btnImportar.AutoRoundBorders = true;
-            this.btnImportar.AutoSizeLeftIcon = true;
-            this.btnImportar.AutoSizeRightIcon = true;
-            this.btnImportar.BackColor = System.Drawing.Color.Transparent;
-            this.btnImportar.BackColor1 = System.Drawing.Color.Teal;
-            this.btnImportar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImportar.BackgroundImage")));
-            this.btnImportar.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Dot;
-            this.btnImportar.ButtonText = "Importar base de datos";
-            this.btnImportar.ButtonTextMarginLeft = 0;
-            this.btnImportar.ColorContrastOnClick = 45;
-            this.btnImportar.ColorContrastOnHover = 45;
-            this.btnImportar.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnImportar.CustomizableEdges = borderEdges3;
-            this.btnImportar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnImportar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnImportar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnImportar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnImportar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnImportar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnImportar.ForeColor = System.Drawing.Color.White;
-            this.btnImportar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImportar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnImportar.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnImportar.IconMarginLeft = 11;
-            this.btnImportar.IconPadding = 10;
-            this.btnImportar.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnImportar.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnImportar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnImportar.IconSize = 25;
-            this.btnImportar.IdleBorderColor = System.Drawing.Color.Black;
-            this.btnImportar.IdleBorderRadius = 27;
-            this.btnImportar.IdleBorderThickness = 1;
-            this.btnImportar.IdleFillColor = System.Drawing.Color.Teal;
-            this.btnImportar.IdleIconLeftImage = null;
-            this.btnImportar.IdleIconRightImage = null;
-            this.btnImportar.IndicateFocus = false;
-            this.btnImportar.Location = new System.Drawing.Point(355, 268);
-            this.btnImportar.Name = "btnImportar";
-            this.btnImportar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnImportar.OnDisabledState.BorderRadius = 1;
-            this.btnImportar.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnImportar.OnDisabledState.BorderThickness = 1;
-            this.btnImportar.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnImportar.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnImportar.OnDisabledState.IconLeftImage = null;
-            this.btnImportar.OnDisabledState.IconRightImage = null;
-            this.btnImportar.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnImportar.onHoverState.BorderRadius = 1;
-            this.btnImportar.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnImportar.onHoverState.BorderThickness = 1;
-            this.btnImportar.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnImportar.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnImportar.onHoverState.IconLeftImage = null;
-            this.btnImportar.onHoverState.IconRightImage = null;
-            this.btnImportar.OnIdleState.BorderColor = System.Drawing.Color.Black;
-            this.btnImportar.OnIdleState.BorderRadius = 1;
-            this.btnImportar.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Dot;
-            this.btnImportar.OnIdleState.BorderThickness = 1;
-            this.btnImportar.OnIdleState.FillColor = System.Drawing.Color.Teal;
-            this.btnImportar.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnImportar.OnIdleState.IconLeftImage = null;
-            this.btnImportar.OnIdleState.IconRightImage = null;
-            this.btnImportar.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnImportar.OnPressedState.BorderRadius = 1;
-            this.btnImportar.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnImportar.OnPressedState.BorderThickness = 1;
-            this.btnImportar.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnImportar.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnImportar.OnPressedState.IconLeftImage = null;
-            this.btnImportar.OnPressedState.IconRightImage = null;
-            this.btnImportar.Size = new System.Drawing.Size(162, 29);
-            this.btnImportar.TabIndex = 11;
-            this.btnImportar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnImportar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnImportar.TextMarginLeft = 0;
-            this.btnImportar.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnImportar.UseDefaultRadiusAndThickness = true;
-            this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click);
-            // 
-            // cmbBasesDeDatos
-            // 
-            this.cmbBasesDeDatos.FormattingEnabled = true;
-            this.cmbBasesDeDatos.Location = new System.Drawing.Point(264, 120);
-            this.cmbBasesDeDatos.Name = "cmbBasesDeDatos";
-            this.cmbBasesDeDatos.Size = new System.Drawing.Size(357, 21);
-            this.cmbBasesDeDatos.TabIndex = 9;
-            // 
             // bunifuLabel4
             // 
             this.bunifuLabel4.AllowParentOverrides = false;
@@ -495,6 +394,14 @@
             this.bunifuLabel4.Text = "Seleccionar base de datos:";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // cmbBasesDeDatos
+            // 
+            this.cmbBasesDeDatos.FormattingEnabled = true;
+            this.cmbBasesDeDatos.Location = new System.Drawing.Point(264, 120);
+            this.cmbBasesDeDatos.Name = "cmbBasesDeDatos";
+            this.cmbBasesDeDatos.Size = new System.Drawing.Size(357, 21);
+            this.cmbBasesDeDatos.TabIndex = 9;
             // 
             // frmBackUp
             // 
@@ -520,7 +427,6 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnRealizarBackup;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnImportar;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private System.Windows.Forms.ComboBox cmbBasesDeDatos;
     }
