@@ -15,10 +15,14 @@ namespace CapaPresentacion
 {
     public partial class frmCompras : Form
     {
+
+        // para saber que usuario compra
+        private Usuario usuarioActual;
         // Declara una lista para el carrito
         private List<Producto> carrito = new List<Producto>();
-        public frmCompras()
+        public frmCompras(Usuario oUsuario = null)
         {
+            usuarioActual = oUsuario;
             InitializeComponent();
         }
 
@@ -31,6 +35,7 @@ namespace CapaPresentacion
 
         private void frmCompras_Load(object sender, EventArgs e)
         {
+         
 
             // Agregar opciones "Activo" y "No Activo" al ComboBox cboEstado
             cboEstadoo.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
@@ -123,6 +128,8 @@ namespace CapaPresentacion
 
             // Agrega el producto al carrito
             carrito.Add(nuevoProducto);
+            MessageBox.Show("Producto agregado al carrito. Total de productos en el carrito: " + carrito.Count);
+
 
             CN_Producto negocioProducto = new CN_Producto();
 
@@ -155,8 +162,54 @@ namespace CapaPresentacion
                     producto.FechaRegistro
                 );
             }
+
+
+        }
+
+        private void btnConfirmarCompra_Click(object sender, EventArgs e)
+        {
+            int idProveedor = Convert.ToInt32(((OpcionCombo)cboProveedor.SelectedItem).Valor);
+            decimal montoTotal = CalcularMontoTotalDelCarrito();
+            Compra nuevoCompra = new Compra
+            {
+                oUsuario = new Usuario() { IdUsuario = usuarioActual.IdUsuario },
+                oProveedor = new Proveedor() { IdProveedor = idProveedor },
+                MontoTotal = montoTotal,
+                FechaRegistro = dtpFecha.Value
+
+            };
+
+            CN_Compra negocioCompra = new CN_Compra();
+
+
+            if (negocioCompra.AgregarCompra(nuevoCompra))
+            {
+                MessageBox.Show("Compra confirmada");
+                carrito.Clear();
+
+                // Actualiza el DataGridView para reflejar la limpieza del carrito
+                ActualizarDataGridView();
+            }
+            else
+            {
+                MessageBox.Show("No anda");
+            }
+
         }
 
 
+        private decimal CalcularMontoTotalDelCarrito()
+        {
+            decimal montoTotal = 0;
+
+            // Recorre los productos en el carrito y suma el valor total de cada uno
+            foreach (Producto producto in carrito)
+            {
+                decimal valorTotalProducto = producto.Stock * producto.PrecioCompra;
+                montoTotal += valorTotalProducto;
+            }
+
+            return montoTotal;
+        }
     }
 }

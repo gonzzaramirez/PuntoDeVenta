@@ -129,7 +129,7 @@ namespace posMate
         private void btnCompras_Click(object sender, EventArgs e)
         {
             SidePanel.Top = btnCompras.Top;
-            frmCompras formularioCP = new frmCompras();
+            frmCompras formularioCP = new frmCompras(usuarioActual);
             MostrarFormularioEnContenedor(formularioCP);
         }
 

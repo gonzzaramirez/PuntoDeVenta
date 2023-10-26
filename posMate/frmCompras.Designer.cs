@@ -77,13 +77,15 @@
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.txtNombre = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.cboEstadoo = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.cboCategoria = new Bunifu.UI.WinForms.BunifuDropdown();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.txtPrecioVenta = new Bunifu.UI.WinForms.BunifuTextBox();
             this.dtpFecha = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.txtNombree = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnConfirmarCompra = new FontAwesome.Sharp.IconButton();
             this.cboProveedor = new Bunifu.UI.WinForms.BunifuDropdown();
             this.txtCantidad = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtPrecioCompra = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -99,16 +101,14 @@
             this.txtDNI = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtEmail = new Bunifu.UI.WinForms.BunifuTextBox();
             this.dgvData = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.btnLimpiar = new FontAwesome.Sharp.IconButton();
-            this.txtBusqueda = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.cboBusqueda = new System.Windows.Forms.ComboBox();
-            this.cboCategoria = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.cboEstadoo = new Bunifu.UI.WinForms.BunifuDropdown();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnLimpiar = new FontAwesome.Sharp.IconButton();
+            this.txtBusqueda = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.cboBusqueda = new System.Windows.Forms.ComboBox();
             this.bunifuGradientPanel1.SuspendLayout();
             this.txtNombre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
@@ -190,7 +190,7 @@
             this.txtNombre.Controls.Add(this.txtNombree);
             this.txtNombre.Controls.Add(this.label3);
             this.txtNombre.Controls.Add(this.iconButton1);
-            this.txtNombre.Controls.Add(this.iconButton2);
+            this.txtNombre.Controls.Add(this.btnConfirmarCompra);
             this.txtNombre.Controls.Add(this.cboProveedor);
             this.txtNombre.Controls.Add(this.txtCantidad);
             this.txtNombre.Controls.Add(this.txtPrecioCompra);
@@ -205,6 +205,94 @@
             this.txtNombre.Quality = 10;
             this.txtNombre.Size = new System.Drawing.Size(199, 525);
             this.txtNombre.TabIndex = 50;
+            // 
+            // cboEstadoo
+            // 
+            this.cboEstadoo.BackColor = System.Drawing.Color.Transparent;
+            this.cboEstadoo.BackgroundColor = System.Drawing.Color.White;
+            this.cboEstadoo.BorderColor = System.Drawing.Color.Silver;
+            this.cboEstadoo.BorderRadius = 1;
+            this.cboEstadoo.Color = System.Drawing.Color.Silver;
+            this.cboEstadoo.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.cboEstadoo.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cboEstadoo.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.cboEstadoo.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cboEstadoo.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cboEstadoo.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.cboEstadoo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboEstadoo.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.cboEstadoo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEstadoo.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cboEstadoo.FillDropDown = true;
+            this.cboEstadoo.FillIndicator = false;
+            this.cboEstadoo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboEstadoo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cboEstadoo.ForeColor = System.Drawing.Color.Black;
+            this.cboEstadoo.FormattingEnabled = true;
+            this.cboEstadoo.Icon = null;
+            this.cboEstadoo.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cboEstadoo.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.cboEstadoo.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cboEstadoo.IndicatorThickness = 2;
+            this.cboEstadoo.IsDropdownOpened = false;
+            this.cboEstadoo.ItemBackColor = System.Drawing.Color.White;
+            this.cboEstadoo.ItemBorderColor = System.Drawing.Color.White;
+            this.cboEstadoo.ItemForeColor = System.Drawing.Color.Black;
+            this.cboEstadoo.ItemHeight = 26;
+            this.cboEstadoo.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.cboEstadoo.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.cboEstadoo.ItemTopMargin = 3;
+            this.cboEstadoo.Location = new System.Drawing.Point(11, 319);
+            this.cboEstadoo.Name = "cboEstadoo";
+            this.cboEstadoo.Size = new System.Drawing.Size(180, 32);
+            this.cboEstadoo.TabIndex = 53;
+            this.cboEstadoo.Text = null;
+            this.cboEstadoo.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cboEstadoo.TextLeftMargin = 5;
+            // 
+            // cboCategoria
+            // 
+            this.cboCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.cboCategoria.BackgroundColor = System.Drawing.Color.White;
+            this.cboCategoria.BorderColor = System.Drawing.Color.Silver;
+            this.cboCategoria.BorderRadius = 1;
+            this.cboCategoria.Color = System.Drawing.Color.Silver;
+            this.cboCategoria.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.cboCategoria.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cboCategoria.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.cboCategoria.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cboCategoria.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cboCategoria.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.cboCategoria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboCategoria.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCategoria.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cboCategoria.FillDropDown = true;
+            this.cboCategoria.FillIndicator = false;
+            this.cboCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboCategoria.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cboCategoria.ForeColor = System.Drawing.Color.Black;
+            this.cboCategoria.FormattingEnabled = true;
+            this.cboCategoria.Icon = null;
+            this.cboCategoria.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cboCategoria.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.cboCategoria.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cboCategoria.IndicatorThickness = 2;
+            this.cboCategoria.IsDropdownOpened = false;
+            this.cboCategoria.ItemBackColor = System.Drawing.Color.White;
+            this.cboCategoria.ItemBorderColor = System.Drawing.Color.White;
+            this.cboCategoria.ItemForeColor = System.Drawing.Color.Black;
+            this.cboCategoria.ItemHeight = 26;
+            this.cboCategoria.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.cboCategoria.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.cboCategoria.ItemTopMargin = 3;
+            this.cboCategoria.Location = new System.Drawing.Point(11, 279);
+            this.cboCategoria.Name = "cboCategoria";
+            this.cboCategoria.Size = new System.Drawing.Size(180, 32);
+            this.cboCategoria.TabIndex = 52;
+            this.cboCategoria.Text = null;
+            this.cboCategoria.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cboCategoria.TextLeftMargin = 5;
             // 
             // iconButton3
             // 
@@ -436,25 +524,26 @@
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
-            // iconButton2
+            // btnConfirmarCompra
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 28;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton2.Location = new System.Drawing.Point(11, 472);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(180, 32);
-            this.iconButton2.TabIndex = 12;
-            this.iconButton2.Text = "Confimar compra";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.btnConfirmarCompra.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnConfirmarCompra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfirmarCompra.FlatAppearance.BorderSize = 0;
+            this.btnConfirmarCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmarCompra.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmarCompra.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.btnConfirmarCompra.IconColor = System.Drawing.Color.White;
+            this.btnConfirmarCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnConfirmarCompra.IconSize = 28;
+            this.btnConfirmarCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConfirmarCompra.Location = new System.Drawing.Point(11, 472);
+            this.btnConfirmarCompra.Name = "btnConfirmarCompra";
+            this.btnConfirmarCompra.Size = new System.Drawing.Size(180, 32);
+            this.btnConfirmarCompra.TabIndex = 12;
+            this.btnConfirmarCompra.Text = "Confimar compra";
+            this.btnConfirmarCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnConfirmarCompra.UseVisualStyleBackColor = false;
+            this.btnConfirmarCompra.Click += new System.EventHandler(this.btnConfirmarCompra_Click);
             // 
             // cboProveedor
             // 
@@ -1256,6 +1345,36 @@
             this.dgvData.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Maroon;
             this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // PrecioCompra
+            // 
+            this.PrecioCompra.HeaderText = "PrecioCompra";
+            this.PrecioCompra.Name = "PrecioCompra";
+            this.PrecioCompra.ReadOnly = true;
+            // 
+            // PrecioVenta
+            // 
+            this.PrecioVenta.HeaderText = "PrecioVenta";
+            this.PrecioVenta.Name = "PrecioVenta";
+            this.PrecioVenta.ReadOnly = true;
+            // 
+            // FechaCompra
+            // 
+            this.FechaCompra.HeaderText = "FechaCompra";
+            this.FechaCompra.Name = "FechaCompra";
+            this.FechaCompra.ReadOnly = true;
+            // 
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.LightSeaGreen;
@@ -1360,124 +1479,6 @@
             this.cboBusqueda.Size = new System.Drawing.Size(95, 21);
             this.cboBusqueda.TabIndex = 54;
             // 
-            // cboCategoria
-            // 
-            this.cboCategoria.BackColor = System.Drawing.Color.Transparent;
-            this.cboCategoria.BackgroundColor = System.Drawing.Color.White;
-            this.cboCategoria.BorderColor = System.Drawing.Color.Silver;
-            this.cboCategoria.BorderRadius = 1;
-            this.cboCategoria.Color = System.Drawing.Color.Silver;
-            this.cboCategoria.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.cboCategoria.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cboCategoria.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.cboCategoria.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cboCategoria.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.cboCategoria.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.cboCategoria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboCategoria.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCategoria.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.cboCategoria.FillDropDown = true;
-            this.cboCategoria.FillIndicator = false;
-            this.cboCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboCategoria.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cboCategoria.ForeColor = System.Drawing.Color.Black;
-            this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Icon = null;
-            this.cboCategoria.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cboCategoria.IndicatorColor = System.Drawing.Color.DarkGray;
-            this.cboCategoria.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cboCategoria.IndicatorThickness = 2;
-            this.cboCategoria.IsDropdownOpened = false;
-            this.cboCategoria.ItemBackColor = System.Drawing.Color.White;
-            this.cboCategoria.ItemBorderColor = System.Drawing.Color.White;
-            this.cboCategoria.ItemForeColor = System.Drawing.Color.Black;
-            this.cboCategoria.ItemHeight = 26;
-            this.cboCategoria.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.cboCategoria.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.cboCategoria.ItemTopMargin = 3;
-            this.cboCategoria.Location = new System.Drawing.Point(11, 279);
-            this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(180, 32);
-            this.cboCategoria.TabIndex = 52;
-            this.cboCategoria.Text = null;
-            this.cboCategoria.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.cboCategoria.TextLeftMargin = 5;
-            // 
-            // cboEstadoo
-            // 
-            this.cboEstadoo.BackColor = System.Drawing.Color.Transparent;
-            this.cboEstadoo.BackgroundColor = System.Drawing.Color.White;
-            this.cboEstadoo.BorderColor = System.Drawing.Color.Silver;
-            this.cboEstadoo.BorderRadius = 1;
-            this.cboEstadoo.Color = System.Drawing.Color.Silver;
-            this.cboEstadoo.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.cboEstadoo.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cboEstadoo.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.cboEstadoo.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cboEstadoo.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.cboEstadoo.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.cboEstadoo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboEstadoo.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.cboEstadoo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEstadoo.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.cboEstadoo.FillDropDown = true;
-            this.cboEstadoo.FillIndicator = false;
-            this.cboEstadoo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboEstadoo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cboEstadoo.ForeColor = System.Drawing.Color.Black;
-            this.cboEstadoo.FormattingEnabled = true;
-            this.cboEstadoo.Icon = null;
-            this.cboEstadoo.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cboEstadoo.IndicatorColor = System.Drawing.Color.DarkGray;
-            this.cboEstadoo.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cboEstadoo.IndicatorThickness = 2;
-            this.cboEstadoo.IsDropdownOpened = false;
-            this.cboEstadoo.ItemBackColor = System.Drawing.Color.White;
-            this.cboEstadoo.ItemBorderColor = System.Drawing.Color.White;
-            this.cboEstadoo.ItemForeColor = System.Drawing.Color.Black;
-            this.cboEstadoo.ItemHeight = 26;
-            this.cboEstadoo.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.cboEstadoo.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.cboEstadoo.ItemTopMargin = 3;
-            this.cboEstadoo.Location = new System.Drawing.Point(11, 319);
-            this.cboEstadoo.Name = "cboEstadoo";
-            this.cboEstadoo.Size = new System.Drawing.Size(180, 32);
-            this.cboEstadoo.TabIndex = 53;
-            this.cboEstadoo.Text = null;
-            this.cboEstadoo.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.cboEstadoo.TextLeftMargin = 5;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // PrecioCompra
-            // 
-            this.PrecioCompra.HeaderText = "PrecioCompra";
-            this.PrecioCompra.Name = "PrecioCompra";
-            this.PrecioCompra.ReadOnly = true;
-            // 
-            // PrecioVenta
-            // 
-            this.PrecioVenta.HeaderText = "PrecioVenta";
-            this.PrecioVenta.Name = "PrecioVenta";
-            this.PrecioVenta.ReadOnly = true;
-            // 
-            // FechaCompra
-            // 
-            this.FechaCompra.HeaderText = "FechaCompra";
-            this.FechaCompra.Name = "FechaCompra";
-            this.FechaCompra.ReadOnly = true;
-            // 
             // frmCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1521,7 +1522,7 @@
         private Bunifu.UI.WinForms.BunifuGradientPanel txtNombre;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btnConfirmarCompra;
         private Bunifu.UI.WinForms.BunifuDropdown cboProveedor;
         private Bunifu.UI.WinForms.BunifuTextBox txtCantidad;
         private Bunifu.UI.WinForms.BunifuTextBox txtPrecioCompra;

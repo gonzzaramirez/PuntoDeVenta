@@ -13,7 +13,7 @@ namespace CapaEntidad
         public Proveedor oProveedor { get; set; }
         public decimal  MontoTotal { get; set; }
         public List <DetalleCompra> oDetalleCompra {  get; set; }
-        public string FechaRegistro {  get; set; }
+        public DateTime FechaRegistro {  get; set; }
 
     }
 }
