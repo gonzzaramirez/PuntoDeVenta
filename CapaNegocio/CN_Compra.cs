@@ -21,5 +21,10 @@ namespace CapaNegocio
             // Puedes agregar validaciones u otra lógica de negocio aquí antes de llamar al método en la capa de datos.
             return ocd_compra.AgregarCompra(compra);
         }
+
+        public int obtenerUltimoIdCompra()
+        {
+            return ocd_compra.ObtenerUltimoIDCompra();
+        }
     }
 }

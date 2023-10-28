@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaEntidad;
 using CapaNegocio;
+using CapaNegocios;
 using CapaPresentacion.Utilidades;
 
 namespace CapaPresentacion
@@ -20,6 +21,8 @@ namespace CapaPresentacion
         private Usuario usuarioActual;
         // Declara una lista para el carrito
         private List<Producto> carrito = new List<Producto>();
+
+        
         public frmCompras(Usuario oUsuario = null)
         {
             usuarioActual = oUsuario;
@@ -126,6 +129,8 @@ namespace CapaPresentacion
                 oCategoria = new Categoria() { IdCategoria = Convert.ToInt32(((OpcionCombo)cboCategoria.SelectedItem).Valor) }
             };
 
+
+
             // Agrega el producto al carrito
             carrito.Add(nuevoProducto);
             MessageBox.Show("Producto agregado al carrito. Total de productos en el carrito: " + carrito.Count);
@@ -168,34 +173,93 @@ namespace CapaPresentacion
 
         private void btnConfirmarCompra_Click(object sender, EventArgs e)
         {
-            int idProveedor = Convert.ToInt32(((OpcionCombo)cboProveedor.SelectedItem).Valor);
-            decimal montoTotal = CalcularMontoTotalDelCarrito();
-            Compra nuevoCompra = new Compra
+            try
             {
-                oUsuario = new Usuario() { IdUsuario = usuarioActual.IdUsuario },
-                oProveedor = new Proveedor() { IdProveedor = idProveedor },
-                MontoTotal = montoTotal,
-                FechaRegistro = dtpFecha.Value
+                int idProveedor = Convert.ToInt32(((OpcionCombo)cboProveedor.SelectedItem).Valor);
+                decimal montoTotal = CalcularMontoTotalDelCarrito();
+                Compra nuevoCompra = new Compra
+                {
+                    oUsuario = new Usuario() { IdUsuario = usuarioActual.IdUsuario },
+                    oProveedor = new Proveedor() { IdProveedor = idProveedor },
+                    MontoTotal = montoTotal,
+                    FechaRegistro = dtpFecha.Value
+                };
 
-            };
+                CN_Compra negocioCompra = new CN_Compra();
+                CN_DetalleCompra negocioDetalle = new CN_DetalleCompra();
+                CN_Producto negocioProducto     = new CN_Producto();
 
-            CN_Compra negocioCompra = new CN_Compra();
+                if (negocioCompra.AgregarCompra(nuevoCompra))
+                {
+                    int idCompra = negocioCompra.obtenerUltimoIdCompra();
 
+                    if (idCompra > 0)
+                    {
+                        MessageBox.Show("ID de compra obtenido correctamente: " + idCompra);
 
-            if (negocioCompra.AgregarCompra(nuevoCompra))
-            {
-                MessageBox.Show("Compra confirmada");
-                carrito.Clear();
+                        // Agrega los productos del carrito a la tabla DetalleCompra
+                        List<DetalleCompra> detallesCompra = new List<DetalleCompra>();
+                        List<Producto> productosDisponibles = negocioProducto.ObtenerProductos(); // Obtener productos desde la base de datos
 
-                // Actualiza el DataGridView para reflejar la limpieza del carrito
-                ActualizarDataGridView();
+                        foreach (Producto productoEnCarrito in carrito)
+                        {
+                            // Busca el producto correspondiente en la lista de productos disponibles
+                            Producto productoEnBaseDeDatos = productosDisponibles.FirstOrDefault(p =>
+                                p.Nombre == productoEnCarrito.Nombre && p.Descripcion == productoEnCarrito.Descripcion);
+
+                            if (productoEnBaseDeDatos != null)
+                            {
+                                DetalleCompra detalle = new DetalleCompra
+                                {
+                                    IdCompra = idCompra,
+                                    oProducto = new Producto() { IdProducto = productoEnBaseDeDatos.IdProducto },
+                                    PrecioCompra = productoEnCarrito.PrecioCompra,
+                                    PrecioVenta = productoEnCarrito.PrecioVenta,
+                                    Cantidad = productoEnCarrito.Stock,
+                                    MontoTotal = productoEnCarrito.PrecioCompra * productoEnCarrito.Stock,
+                                    FechaRegistro = productoEnCarrito.FechaRegistro
+                                };
+
+                                if (negocioDetalle.AgregarDetalleCompra(detalle))
+                                {
+                                    detallesCompra.Add(detalle);
+                                    MessageBox.Show("Detalle de compra agregado correctamente.");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Error al agregar detalle de compra.");
+                                }
+                            }
+                            else
+                            {
+                                // Maneja el caso en el que no se encuentra el producto en la base de datos
+                                MessageBox.Show("Producto en el carrito no encontrado en la base de datos.");
+                            }
+                        }
+
+                        nuevoCompra.DetallesCompra = detallesCompra;
+
+                        MessageBox.Show("Compra confirmada");
+                        carrito.Clear();
+                        ActualizarDataGridView();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al obtener el ID de compra.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Error al agregar la compra.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("No anda");
+                MessageBox.Show("Error general: " + ex.Message);
             }
-
         }
+
+
 
 
         private decimal CalcularMontoTotalDelCarrito()

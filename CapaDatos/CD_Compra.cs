@@ -90,5 +90,35 @@ namespace CapaDatos
 
             }
         }
+
+        public int ObtenerUltimoIDCompra()
+        {
+            int ultimoID = -1;
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand("SELECT TOP 1 IdCompra FROM COMPRA ORDER BY IdCompra DESC", con))
+                    {
+                        cmd.CommandType = CommandType.Text;
+
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null && result != DBNull.Value)
+                        {
+                            ultimoID = Convert.ToInt32(result);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Manejo de errores aquí
+                }
+            }
+
+            return ultimoID;
+        }
     }
 }
