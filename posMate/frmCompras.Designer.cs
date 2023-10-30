@@ -69,10 +69,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties37 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties38 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties39 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties40 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
@@ -101,14 +97,12 @@
             this.txtDNI = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtEmail = new Bunifu.UI.WinForms.BunifuTextBox();
             this.dgvData = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.label4 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnLimpiar = new FontAwesome.Sharp.IconButton();
-            this.txtBusqueda = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.cboBusqueda = new System.Windows.Forms.ComboBox();
             this.bunifuGradientPanel1.SuspendLayout();
             this.txtNombre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
@@ -390,6 +384,7 @@
             this.txtPrecioVenta.TextPlaceholder = "Precio venta";
             this.txtPrecioVenta.UseSystemPasswordChar = false;
             this.txtPrecioVenta.WordWrap = true;
+            this.txtPrecioVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioVenta_KeyPress);
             // 
             // dtpFecha
             // 
@@ -664,6 +659,7 @@
             this.txtCantidad.TextPlaceholder = "Cantidad";
             this.txtCantidad.UseSystemPasswordChar = false;
             this.txtCantidad.WordWrap = true;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // txtPrecioCompra
             // 
@@ -740,6 +736,7 @@
             this.txtPrecioCompra.TextPlaceholder = "Precio compra";
             this.txtPrecioCompra.UseSystemPasswordChar = false;
             this.txtPrecioCompra.WordWrap = true;
+            this.txtPrecioCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioCompra_KeyPress);
             // 
             // txtDesc
             // 
@@ -1345,6 +1342,17 @@
             this.dgvData.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Maroon;
             this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.label4.Location = new System.Drawing.Point(3, 89);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(123, 16);
+            this.label4.TabIndex = 52;
+            this.label4.Text = "Carrito de compras:";
+            // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
@@ -1374,119 +1382,14 @@
             this.FechaCompra.HeaderText = "FechaCompra";
             this.FechaCompra.Name = "FechaCompra";
             this.FechaCompra.ReadOnly = true;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiar.FlatAppearance.BorderSize = 0;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            this.btnLimpiar.IconColor = System.Drawing.Color.White;
-            this.btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLimpiar.IconSize = 18;
-            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpiar.Location = new System.Drawing.Point(631, 76);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(24, 20);
-            this.btnLimpiar.TabIndex = 52;
-            this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            // 
-            // txtBusqueda
-            // 
-            this.txtBusqueda.AcceptsReturn = false;
-            this.txtBusqueda.AcceptsTab = false;
-            this.txtBusqueda.AnimationSpeed = 200;
-            this.txtBusqueda.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtBusqueda.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtBusqueda.AutoSizeHeight = true;
-            this.txtBusqueda.BackColor = System.Drawing.Color.Transparent;
-            this.txtBusqueda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtBusqueda.BackgroundImage")));
-            this.txtBusqueda.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txtBusqueda.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtBusqueda.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txtBusqueda.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtBusqueda.BorderRadius = 1;
-            this.txtBusqueda.BorderThickness = 1;
-            this.txtBusqueda.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
-            this.txtBusqueda.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtBusqueda.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBusqueda.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.txtBusqueda.DefaultText = "";
-            this.txtBusqueda.FillColor = System.Drawing.Color.White;
-            this.txtBusqueda.HideSelection = true;
-            this.txtBusqueda.IconLeft = null;
-            this.txtBusqueda.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBusqueda.IconPadding = 10;
-            this.txtBusqueda.IconRight = null;
-            this.txtBusqueda.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBusqueda.Lines = new string[0];
-            this.txtBusqueda.Location = new System.Drawing.Point(460, 74);
-            this.txtBusqueda.MaxLength = 32767;
-            this.txtBusqueda.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txtBusqueda.Modified = false;
-            this.txtBusqueda.Multiline = false;
-            this.txtBusqueda.Name = "txtBusqueda";
-            stateProperties37.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties37.FillColor = System.Drawing.Color.Empty;
-            stateProperties37.ForeColor = System.Drawing.Color.Empty;
-            stateProperties37.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBusqueda.OnActiveState = stateProperties37;
-            stateProperties38.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties38.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties38.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtBusqueda.OnDisabledState = stateProperties38;
-            stateProperties39.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties39.FillColor = System.Drawing.Color.Empty;
-            stateProperties39.ForeColor = System.Drawing.Color.Empty;
-            stateProperties39.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBusqueda.OnHoverState = stateProperties39;
-            stateProperties40.BorderColor = System.Drawing.Color.Silver;
-            stateProperties40.FillColor = System.Drawing.Color.White;
-            stateProperties40.ForeColor = System.Drawing.Color.Empty;
-            stateProperties40.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBusqueda.OnIdleState = stateProperties40;
-            this.txtBusqueda.Padding = new System.Windows.Forms.Padding(3);
-            this.txtBusqueda.PasswordChar = '\0';
-            this.txtBusqueda.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtBusqueda.PlaceholderText = "Buscar por:";
-            this.txtBusqueda.ReadOnly = false;
-            this.txtBusqueda.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtBusqueda.SelectedText = "";
-            this.txtBusqueda.SelectionLength = 0;
-            this.txtBusqueda.SelectionStart = 0;
-            this.txtBusqueda.ShortcutsEnabled = true;
-            this.txtBusqueda.Size = new System.Drawing.Size(165, 22);
-            this.txtBusqueda.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtBusqueda.TabIndex = 53;
-            this.txtBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtBusqueda.TextMarginBottom = 0;
-            this.txtBusqueda.TextMarginLeft = 3;
-            this.txtBusqueda.TextMarginTop = 1;
-            this.txtBusqueda.TextPlaceholder = "Buscar por:";
-            this.txtBusqueda.UseSystemPasswordChar = false;
-            this.txtBusqueda.WordWrap = true;
-            // 
-            // cboBusqueda
-            // 
-            this.cboBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboBusqueda.FormattingEnabled = true;
-            this.cboBusqueda.Location = new System.Drawing.Point(359, 74);
-            this.cboBusqueda.Name = "cboBusqueda";
-            this.cboBusqueda.Size = new System.Drawing.Size(95, 21);
-            this.cboBusqueda.TabIndex = 54;
+            this.FechaCompra.Visible = false;
             // 
             // frmCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 525);
-            this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.txtBusqueda);
-            this.Controls.Add(this.cboBusqueda);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.bunifuLabel1);
@@ -1528,15 +1431,13 @@
         private Bunifu.UI.WinForms.BunifuTextBox txtPrecioCompra;
         private Bunifu.UI.WinForms.BunifuTextBox txtDesc;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvData;
-        private FontAwesome.Sharp.IconButton btnLimpiar;
-        private Bunifu.UI.WinForms.BunifuTextBox txtBusqueda;
-        private System.Windows.Forms.ComboBox cboBusqueda;
         private Bunifu.UI.WinForms.BunifuTextBox txtNombree;
         private Bunifu.UI.WinForms.BunifuDatePicker dtpFecha;
         private FontAwesome.Sharp.IconButton iconButton3;
         private Bunifu.UI.WinForms.BunifuTextBox txtPrecioVenta;
         private Bunifu.UI.WinForms.BunifuDropdown cboCategoria;
         private Bunifu.UI.WinForms.BunifuDropdown cboEstadoo;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;

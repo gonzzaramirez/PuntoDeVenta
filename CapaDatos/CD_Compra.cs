@@ -22,7 +22,7 @@ namespace CapaDatos
                 try
                 {
                     con.Open();
-                    using (SqlCommand cmd = new SqlCommand("SELECT c.IdCompra, c.IdUsuario, c.IdProveedor, c.MontoTotal, c.FechaRegistro, u.Nombre AS NombreUsuario, p.Nombre AS NombreProveedor FROM COMPRA c " +
+                    using (SqlCommand cmd = new SqlCommand("SELECT c.IdCompra, u.Nombre AS NombreUsuario, p.Nombre AS NombreProveedor, c.MontoTotal, c.FechaRegistro FROM COMPRA c " +
                                                            "INNER JOIN USUARIO u ON c.IdUsuario = u.IdUsuario " +
                                                            "INNER JOIN PROVEEDOR p ON c.IdProveedor = p.IdProveedor", con))
                     {
@@ -37,14 +37,11 @@ namespace CapaDatos
                                     IdCompra = Convert.ToInt32(reader["IdCompra"]),
                                     oUsuario = new Usuario
                                     {
-                                        IdUsuario = Convert.ToInt32(reader["IdUsuario"]),
-                                        Nombre = reader["Nombre"].ToString()
-                                        
+                                        Nombre = reader["NombreUsuario"].ToString()
                                     },
                                     oProveedor = new Proveedor
                                     {
-                                        IdProveedor = Convert.ToInt32(reader["IdProveedor"]),
-                                        Nombre = reader["Nombre"].ToString()
+                                        Nombre = reader["NombreProveedor"].ToString()
                                     },
                                     MontoTotal = Convert.ToDecimal(reader["MontoTotal"]),
                                     FechaRegistro = (DateTime)(reader["FechaRegistro"] as DateTime?)

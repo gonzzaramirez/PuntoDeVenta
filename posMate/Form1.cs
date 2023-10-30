@@ -129,7 +129,7 @@ namespace posMate
         private void btnCompras_Click(object sender, EventArgs e)
         {
             SidePanel.Top = btnCompras.Top;
-            frmCompras formularioCP = new frmCompras(usuarioActual);
+            opcionCompra formularioCP = new opcionCompra(usuarioActual);
             MostrarFormularioEnContenedor(formularioCP);
         }
 
@@ -164,7 +164,7 @@ namespace posMate
             MostrarFormularioEnContenedor(frmInicio);
         }
 
-        private void MostrarFormularioEnContenedor(Form formulario)
+        public void MostrarFormularioEnContenedor(Form formulario)
         {
             // Borra cualquier control existente en el panel "contenedor"
             contenedor.Controls.Clear();

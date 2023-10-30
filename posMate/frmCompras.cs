@@ -22,7 +22,7 @@ namespace CapaPresentacion
         // Declara una lista para el carrito
         private List<Producto> carrito = new List<Producto>();
 
-        
+
         public frmCompras(Usuario oUsuario = null)
         {
             usuarioActual = oUsuario;
@@ -34,11 +34,11 @@ namespace CapaPresentacion
 
         }
 
-     
+
 
         private void frmCompras_Load(object sender, EventArgs e)
         {
-         
+
 
             // Agregar opciones "Activo" y "No Activo" al ComboBox cboEstado
             cboEstadoo.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
@@ -80,35 +80,7 @@ namespace CapaPresentacion
             cboCategoria.SelectedIndex = 0;
 
             // Obtener una lista de productos y mostrarlos en el dgv
-            List<Producto> ObtenerProducto= new CN_Producto().ObtenerProductos();
-
-            foreach (DataGridViewColumn columna in dgvData.Columns)
-            {
-                // Agregar a cboBusqueda
-                if (columna.Visible == true && columna.Name != "Estado")
-                {
-                    cboBusqueda.Items.Add(new OpcionCombo() { Valor = columna.Name, Texto = columna.HeaderText });
-                }
-            }
-
-            // Configurar el ComboBox cboBusqueda para mostrar el texto y usar el valor al seleccionar
-            cboBusqueda.DisplayMember = "Texto";
-            cboBusqueda.ValueMember = "Valor";
-
-            // Establecer la opción seleccionada inicialmente como la primera columna visible
-            cboBusqueda.SelectedIndex = 0;
-
-            foreach (Producto producto in ObtenerProducto)
-            {
-                string estadoTexto = producto.Estado ? "Activo" : "Inactivo";
-                dgvData.Rows.Add(
-                    producto.Nombre,
-                    producto.Stock,
-                    producto.PrecioCompra,
-                    producto.PrecioVenta,
-                    producto.FechaRegistro
-                );
-            }
+           
 
 
 
@@ -142,21 +114,19 @@ namespace CapaPresentacion
             if (negocioProducto.AgregarProducto(nuevoProducto))
             {
                 MessageBox.Show("Producto insertado en la base de datos correctamente.");
-                ActualizarDataGridView();
+                ActualizarDataGridView(carrito);
             }
 
-          
+
 
 
         }
 
-        private void ActualizarDataGridView()
+        private void ActualizarDataGridView(List<Producto> productos)
         {
-            // Obtener una nueva lista de categorías y actualizar el DataGridView
-            List<Producto> ObtenerProducto = new CN_Producto().ObtenerProductos();
             dgvData.Rows.Clear();
 
-            foreach (Producto producto in ObtenerProducto)
+            foreach (Producto producto in productos)
             {
                 string estadoTexto = producto.Estado ? "Activo" : "Inactivo";
                 dgvData.Rows.Add(
@@ -167,95 +137,63 @@ namespace CapaPresentacion
                     producto.FechaRegistro
                 );
             }
-
-
         }
 
         private void btnConfirmarCompra_Click(object sender, EventArgs e)
         {
-            try
+            int idProveedor = Convert.ToInt32(((OpcionCombo)cboProveedor.SelectedItem).Valor);
+            decimal montoTotal = CalcularMontoTotalDelCarrito();
+            Compra nuevoCompra = new Compra
             {
-                int idProveedor = Convert.ToInt32(((OpcionCombo)cboProveedor.SelectedItem).Valor);
-                decimal montoTotal = CalcularMontoTotalDelCarrito();
-                Compra nuevoCompra = new Compra
+                oUsuario = new Usuario() { IdUsuario = usuarioActual.IdUsuario },
+                oProveedor = new Proveedor() { IdProveedor = idProveedor },
+                MontoTotal = montoTotal,
+                FechaRegistro = dtpFecha.Value
+            };
+
+            CN_Compra negocioCompra = new CN_Compra();
+            CN_DetalleCompra negocioDetalle = new CN_DetalleCompra();
+            CN_Producto negocioProducto = new CN_Producto();
+
+            if (negocioCompra.AgregarCompra(nuevoCompra))
+            {
+                int idCompra = negocioCompra.obtenerUltimoIdCompra();
+
+                if (idCompra > 0)
                 {
-                    oUsuario = new Usuario() { IdUsuario = usuarioActual.IdUsuario },
-                    oProveedor = new Proveedor() { IdProveedor = idProveedor },
-                    MontoTotal = montoTotal,
-                    FechaRegistro = dtpFecha.Value
-                };
+                    List<DetalleCompra> detallesCompra = new List<DetalleCompra>();
+                    List<Producto> productosDisponibles = negocioProducto.ObtenerProductos();
 
-                CN_Compra negocioCompra = new CN_Compra();
-                CN_DetalleCompra negocioDetalle = new CN_DetalleCompra();
-                CN_Producto negocioProducto     = new CN_Producto();
-
-                if (negocioCompra.AgregarCompra(nuevoCompra))
-                {
-                    int idCompra = negocioCompra.obtenerUltimoIdCompra();
-
-                    if (idCompra > 0)
+                    foreach (Producto productoEnCarrito in carrito)
                     {
-                        MessageBox.Show("ID de compra obtenido correctamente: " + idCompra);
+                        Producto productoEnBaseDeDatos = productosDisponibles.FirstOrDefault(p =>
+                            p.Nombre == productoEnCarrito.Nombre && p.Descripcion == productoEnCarrito.Descripcion);
 
-                        // Agrega los productos del carrito a la tabla DetalleCompra
-                        List<DetalleCompra> detallesCompra = new List<DetalleCompra>();
-                        List<Producto> productosDisponibles = negocioProducto.ObtenerProductos(); // Obtener productos desde la base de datos
-
-                        foreach (Producto productoEnCarrito in carrito)
+                        if (productoEnBaseDeDatos != null)
                         {
-                            // Busca el producto correspondiente en la lista de productos disponibles
-                            Producto productoEnBaseDeDatos = productosDisponibles.FirstOrDefault(p =>
-                                p.Nombre == productoEnCarrito.Nombre && p.Descripcion == productoEnCarrito.Descripcion);
-
-                            if (productoEnBaseDeDatos != null)
+                            DetalleCompra detalle = new DetalleCompra
                             {
-                                DetalleCompra detalle = new DetalleCompra
-                                {
-                                    IdCompra = idCompra,
-                                    oProducto = new Producto() { IdProducto = productoEnBaseDeDatos.IdProducto },
-                                    PrecioCompra = productoEnCarrito.PrecioCompra,
-                                    PrecioVenta = productoEnCarrito.PrecioVenta,
-                                    Cantidad = productoEnCarrito.Stock,
-                                    MontoTotal = productoEnCarrito.PrecioCompra * productoEnCarrito.Stock,
-                                    FechaRegistro = productoEnCarrito.FechaRegistro
-                                };
+                                IdCompra = idCompra,
+                                oProducto = new Producto() { IdProducto = productoEnBaseDeDatos.IdProducto },
+                                PrecioCompra = productoEnCarrito.PrecioCompra,
+                                PrecioVenta = productoEnCarrito.PrecioVenta,
+                                Cantidad = productoEnCarrito.Stock,
+                                MontoTotal = productoEnCarrito.PrecioCompra * productoEnCarrito.Stock,
+                                FechaRegistro = productoEnCarrito.FechaRegistro
+                            };
 
-                                if (negocioDetalle.AgregarDetalleCompra(detalle))
-                                {
-                                    detallesCompra.Add(detalle);
-                                    MessageBox.Show("Detalle de compra agregado correctamente.");
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Error al agregar detalle de compra.");
-                                }
-                            }
-                            else
+                            if (negocioDetalle.AgregarDetalleCompra(detalle))
                             {
-                                // Maneja el caso en el que no se encuentra el producto en la base de datos
-                                MessageBox.Show("Producto en el carrito no encontrado en la base de datos.");
+                                detallesCompra.Add(detalle);
                             }
                         }
-
-                        nuevoCompra.DetallesCompra = detallesCompra;
-
-                        MessageBox.Show("Compra confirmada");
-                        carrito.Clear();
-                        ActualizarDataGridView();
                     }
-                    else
-                    {
-                        MessageBox.Show("Error al obtener el ID de compra.");
-                    }
+
+                    nuevoCompra.DetallesCompra = detallesCompra;
+                    carrito.Clear();
+                    ActualizarDataGridView(carrito);
+                    MessageBox.Show("Compra confirmada con éxito.");
                 }
-                else
-                {
-                    MessageBox.Show("Error al agregar la compra.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error general: " + ex.Message);
             }
         }
 
@@ -274,6 +212,30 @@ namespace CapaPresentacion
             }
 
             return montoTotal;
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPrecioCompra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPrecioVenta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
