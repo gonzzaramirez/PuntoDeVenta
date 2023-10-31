@@ -142,6 +142,7 @@ namespace CapaPresentacion
                 txtIndice.Text = indice.ToString();
                 txtId.Text = dgvData.Rows[indice].Cells["IdProducto"].Value.ToString();
                 txtPrecioVenta.Text = dgvData.Rows[indice].Cells["PrecioVenta"].Value.ToString();
+                txtDescripcion.Text = dgvData.Rows[indice].Cells["Descripcion"].Value.ToString();
                 txtCantidad.Text = dgvData.Rows[indice].Cells["Cantidad"].Value.ToString();
 
                 string categoriaEnDataGrid = dgvData.Rows[indice].Cells["Categoria"].Value.ToString();
@@ -155,8 +156,65 @@ namespace CapaPresentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            
-            
+            // Validar que se hayan completado los campos necesarios
+            if (string.IsNullOrWhiteSpace(txtPrecioVenta.Text) || string.IsNullOrWhiteSpace(txtCantidad.Text) || cboEstado.SelectedIndex == -1 || cboCateg.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor, complete todos los campos requeridos.");
+                return;
+            }
+
+
+
+            CN_Producto negocioProducto = new CN_Producto();
+
+            // Si txtId es mayor a 0 se desea editar un producto existente.
+            if (int.TryParse(txtId.Text, out int id) && id > 0)
+            {
+                int idProducto = int.Parse(txtId.Text);
+
+                // Obtener el producto completo desde la base de datos
+                Producto producto = negocioProducto.ObtenerProductos().FirstOrDefault(p => p.IdProducto == idProducto);
+
+                // Actualizar los campos del producto con los datos del formulario
+                producto.oCategoria = new Categoria() { IdCategoria = Convert.ToInt32(((OpcionCombo)cboCateg.SelectedItem).Valor) };
+                producto.PrecioVenta = decimal.Parse(txtPrecioVenta.Text);
+                producto.Descripcion = txtDescripcion.Text;
+                producto.Stock = int.Parse(txtCantidad.Text);
+                producto.Estado = Convert.ToInt32(((OpcionCombo)cboEstado.SelectedItem).Valor) == 1 ? true : false;
+
+
+                if (negocioProducto.EditarProducto(producto))
+                {
+                    MessageBox.Show("El producto se ha editado correctamente.");
+                    
+                    limpiar();
+                    ActualizarDataGridView();
+                }
+
+            }
+        }
+
+        private void ActualizarDataGridView()
+        {
+            // Obtener una nueva lista de proveedores y actualizar el DataGridView
+            List<Producto> productos = new CN_Producto().ObtenerProductos();
+            dgvData.Rows.Clear();
+
+            foreach (Producto producto in productos)
+            {
+                dgvData.Rows.Add(
+                   producto.IdProducto,
+                   producto.Nombre,
+                   producto.Descripcion,
+                   producto.PrecioVenta,
+                   producto.Stock,
+                   producto.FechaRegistro,
+                   producto.oCategoria.Descripcion,
+                   producto.Estado ? "Activo" : "Inactivo"
+
+               );
+            }
+
             
         }
 
@@ -186,6 +244,16 @@ namespace CapaPresentacion
         {
             
             limpiar();
+        }
+
+        private void cboCateg_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
