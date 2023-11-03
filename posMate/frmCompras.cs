@@ -7,15 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaDatos;
 using CapaEntidad;
 using CapaNegocio;
 using CapaNegocios;
 using CapaPresentacion.Utilidades;
+using FontAwesome.Sharp;
 
 namespace CapaPresentacion
 {
     public partial class frmCompras : Form
     {
+       
 
         // para saber que usuario compra
         private Usuario usuarioActual;
@@ -25,8 +28,11 @@ namespace CapaPresentacion
 
         public frmCompras(Usuario oUsuario = null)
         {
+
             usuarioActual = oUsuario;
             InitializeComponent();
+            txtCodigoBarra.Focus();
+            verificarCheck();
         }
 
         private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -34,10 +40,66 @@ namespace CapaPresentacion
 
         }
 
+        private void verificarCheck()
+        {
+            if (carrito.Count > 0)
+            {
+               
+                btnConfirmarCompra.Enabled = true;
+                btnConfirmarCompra.BackColor = Color.Green;
+            }
+            else
+            {
+                btnConfirmarCompra.Enabled = false;
+                btnConfirmarCompra.BackColor = SystemColors.Control;
+            }
+
+
+            iconButton2.Enabled = true;
+            iconButton2.BackColor = Color.ForestGreen;
+            
+            btnCarrito.BackColor = SystemColors.Control;
+            btnCarrito.Enabled = false;
+           
+            txtNombree.Enabled = false;
+            txtDesc.Enabled = false;
+            txtCantidad.Enabled = false;
+            txtPrecioCompra.Enabled = false;
+            txtPrecioVenta.Enabled = false;
+            dtpFecha.Enabled = false;
+            cboCategoria.Enabled = false;
+            cboProveedor.Enabled = false;
+            cboEstadoo.Enabled = false;
+        }
+
+        private void verificado()
+        {
+           
+
+            iconButton2.Enabled = false;
+            iconButton2.BackColor = SystemColors.Control;
+          
+            btnCarrito.BackColor = Color.MediumTurquoise;
+            btnCarrito.Enabled = true;
+           
+
+            aviso.Visible = false;
+            txtNombree.Enabled = true;
+            txtDesc.Enabled = true;
+            txtCantidad.Enabled = true;
+            txtPrecioCompra.Enabled = true;
+            txtPrecioVenta.Enabled = true;
+            dtpFecha.Enabled = true;
+            cboCategoria.Enabled = true;
+            cboProveedor.Enabled = true;
+            cboEstadoo.Enabled = true;
+        }
+
 
 
         private void frmCompras_Load(object sender, EventArgs e)
         {
+
 
 
             // Agregar opciones "Activo" y "No Activo" al ComboBox cboEstado
@@ -86,11 +148,14 @@ namespace CapaPresentacion
 
         }
 
-        private void iconButton3_Click(object sender, EventArgs e)
+        //boton agregar carrito
+        private void btnCarrito_Click(object sender, EventArgs e)
         {
-            // Crea un objeto Producto
+            verificarCheck();
+
             Producto nuevoProducto = new Producto
             {
+                codigoProducto = txtCodigoBarra.Text,
                 Nombre = txtNombree.Text,
                 Descripcion = txtDesc.Text,
                 Stock = Convert.ToInt32(txtCantidad.Text),
@@ -99,6 +164,7 @@ namespace CapaPresentacion
                 FechaRegistro = dtpFecha.Value,
                 Estado = cboEstadoo.SelectedIndex == 0,
                 oCategoria = new Categoria() { IdCategoria = Convert.ToInt32(((OpcionCombo)cboCategoria.SelectedItem).Valor) }
+
             };
 
 
@@ -107,15 +173,39 @@ namespace CapaPresentacion
             carrito.Add(nuevoProducto);
             MessageBox.Show("Producto agregado al carrito. Total de productos en el carrito: " + carrito.Count);
 
+            if (carrito.Count > 0)
+            {
+                btnConfirmarCompra.BackColor = Color.ForestGreen;
+                btnConfirmarCompra.Enabled = true;
+            }
 
             CN_Producto negocioProducto = new CN_Producto();
 
-
-            if (negocioProducto.AgregarProducto(nuevoProducto))
+            if (txtCodigoBarra.Enabled)
             {
-                MessageBox.Show("Producto insertado en la base de datos correctamente.");
-                ActualizarDataGridView(carrito);
+                if (negocioProducto.AgregarProducto(nuevoProducto))
+                {
+                    MessageBox.Show("Producto insertado en la base de datos correctamente.");
+                    ActualizarDataGridView(carrito);
+                }
             }
+            else
+            {
+                int idProducto = int.Parse(txtId.Text);
+                Producto producto = negocioProducto.ObtenerProductos().FirstOrDefault(p => p.IdProducto == idProducto);
+                producto.PrecioCompra = decimal.Parse(txtPrecioCompra.Text);
+                
+                producto.Stock = int.Parse(txtCantidad.Text);
+                if (negocioProducto.EditarProducto(producto))
+                {
+                    MessageBox.Show("El producto se ha editado correctamente.");
+                    ActualizarDataGridView(carrito);
+
+
+                }
+
+            }
+            limpar();
 
 
 
@@ -141,6 +231,7 @@ namespace CapaPresentacion
 
         private void btnConfirmarCompra_Click(object sender, EventArgs e)
         {
+            verificarCheck();
             int idProveedor = Convert.ToInt32(((OpcionCombo)cboProveedor.SelectedItem).Valor);
             decimal montoTotal = CalcularMontoTotalDelCarrito();
             Compra nuevoCompra = new Compra
@@ -236,6 +327,57 @@ namespace CapaPresentacion
             {
                 e.Handled = true;
             }
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            verificado();
+            CN_Producto negocioProducto = new CN_Producto();
+            string codigoProducto = txtCodigoBarra.Text;
+            Producto productoCargado = negocioProducto.ObtenerProductoPorCodigoProducto(codigoProducto);
+
+            if (productoCargado != null)
+            {
+                MessageBox.Show("Producto existente");
+                txtCantidad.Focus();
+                int id = productoCargado.IdProducto;
+                txtId.Text = id.ToString();
+
+                txtCodigoBarra.Text = productoCargado.codigoProducto;
+                txtCodigoBarra.Enabled = false;
+                txtNombree.Text = productoCargado.Nombre;
+                txtNombree.Enabled = false;
+                txtDesc.Text = productoCargado.Descripcion;
+                txtDesc.Enabled = false;
+                txtPrecioVenta.Text = productoCargado.PrecioVenta.ToString();
+                txtPrecioVenta.Enabled = false;
+                cboCategoria.Enabled = false;
+                cboEstadoo.Enabled = false;
+                
+            }
+            else
+            {
+                MessageBox.Show("Producto inexistente, cargue sus datos");
+                limpar();
+            }
+
+
+
+
+        }
+
+        private void limpar()
+        {
+            txtCodigoBarra.Focus();
+            txtCodigoBarra.Enabled  = true;
+            txtCodigoBarra.Clear();
+            txtNombree.Clear();
+            txtDesc.Clear();
+            txtCantidad.Clear();
+            txtPrecioCompra.Clear();    
+            txtPrecioVenta.Clear();
+           
+
         }
     }
 }

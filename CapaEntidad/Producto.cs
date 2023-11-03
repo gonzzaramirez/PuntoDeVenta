@@ -18,6 +18,8 @@ namespace CapaEntidad
         public bool Estado {  get; set; }
         public DateTime FechaRegistro { get; set; }
 
-        
+        public string codigoProducto { get; set; }
+
+
     }
 }

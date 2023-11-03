@@ -22,7 +22,7 @@ namespace CapaDatos
                 try
                 {
                     StringBuilder query = new StringBuilder();
-                    query.AppendLine("SELECT p.IdProducto, p.IdCategoria, p.Nombre, p.Descripcion, p.Stock, p.PrecioCompra, p.PrecioVenta, p.Estado, p.FechaRegistro, c.Descripcion AS CategoriaDescripcion ");
+                    query.AppendLine("SELECT p.IdProducto, p.IdCategoria, p.Nombre, p.Descripcion, p.Stock, p.PrecioCompra, p.PrecioVenta, p.Estado, p.FechaRegistro, c.Descripcion AS CategoriaDescripcion, p.codigoProducto ");
                     query.AppendLine("FROM PRODUCTO p ");
                     query.AppendLine("LEFT JOIN CATEGORIA c ON p.IdCategoria = c.IdCategoria");
 
@@ -49,6 +49,7 @@ namespace CapaDatos
                                 PrecioVenta = Convert.ToDecimal(reader["PrecioVenta"]),
                                 Estado = Convert.ToBoolean(reader["Estado"]),
                                 FechaRegistro = (DateTime)(reader["FechaRegistro"] as DateTime?),
+                                codigoProducto = reader["codigoProducto"].ToString()
 
                             });
                         }
@@ -69,8 +70,8 @@ namespace CapaDatos
             {
                 try
                 {
-                    string query = "INSERT INTO PRODUCTO (IdCategoria, Nombre, Descripcion, Stock, PrecioCompra, PrecioVenta, Estado, FechaRegistro) " +
-                                   "VALUES (@IdCategoria, @Nombre, @Descripcion, @Stock, @PrecioCompra, @PrecioVenta, @Estado, @FechaRegistro)";
+                    string query = "INSERT INTO PRODUCTO (IdCategoria, Nombre, Descripcion, Stock, PrecioCompra, PrecioVenta, Estado, FechaRegistro, codigoProducto) " +
+                                   "VALUES (@IdCategoria, @Nombre, @Descripcion, @Stock, @PrecioCompra, @PrecioVenta, @Estado, @FechaRegistro, @codigoProducto)";
 
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@IdCategoria", producto.oCategoria.IdCategoria);
@@ -81,6 +82,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("@PrecioVenta", producto.PrecioVenta);
                     cmd.Parameters.AddWithValue("@Estado", producto.Estado);
                     cmd.Parameters.AddWithValue("@FechaRegistro", producto.FechaRegistro);
+                    cmd.Parameters.AddWithValue("@codigoProducto", producto.codigoProducto);
 
                     cmd.CommandType = CommandType.Text;
                     con.Open();
@@ -104,7 +106,7 @@ namespace CapaDatos
                 {
                     string query = "UPDATE PRODUCTO " +
                                    "SET IdCategoria = @IdCategoria, Nombre = @Nombre, Descripcion = @Descripcion, Stock = @Stock, " +
-                                   "PrecioCompra = @PrecioCompra, PrecioVenta = @PrecioVenta, Estado = @Estado, FechaRegistro = @FechaRegistro " +
+                                   "PrecioCompra = @PrecioCompra, PrecioVenta = @PrecioVenta, Estado = @Estado, FechaRegistro = @FechaRegistro, codigoProducto = @codigoProducto " +
                                    "WHERE IdProducto = @IdProducto";
 
                     SqlCommand cmd = new SqlCommand(query, con);
@@ -117,6 +119,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("@PrecioVenta", producto.PrecioVenta);
                     cmd.Parameters.AddWithValue("@Estado", producto.Estado);
                     cmd.Parameters.AddWithValue("@FechaRegistro", producto.FechaRegistro);
+                    cmd.Parameters.AddWithValue("@codigoProducto", producto.codigoProducto);
 
                     cmd.CommandType = CommandType.Text;
                     con.Open();
@@ -131,6 +134,61 @@ namespace CapaDatos
                 }
             }
         }
+
+        
+        public Producto ObtenerProductoPorCodigoProducto(string codigoProducto)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    string query = "SELECT p.IdProducto, p.IdCategoria, p.Nombre, p.Descripcion, p.Stock, p.PrecioCompra, p.PrecioVenta, p.Estado, p.FechaRegistro, c.Descripcion AS CategoriaDescripcion, p.codigoProducto " +
+                                   "FROM PRODUCTO p " +
+                                   "LEFT JOIN CATEGORIA c ON p.IdCategoria = c.IdCategoria " +
+                                   "WHERE p.codigoProducto = @CodigoProducto";
+
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@CodigoProducto", codigoProducto);
+                    cmd.CommandType = CommandType.Text;
+                    con.Open();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Producto
+                            {
+                                IdProducto = Convert.ToInt32(reader["IdProducto"]),
+                                oCategoria = new Categoria
+                                {
+                                    IdCategoria = Convert.ToInt32(reader["IdCategoria"]),
+                                    Descripcion = reader["CategoriaDescripcion"].ToString()
+                                },
+                                Nombre = reader["Nombre"].ToString(),
+                                Descripcion = reader["Descripcion"].ToString(),
+                                Stock = Convert.ToInt32(reader["Stock"]),
+                                PrecioCompra = Convert.ToDecimal(reader["PrecioCompra"]),
+                                PrecioVenta = Convert.ToDecimal(reader["PrecioVenta"]),
+                                Estado = Convert.ToBoolean(reader["Estado"]),
+                                FechaRegistro = (DateTime)(reader["FechaRegistro"] as DateTime?),
+                                codigoProducto = reader["codigoProducto"].ToString()
+                            };
+                        }
+                    }
+
+                    // Si no se encuentra el producto, puedes devolver null o manejarlo de otra forma.
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    // Manejo de errores aquí
+                    return null;
+                }
+            }
+        }
+
+
+
 
     }
 }

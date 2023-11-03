@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaEntidad;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace CapaPresentacion
 {
     public partial class frmVentas : Form
     {
-        public frmVentas()
+        private Usuario usuarioActual;
+        public frmVentas(Usuario oUsuario = null)
         {
+            usuarioActual = oUsuario;
             InitializeComponent();
+        }
+
+        private void frmVentas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

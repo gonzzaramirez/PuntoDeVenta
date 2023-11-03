@@ -55,7 +55,7 @@ namespace posMate
         private void iconButton3_Click(object sender, EventArgs e)
         {
             SidePanel.Top = btnVentas.Top;
-            frmVentas formularioVT = new frmVentas();
+            opcionVenta formularioVT = new opcionVenta();
             MostrarFormularioEnContenedor(formularioVT);
 
         }

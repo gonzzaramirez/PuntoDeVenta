@@ -19,14 +19,20 @@ namespace CapaNegocio
 
         public bool AgregarProducto(Producto producto)
         {
-            // Puedes agregar validaciones u otra lógica de negocio aquí antes de llamar al método en la capa de datos.
+            
             return ocd_producto.AgregarProducto(producto);
         }
 
         public bool EditarProducto(Producto producto)
         {
-            // Puedes agregar validaciones u otra lógica de negocio aquí antes de llamar al método en la capa de datos.
             return ocd_producto.EditarProducto(producto);
         }
+
+        public Producto ObtenerProductoPorCodigoProducto(string codigoProducto)
+        {
+            
+            return ocd_producto.ObtenerProductoPorCodigoProducto(codigoProducto);
+        }
+
     }
 }
