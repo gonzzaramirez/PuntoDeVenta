@@ -380,7 +380,7 @@ namespace CapaPresentacion
         private void limparVerificado()
         {
             txtNombree.Focus();
-            txtCodigoBarra.Enabled = false;
+            txtCodigoBarra.ReadOnly = true;
           
             txtNombree.Clear();
             txtDesc.Clear();
