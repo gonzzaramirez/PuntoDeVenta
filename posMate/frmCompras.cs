@@ -18,7 +18,7 @@ namespace CapaPresentacion
 {
     public partial class frmCompras : Form
     {
-       
+
 
         // para saber que usuario compra
         private Usuario usuarioActual;
@@ -44,7 +44,7 @@ namespace CapaPresentacion
         {
             if (carrito.Count > 0)
             {
-               
+
                 btnConfirmarCompra.Enabled = true;
                 btnConfirmarCompra.BackColor = Color.Green;
             }
@@ -57,16 +57,16 @@ namespace CapaPresentacion
 
             iconButton2.Enabled = true;
             iconButton2.BackColor = Color.ForestGreen;
-            
+
             btnCarrito.BackColor = SystemColors.Control;
             btnCarrito.Enabled = false;
-           
+
             txtNombree.Enabled = false;
             txtDesc.Enabled = false;
             txtCantidad.Enabled = false;
             txtPrecioCompra.Enabled = false;
             txtPrecioVenta.Enabled = false;
-            dtpFecha.Enabled = false;
+
             cboCategoria.Enabled = false;
             cboProveedor.Enabled = false;
             cboEstadoo.Enabled = false;
@@ -74,14 +74,14 @@ namespace CapaPresentacion
 
         private void verificado()
         {
-           
+
 
             iconButton2.Enabled = false;
             iconButton2.BackColor = SystemColors.Control;
-          
+
             btnCarrito.BackColor = Color.MediumTurquoise;
             btnCarrito.Enabled = true;
-           
+
 
             aviso.Visible = false;
             txtNombree.Enabled = true;
@@ -89,7 +89,7 @@ namespace CapaPresentacion
             txtCantidad.Enabled = true;
             txtPrecioCompra.Enabled = true;
             txtPrecioVenta.Enabled = true;
-            dtpFecha.Enabled = true;
+
             cboCategoria.Enabled = true;
             cboProveedor.Enabled = true;
             cboEstadoo.Enabled = true;
@@ -99,7 +99,7 @@ namespace CapaPresentacion
 
         private void frmCompras_Load(object sender, EventArgs e)
         {
-
+            dtpFecha.Value = DateTime.Now;
 
 
             // Agregar opciones "Activo" y "No Activo" al ComboBox cboEstado
@@ -142,7 +142,7 @@ namespace CapaPresentacion
             cboCategoria.SelectedIndex = 0;
 
             // Obtener una lista de productos y mostrarlos en el dgv
-           
+
 
 
 
@@ -164,10 +164,7 @@ namespace CapaPresentacion
                 FechaRegistro = dtpFecha.Value,
                 Estado = cboEstadoo.SelectedIndex == 0,
                 oCategoria = new Categoria() { IdCategoria = Convert.ToInt32(((OpcionCombo)cboCategoria.SelectedItem).Valor) }
-
             };
-
-
 
             // Agrega el producto al carrito
             carrito.Add(nuevoProducto);
@@ -192,24 +189,22 @@ namespace CapaPresentacion
             else
             {
                 int idProducto = int.Parse(txtId.Text);
-                Producto producto = negocioProducto.ObtenerProductos().FirstOrDefault(p => p.IdProducto == idProducto);
-                producto.PrecioCompra = decimal.Parse(txtPrecioCompra.Text);
-                
-                producto.Stock = int.Parse(txtCantidad.Text);
-                if (negocioProducto.EditarProducto(producto))
+                Producto productoExistente = negocioProducto.ObtenerProductoPorCodigoProducto(txtCodigoBarra.Text);
+
+                if (productoExistente != null)
                 {
-                    MessageBox.Show("El producto se ha editado correctamente.");
-                    ActualizarDataGridView(carrito);
+                    productoExistente.PrecioCompra = decimal.Parse(txtPrecioCompra.Text);
+                    int cantidadNueva = int.Parse(txtCantidad.Text);
 
-
+                    if (negocioProducto.EditarProducto(productoExistente) && negocioProducto.ActualizarStockProducto(idProducto, cantidadNueva))
+                    {
+                        MessageBox.Show("El producto se ha editado correctamente.");
+                        ActualizarDataGridView(carrito);
+                    }
                 }
-
             }
+
             limpar();
-
-
-
-
         }
 
         private void ActualizarDataGridView(List<Producto> productos)
@@ -329,6 +324,8 @@ namespace CapaPresentacion
             }
         }
 
+
+        //BOTON VERIFICAR
         private void iconButton2_Click(object sender, EventArgs e)
         {
             verificado();
@@ -353,12 +350,12 @@ namespace CapaPresentacion
                 txtPrecioVenta.Enabled = false;
                 cboCategoria.Enabled = false;
                 cboEstadoo.Enabled = false;
-                
+
             }
             else
             {
                 MessageBox.Show("Producto inexistente, cargue sus datos");
-                limpar();
+                limparVerificado();
             }
 
 
@@ -369,15 +366,30 @@ namespace CapaPresentacion
         private void limpar()
         {
             txtCodigoBarra.Focus();
-            txtCodigoBarra.Enabled  = true;
+            txtCodigoBarra.Enabled = true;
             txtCodigoBarra.Clear();
             txtNombree.Clear();
             txtDesc.Clear();
             txtCantidad.Clear();
-            txtPrecioCompra.Clear();    
+            txtPrecioCompra.Clear();
             txtPrecioVenta.Clear();
-           
+
 
         }
+
+        private void limparVerificado()
+        {
+            txtNombree.Focus();
+            txtCodigoBarra.Enabled = false;
+          
+            txtNombree.Clear();
+            txtDesc.Clear();
+            txtCantidad.Clear();
+            txtPrecioCompra.Clear();
+            txtPrecioVenta.Clear();
+
+
+        }
+
     }
 }

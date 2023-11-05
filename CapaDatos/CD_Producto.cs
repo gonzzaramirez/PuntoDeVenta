@@ -187,6 +187,31 @@ namespace CapaDatos
             }
         }
 
+        public bool ActualizarStockProducto(int productoId, int cantidad)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    string query = "UPDATE PRODUCTO SET Stock = Stock + @Cantidad WHERE IdProducto = @ProductoId";
+
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@Cantidad", cantidad);
+                    cmd.Parameters.AddWithValue("@ProductoId", productoId);
+
+                    cmd.CommandType = CommandType.Text;
+                    con.Open();
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+                catch (Exception ex)
+                {
+                    // Manejo de errores aquí
+                    return false;
+                }
+            }
+        }
 
 
 
