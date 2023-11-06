@@ -170,7 +170,7 @@ namespace CapaPresentacion
                 Nombre = textNameProvedor.Text,
                 Documento = textDocumentoProveedor.Text,
                 Telefono = textTelefonoProveedor.Text,
-                Estado = cboEstado2.SelectedIndex == 0, // 0 para Inactivo, 1 para Activo
+                Estado = cboEstado2.SelectedIndex == 0, 
             };
 
             CN_Proveedor negocioProveedor = new CN_Proveedor();
@@ -233,15 +233,20 @@ namespace CapaPresentacion
 
         private void limpiarCampos()
         {
-            txtIndice2.Text = "-1";
-            txtId2.Clear();
+            cboEstado.SelectedIndex = -1;
+            txtId2.Text = "0";
             textNameProvedor.Clear();
             textDocumentoProveedor.Clear();
             textTelefonoProveedor.Clear();
-            cboEstado2.SelectedIndex = -1;
+           
         }
 
         private void dgvData_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel2_Click(object sender, EventArgs e)
         {
 
         }
