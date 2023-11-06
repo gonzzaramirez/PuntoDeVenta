@@ -53,20 +53,15 @@ namespace CapaPresentacion
                 btnConfirmarCompra.Enabled = false;
                 btnConfirmarCompra.BackColor = SystemColors.Control;
             }
-
-
             iconButton2.Enabled = true;
             iconButton2.BackColor = Color.ForestGreen;
-
             btnCarrito.BackColor = SystemColors.Control;
             btnCarrito.Enabled = false;
-
             txtNombree.Enabled = false;
             txtDesc.Enabled = false;
             txtCantidad.Enabled = false;
             txtPrecioCompra.Enabled = false;
             txtPrecioVenta.Enabled = false;
-
             cboCategoria.Enabled = false;
             cboProveedor.Enabled = false;
             cboEstadoo.Enabled = false;
@@ -74,22 +69,16 @@ namespace CapaPresentacion
 
         private void verificado()
         {
-
-
             iconButton2.Enabled = false;
             iconButton2.BackColor = SystemColors.Control;
-
             btnCarrito.BackColor = Color.MediumTurquoise;
             btnCarrito.Enabled = true;
-
-
             aviso.Visible = false;
             txtNombree.Enabled = true;
             txtDesc.Enabled = true;
             txtCantidad.Enabled = true;
             txtPrecioCompra.Enabled = true;
             txtPrecioVenta.Enabled = true;
-
             cboCategoria.Enabled = true;
             cboProveedor.Enabled = true;
             cboEstadoo.Enabled = true;
@@ -99,53 +88,33 @@ namespace CapaPresentacion
 
         private void frmCompras_Load(object sender, EventArgs e)
         {
-            dtpFecha.Value = DateTime.Now;
+            dtpFecha.Value = DateTime.Now; 
 
-
-            // Agregar opciones "Activo" y "No Activo" al ComboBox cboEstado
             cboEstadoo.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
-            cboEstadoo.Items.Add(new OpcionCombo() { Valor = 0, Texto = "Inactivo" });
-
-            // Configurar el ComboBox cboEstado para mostrar el texto y usar el valor al seleccionar
+            cboEstadoo.Items.Add(new OpcionCombo() { Valor = 0, Texto = "Inactivo" });      
             cboEstadoo.DisplayMember = "Texto";
-            cboEstadoo.ValueMember = "Valor";
-
-            // Establecer la opción seleccionada inicialmente como "Activo"
+            cboEstadoo.ValueMember = "Valor";    
             cboEstadoo.SelectedIndex = 0;
 
-            // Obtener una lista de proveedores y agregarlos al ComboBox cboProveedor
+
             List<Proveedor> listaProveedor = new CN_Proveedor().ObtenerProveedores();
             foreach (var item in listaProveedor)
             {
                 cboProveedor.Items.Add(new OpcionCombo() { Valor = item.IdProveedor, Texto = item.Nombre });
             }
-
-            // Configurar el ComboBox provedor para mostrar el texto y usar el valor al seleccionar
             cboProveedor.DisplayMember = "Texto";
-            cboProveedor.ValueMember = "Valor";
-
-            // Establecer la opción seleccionada inicialmente como administrador
+            cboProveedor.ValueMember = "Valor"; 
             cboProveedor.SelectedIndex = 0;
 
-            // Obtener una lista de categorias y agregarlos al ComboBox cbocategoria
+           
             List<Categoria> listaCategoria = new CN_Categoria().ObtenerCategorias();
             foreach (var item in listaCategoria)
             {
                 cboCategoria.Items.Add(new OpcionCombo() { Valor = item.IdCategoria, Texto = item.Descripcion });
-            }
-
-            // Configurar el ComboBox provedor para mostrar el texto y usar el valor al seleccionar
+            }        
             cboCategoria.DisplayMember = "Texto";
-            cboCategoria.ValueMember = "Valor";
-
-            // Establecer la opción seleccionada inicialmente como administrador
+            cboCategoria.ValueMember = "Valor";           
             cboCategoria.SelectedIndex = 0;
-
-            // Obtener una lista de productos y mostrarlos en el dgv
-
-
-
-
         }
 
         //boton agregar carrito

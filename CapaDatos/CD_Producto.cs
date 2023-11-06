@@ -213,7 +213,82 @@ namespace CapaDatos
             }
         }
 
+        public bool ActualizarStockProductoVenta(int productoId, int cantidad)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    string query = "UPDATE PRODUCTO SET Stock = Stock - @Cantidad WHERE IdProducto = @ProductoId";
 
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@Cantidad", cantidad);
+                    cmd.Parameters.AddWithValue("@ProductoId", productoId);
+
+                    cmd.CommandType = CommandType.Text;
+                    con.Open();
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+                catch (Exception ex)
+                {
+                    // Manejo de errores aquí
+                    return false;
+                }
+            }
+        }
+
+        public Producto ObtenerProductoPorId(int id)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    string query = "SELECT p.IdProducto, p.IdCategoria, p.Nombre, p.Descripcion, p.Stock, p.PrecioCompra, p.PrecioVenta, p.Estado, p.FechaRegistro, c.Descripcion AS CategoriaDescripcion, p.codigoProducto " +
+                                   "FROM PRODUCTO p " +
+                                   "LEFT JOIN CATEGORIA c ON p.IdCategoria = c.IdCategoria " +
+                                   "WHERE p.IdProducto = @id";
+
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.CommandType = CommandType.Text;
+                    con.Open();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Producto
+                            {
+                                IdProducto = Convert.ToInt32(reader["IdProducto"]),
+                                oCategoria = new Categoria
+                                {
+                                    IdCategoria = Convert.ToInt32(reader["IdCategoria"]),
+                                    Descripcion = reader["CategoriaDescripcion"].ToString()
+                                },
+                                Nombre = reader["Nombre"].ToString(),
+                                Descripcion = reader["Descripcion"].ToString(),
+                                Stock = Convert.ToInt32(reader["Stock"]),
+                                PrecioCompra = Convert.ToDecimal(reader["PrecioCompra"]),
+                                PrecioVenta = Convert.ToDecimal(reader["PrecioVenta"]),
+                                Estado = Convert.ToBoolean(reader["Estado"]),
+                                FechaRegistro = (DateTime)(reader["FechaRegistro"] as DateTime?),
+                                codigoProducto = reader["codigoProducto"].ToString()
+                            };
+                        }
+                    }
+
+                    // Si no se encuentra el producto, puedes devolver null o manejarlo de otra forma.
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    // Manejo de errores aquí
+                    return null;
+                }
+            }
+        }
 
     }
 }

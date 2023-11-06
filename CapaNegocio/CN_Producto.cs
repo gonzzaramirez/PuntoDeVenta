@@ -34,12 +34,24 @@ namespace CapaNegocio
             return ocd_producto.ObtenerProductoPorCodigoProducto(codigoProducto);
         }
 
+        public Producto ObtenerProductoPorId(int id)
+        {
+
+            return ocd_producto.ObtenerProductoPorId(id);
+        }
 
         public bool ActualizarStockProducto(int productoId, int cantidad)
         {
             // Aquí puedes agregar lógica adicional si es necesario antes de llamar a la capa de datos.
             return ocd_producto.ActualizarStockProducto(productoId, cantidad);
         }
+
+        public bool ActualizarStockProductoVenta(int productoId, int cantidad)
+        {
+            // Aquí puedes agregar lógica adicional si es necesario antes de llamar a la capa de datos.
+            return ocd_producto.ActualizarStockProductoVenta(productoId, cantidad);
+        }
+
 
     }
 }

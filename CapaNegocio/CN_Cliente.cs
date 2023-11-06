@@ -28,5 +28,10 @@ namespace CapaNegocio
             return ocd_cliente.BuscarClientePorDNI(dni);
         }
 
+        public int ObtenerIdClientePorDNI(int dni)
+        {
+            return ocd_cliente.ObtenerIdClientePorDNI(dni);
+        }
+
     }
 }

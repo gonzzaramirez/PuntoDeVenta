@@ -51,12 +51,18 @@ namespace posMate
             Inicio Inicio = new Inicio();
             MostrarFormularioEnContenedor(Inicio);
         }
+        
 
+        //venta
         private void iconButton3_Click(object sender, EventArgs e)
         {
             SidePanel.Top = btnVentas.Top;
-            opcionVenta formularioVT = new opcionVenta();
+            opcionVenta formularioVT = new opcionVenta(usuarioActual);
             MostrarFormularioEnContenedor(formularioVT);
+
+
+
+      
 
         }
 
@@ -126,6 +132,7 @@ namespace posMate
             MostrarFormularioEnContenedor(formularioPD);
         }
 
+        //Compra
         private void btnCompras_Click(object sender, EventArgs e)
         {
             SidePanel.Top = btnCompras.Top;

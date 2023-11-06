@@ -112,5 +112,36 @@ namespace CapaDatos
             return clienteEncontrado;
         }
 
+        public int ObtenerIdClientePorDNI(int dni)
+        {
+            int idCliente = -1; // Valor predeterminado si no se encuentra el cliente
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    string query = "SELECT IdCliente FROM Cliente WHERE DNI = @DNI";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@DNI", dni);
+                    cmd.CommandType = CommandType.Text;
+                    con.Open();
+
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null && result != DBNull.Value)
+                    {
+                        idCliente = Convert.ToInt32(result);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Manejo de errores aquí
+                }
+            }
+
+            return idCliente;
+        }
+
+
     }
 }
