@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="BaseDatosDAL.cs" />
     <Compile Include="CD_Categoria.cs" />
+    <Compile Include="CD_Cliente.cs" />
     <Compile Include="CD_Compra.cs" />
     <Compile Include="CD_DetalleCompra.cs" />
     <Compile Include="CD_Permiso.cs" />

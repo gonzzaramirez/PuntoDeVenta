@@ -61,8 +61,10 @@ namespace CapaPresentacion
 
         private void btnRealizarBackup_Click_1(object sender, EventArgs e)
         {
+            bunifuLoader1.Visible = true;
             try
             {
+                
                 string rutaCarpeta = txtRutaCarpeta.Text;
                 string baseDeDatosSeleccionada = cmbBasesDeDatos.Text;
 
@@ -104,6 +106,7 @@ namespace CapaPresentacion
                 // Realizar la copia de seguridad
                 if (CN_Backup.RealizarBackup(baseDeDatosSeleccionada, rutaCarpeta))
                 {
+                    bunifuLoader1.Visible = false;
                     // Muestra un mensaje de éxito
                     MessageBox.Show("Copia de seguridad realizada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
