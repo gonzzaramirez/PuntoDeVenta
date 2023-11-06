@@ -21,7 +21,7 @@ namespace CapaPresentacion
     public partial class frmVentas : Form
     {
         private Usuario usuarioActual;
-        private int idClienteCreado;
+        private decimal montoTotal = 0;
 
         private List<Producto> carrito = new List<Producto>();
         public frmVentas(Usuario oUsuario = null)
@@ -66,7 +66,12 @@ namespace CapaPresentacion
                 btnConfirmarCompra.Enabled = false;
                 btnConfirmarCompra.BackColor = SystemColors.Control;
             }
-
+            txtDNII.Enabled = true;
+            txtDNII.Clear();
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtCantidad.Clear(); 
+            txtPago.Clear();    
 
             iconButton1.Enabled = true;
             iconButton1.BackColor = Color.ForestGreen;
@@ -190,6 +195,11 @@ namespace CapaPresentacion
                 negocioProducto.ActualizarStockProductoVenta(idProducto, cantidad);
                 carrito.Add(producto);
 
+
+                montoTotal += producto.PrecioVenta * cantidad;
+
+                resultadoTotal.Text =   montoTotal.ToString("C");
+
                 if (carrito.Count > 0)
                 {
                     btnConfirmarCompra.BackColor = Color.ForestGreen;
@@ -199,11 +209,11 @@ namespace CapaPresentacion
                 // Agregar los datos del producto al DataGridView
                 dgvData.Rows.Add(new object[]
                 {
-             txtDNII.Text, // DNI del cliente
-             producto.Nombre, // Nombre del producto
-             producto.PrecioVenta, // Precio del producto
-             cantidad, // Cantidad
-            producto.PrecioVenta * cantidad // Total
+                     txtDNII.Text, // DNI del cliente
+                     producto.Nombre, 
+                     producto.PrecioVenta, 
+                     cantidad, 
+                     producto.PrecioVenta * cantidad 
                 });
 
                 // Limpiar los campos después de agregar el producto al carrito
@@ -238,57 +248,92 @@ namespace CapaPresentacion
 
         private void btnConfirmarCompra_Click(object sender, EventArgs e)
         {
-            verificarCheck();
-
-            if (txtId != null && txtId.Text != null)
+            if (string.IsNullOrWhiteSpace(txtPago.Text))
             {
-                int idCliente = 0;
-                if (int.TryParse(txtId.Text, out idCliente))
+                MessageBox.Show("Por favor, ingrese un monto de pago válido.");
+                return;
+            }
+
+            
+
+            decimal montoTotal = CalcularMontoTotalDelCarrito();
+            decimal montoPago = decimal.Parse(txtPago.Text);
+
+            if (montoPago < montoTotal)
+            {
+                MessageBox.Show("El monto de pago debe ser mayor o igual al monto total.");
+                return;
+            }
+
+                Venta nuevaVenta = new Venta
+            {
+                oUsuario = new Usuario() { IdUsuario = usuarioActual.IdUsuario },
+                oCliente = new Cliente() { IdCliente = int.Parse(txtId.Text) },
+                MontoPago = decimal.Parse(txtPago.Text),
+                MontoCambio = decimal.Parse(txtPago.Text) - montoTotal,
+                MontoTotal = montoTotal,
+                FechaRegistro = dtpFecha.Value,
+            };
+
+            CN_Venta negocioVenta = new CN_Venta();
+            CN_DetalleVenta negocioDetalle = new CN_DetalleVenta();
+            CN_Producto negocioProducto = new CN_Producto();
+
+            if (negocioVenta.AgregarVenta(nuevaVenta))
+            {
+                int idVenta = negocioVenta.ObtenerUltimoIDVenta();
+                if (idVenta > 0)
                 {
-                    decimal montoTotal = CalcularMontoTotalDelCarrito();
+                    List<DetalleVenta> detallesVenta = new List<DetalleVenta>();
+                    List<Producto> productosDisponibles = negocioProducto.ObtenerProductos();
 
-                    if (txtPago != null && txtPago.Text != null)
+                    foreach (Producto productoEnCarrito in carrito)
                     {
-                        decimal montoPago;
-                        if (decimal.TryParse(txtPago.Text, out montoPago))
-                        {
-                            decimal montoCambio = montoPago - montoTotal;
+                        Producto productoEnBaseDeDatos = productosDisponibles.FirstOrDefault(p =>
+                            p.Nombre == productoEnCarrito.Nombre && p.Descripcion == productoEnCarrito.Descripcion);
 
-                            Venta nuevaVenta = new Venta
+                        if (productoEnBaseDeDatos != null)
+                        {
+                            // Obtener la fila correspondiente a este producto en el DataGridView
+                            DataGridViewRow row = dgvData.Rows
+                                .Cast<DataGridViewRow>()
+                                .First(r => r.Cells["Producto"].Value.ToString() == productoEnBaseDeDatos.Nombre);
+
+                            int cantidad = Convert.ToInt32(row.Cells["Cantidad"].Value);
+                            decimal subtotal = cantidad * productoEnCarrito.PrecioVenta;
+
+                            DetalleVenta detalle = new DetalleVenta
                             {
-                                oUsuario = new Usuario() { IdUsuario = usuarioActual.IdUsuario },
-                                oCliente = new Cliente() { IdCliente = idCliente },
-                                MontoPago = montoPago,
-                                MontoCambio = montoCambio,
-                                MontoTotal = montoTotal,
-                                FechaRegistro = dtpFecha.Value,
+                                IdVenta = idVenta,
+                                oProducto = new Producto() { IdProducto = productoEnBaseDeDatos.IdProducto },
+                                PrecioVenta = productoEnCarrito.PrecioVenta,
+                                Cantidad = cantidad,    // Usar la cantidad del DataGridView
+                                Subtotal = subtotal,    // Calcular el subtotal
+                                FechaRegistro = productoEnCarrito.FechaRegistro
                             };
 
-                            CN_Venta negocioVenta = new CN_Venta();
-                            if (negocioVenta.AgregarVenta(nuevaVenta))
+                            if (negocioDetalle.AgregarDetalleVenta(detalle))
                             {
-                                MessageBox.Show("Compra confirmada con éxito.");
+                                detallesVenta.Add(detalle);
                             }
                         }
-                        else
-                        {
-                            MessageBox.Show("El monto de pago no es válido.");
-                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("El campo de monto de pago es nulo o vacío.");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("El ID del cliente no es un número válido.");
+
+                    nuevaVenta.DetalleVenta = detallesVenta;
+                   
+
+                    dgvData.Rows.Clear();
+                    carrito.Clear();
+                    MessageBox.Show("venta confirmada con éxito.");
+                    resultadoTotal.Text = " ";
+                    verificarCheck();
                 }
             }
-            else
-            {
-                MessageBox.Show("El campo de ID del cliente es nulo o vacío.");
-            }
+        }
+
+        private void bunifuLabel3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

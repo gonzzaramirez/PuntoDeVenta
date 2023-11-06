@@ -77,6 +77,8 @@
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtId = new System.Windows.Forms.TextBox();
             this.idProducto = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.resultadoTotal = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
@@ -390,7 +392,7 @@
             this.btnConfirmarCompra.Name = "btnConfirmarCompra";
             this.btnConfirmarCompra.Size = new System.Drawing.Size(180, 32);
             this.btnConfirmarCompra.TabIndex = 12;
-            this.btnConfirmarCompra.Text = "Confirmar compra";
+            this.btnConfirmarCompra.Text = "Confirmar venta";
             this.btnConfirmarCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnConfirmarCompra.UseVisualStyleBackColor = false;
             this.btnConfirmarCompra.Click += new System.EventHandler(this.btnConfirmarCompra_Click);
@@ -824,11 +826,32 @@
             this.idProducto.Text = "0";
             this.idProducto.Visible = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(2, 489);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 28);
+            this.label3.TabIndex = 60;
+            this.label3.Text = "Total:";
+            // 
+            // resultadoTotal
+            // 
+            this.resultadoTotal.AutoSize = true;
+            this.resultadoTotal.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultadoTotal.Location = new System.Drawing.Point(69, 489);
+            this.resultadoTotal.Name = "resultadoTotal";
+            this.resultadoTotal.Size = new System.Drawing.Size(0, 28);
+            this.resultadoTotal.TabIndex = 61;
+            // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 525);
+            this.Controls.Add(this.resultadoTotal);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.idProducto);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.bunifuGradientPanel1);
@@ -872,5 +895,7 @@
         private FontAwesome.Sharp.IconButton btnCarrito;
         private Bunifu.UI.WinForms.BunifuDropdown cboProducto;
         private System.Windows.Forms.TextBox idProducto;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label resultadoTotal;
     }
 }

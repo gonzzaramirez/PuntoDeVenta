@@ -15,31 +15,13 @@ namespace CapaNegocios
         }
 
         public List<DetalleCompra> ObtenerDetallesCompra(int idCompra)
-        {
-            try
-            {
-                // Puedes agregar aquí la lógica adicional que necesites antes o después de acceder a la capa de datos.
+        {      
                 return datosDetalleCompra.ObtenerDetallesCompra(idCompra);
-            }
-            catch (Exception ex)
-            {
-                // Manejo de errores aquí
-                return new List<DetalleCompra>();
-            }
         }
 
         public bool AgregarDetalleCompra(DetalleCompra detalleCompra)
-        {
-            try
-            {
-                // Puedes agregar aquí la lógica adicional que necesites antes de agregar el detalle de compra.
-                return datosDetalleCompra.AgregarDetalleCompra(detalleCompra);
-            }
-            catch (Exception ex)
-            {
-                // Manejo de errores aquí
-                return false;
-            }
+        {      
+                return datosDetalleCompra.AgregarDetalleCompra(detalleCompra);                    
         }
     }
 }

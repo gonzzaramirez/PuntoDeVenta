@@ -22,5 +22,10 @@ namespace CapaNegocio
             
             return ocd_venta.AgregarVenta(venta);
         }
+
+        public int ObtenerUltimoIDVenta()
+        {
+            return ocd_venta.ObtenerUltimoIDVenta();
+        }
     }
 }
