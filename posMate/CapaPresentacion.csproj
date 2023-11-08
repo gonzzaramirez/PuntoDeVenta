@@ -213,6 +213,7 @@
     <Reference Include="System.Web.Services.Description, Version=4.9.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Web.Services.Description.4.9.0\lib\net461\System.Web.Services.Description.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -236,6 +237,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGananciasPorCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGananciasPorCategoria.Designer.cs">
+      <DependentUpon>FormGananciasPorCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBackUp.cs">
       <SubType>Form</SubType>
@@ -285,6 +292,12 @@
     <Compile Include="frmVentas.Designer.cs">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVerCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerCompras.Designer.cs">
+      <DependentUpon>frmVerCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +309,12 @@
     </Compile>
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="opcionCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="opcionCompra.Designer.cs">
+      <DependentUpon>opcionCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -310,8 +329,17 @@
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
     <Compile Include="Utilidades\OpcionCombo.cs" />
+    <Compile Include="opcionVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="opcionVenta.Designer.cs">
+      <DependentUpon>opcionVenta.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGananciasPorCategoria.resx">
+      <DependentUpon>FormGananciasPorCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBackUp.resx">
       <DependentUpon>frmBackUp.cs</DependentUpon>
@@ -337,11 +365,20 @@
     <EmbeddedResource Include="frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmVerCompras.resx">
+      <DependentUpon>frmVerCompras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="opcionCompra.resx">
+      <DependentUpon>opcionCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="opcionVenta.resx">
+      <DependentUpon>opcionVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

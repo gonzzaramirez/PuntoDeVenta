@@ -97,7 +97,7 @@ namespace CapaPresentacion
         private void limpiar()
         {
             txtIndice.Text = "-1";
-            txtId.Clear();
+            txtId.Text = "0";
             txtDescripcion.Clear();
             cboEstado.SelectedIndex = -1;
         }

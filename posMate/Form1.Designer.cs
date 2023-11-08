@@ -232,7 +232,7 @@
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(172, 54);
             this.btnProductos.TabIndex = 4;
-            this.btnProductos.Text = "Productos";
+            this.btnProductos.Text = "Inventario";
             this.btnProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnProductos.UseVisualStyleBackColor = false;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click_2);
