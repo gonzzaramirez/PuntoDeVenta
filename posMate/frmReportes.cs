@@ -16,5 +16,17 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void bunifuButton22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void categoriaGanancias_Click(object sender, EventArgs e)
+        {
+            FormGananciasPorCategoria formGananciasPorCategoria = new FormGananciasPorCategoria();
+            formGananciasPorCategoria.Show();
+        }
+
     }
 }

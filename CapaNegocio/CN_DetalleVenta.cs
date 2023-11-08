@@ -22,5 +22,11 @@ namespace CapaNegocio
         {
             return ocd_venta.AgregarDetalleVenta(detalleVenta);
         }
+
+        public Dictionary<string, decimal> ObtenerGananciasPorCategoria()
+        {
+            return ocd_venta.ObtenerGananciasPorCategoria();
+        }
+
     }
 }

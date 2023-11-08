@@ -89,5 +89,40 @@ namespace CapaDatos
                 }
             }
         }
+
+        public Dictionary<string, decimal> ObtenerGananciasPorCategoria()
+        {
+            Dictionary<string, decimal> gananciasPorCategoria = new Dictionary<string, decimal>();
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand("SELECT c.Descripcion, SUM(dv.Subtotal) as Ganancias " +
+                                                           "FROM DETALLE_VENTA dv " +
+                                                           "INNER JOIN PRODUCTO p ON dv.IdProducto = p.IdProducto " +
+                                                           "INNER JOIN CATEGORIA c ON p.IdCategoria = c.IdCategoria " +
+                                                           "GROUP BY c.Descripcion", con))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                gananciasPorCategoria.Add(reader["Descripcion"].ToString(), Convert.ToDecimal(reader["Ganancias"]));
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Manejo de errores aquí
+                    gananciasPorCategoria = new Dictionary<string, decimal>();
+                }
+            }
+            return gananciasPorCategoria;
+        }
+
     }
 }
