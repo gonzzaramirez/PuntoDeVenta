@@ -27,6 +27,9 @@ namespace CapaPresentacion
             // Obtener la lista de compras desde la capa de negocio
             List<Venta> ventas = negocioVenta.ObtenerVentas();
 
+            // Establecer el texto de lblTotalVentas para mostrar el total de ventas
+            lblTotalVentas.Text =  ventas.Count.ToString();
+
             dgvDataVenta.Rows.Clear();
 
             foreach (Venta venta in ventas)
@@ -78,10 +81,28 @@ namespace CapaPresentacion
                         detalleVenta.Subtotal
                     );
                 }
+
+                // Establecer el texto de lblTotalDetalleVentas para mostrar el total de registros en detalle de venta
+                lblTotalDetalleVentas.Text = detallesVenta.Count.ToString();
             }
         }
 
         private void dgvDetalleVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotalVentas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotalDetalleVentas_Click(object sender, EventArgs e)
         {
 
         }

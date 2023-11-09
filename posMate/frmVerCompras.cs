@@ -27,6 +27,8 @@ namespace CapaPresentacion
             // Obtener la lista de compras desde la capa de negocio
             List<Compra> compras = negocioCompra.ObtenerCompras();
 
+            // Establecer el texto de lblTotalVentas para mostrar el total de compras
+            lblTotalCompras.Text = compras.Count.ToString();
             dgvData.Rows.Clear();
 
             foreach (Compra compra in compras)
@@ -79,6 +81,9 @@ namespace CapaPresentacion
                         detalleCompra.MontoTotal
                     );
                 }
+
+                // Establecer el texto de lblTotalDetalleCompras para mostrar el total de registros en detalle de compra
+                lblTotalDetalleCompras.Text = detallesCompra.Count.ToString();
             }
         }
 
@@ -93,6 +98,16 @@ namespace CapaPresentacion
         }
 
         private void bunifuLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotalCompras_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotalDetalleCompras_Click(object sender, EventArgs e)
         {
 
         }
