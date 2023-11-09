@@ -273,4 +273,3 @@ C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_
 C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\CapaDatos.dll.config
 C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\CapaEntidad.dll.config
 C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\CapaNegocio.dll.config
-C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\Microsoft.ReportViewer.WinForms.xml
