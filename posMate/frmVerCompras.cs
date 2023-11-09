@@ -47,5 +47,54 @@ namespace CapaPresentacion
 
             }
     }
+
+        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Obtén el índice de la fila seleccionada
+            int index = e.RowIndex;
+
+            // Si el índice es válido (es decir, el usuario hizo clic en una fila, no en el encabezado de la columna)
+            if (index != -1)
+            {
+                // Obtén el IdCompra de la fila seleccionada
+                int idCompra = Convert.ToInt32(dgvData.Rows[index].Cells[0].Value);
+
+                // Crea una instancia de CN_DetalleCompra
+                CN_DetalleCompra negocioDetalleCompra = new CN_DetalleCompra();
+
+                // Obtén los detalles de la compra desde la capa de negocio
+                List<DetalleCompra> detallesCompra = negocioDetalleCompra.ObtenerDetallesCompra(idCompra);
+
+                // Limpia las filas existentes en dgvDetalleCompra
+                dgvDetalleCompra.Rows.Clear();
+
+                // Agrega los detalles de la compra a dgvDetalleCompra
+                foreach (DetalleCompra detalleCompra in detallesCompra)
+                {
+                    dgvDetalleCompra.Rows.Add(
+                        detalleCompra.oProducto.IdProducto,
+                        detalleCompra.oProducto.Nombre,
+                        detalleCompra.PrecioCompra,
+                        detalleCompra.Cantidad,
+                        detalleCompra.MontoTotal
+                    );
+                }
+            }
+        }
+
+        private void dgvDetalleCompra_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+  
+        }
+
+        private void bunifuLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

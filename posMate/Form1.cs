@@ -57,12 +57,11 @@ namespace posMate
         private void iconButton3_Click(object sender, EventArgs e)
         {
             SidePanel.Top = btnVentas.Top;
-            opcionVenta formularioVT = new opcionVenta(usuarioActual);
-            MostrarFormularioEnContenedor(formularioVT);
+
+            frmVentas formularioVentas = new frmVentas(usuarioActual);
+            MostrarFormularioEnContenedor(formularioVentas);
 
 
-
-      
 
         }
 
@@ -136,8 +135,12 @@ namespace posMate
         private void btnCompras_Click(object sender, EventArgs e)
         {
             SidePanel.Top = btnCompras.Top;
-            opcionCompra formularioCP = new opcionCompra(usuarioActual);
-            MostrarFormularioEnContenedor(formularioCP);
+            // Crear una instancia del formulario de compras (frmCompras)
+            frmCompras formularioCompras = new frmCompras(usuarioActual);
+
+            // Mostrar el formulario de compras en el contenedor de Form1
+            MostrarFormularioEnContenedor(formularioCompras);
+
         }
 
         private void btnCategorias_Click_1(object sender, EventArgs e)

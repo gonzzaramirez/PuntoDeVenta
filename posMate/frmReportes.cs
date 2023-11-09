@@ -1,4 +1,5 @@
-﻿using System;
+﻿using posMate;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,13 @@ namespace CapaPresentacion
 
         private void bunifuButton22_Click(object sender, EventArgs e)
         {
+            frmVerCompras formularioCompras = new frmVerCompras();
+            formularioCompras.Show();
 
+            // Obtener el formulario padre (Form1)
+            //Form1 formPadre = this.ParentForm as Form1;
+
+            //formPadre.MostrarFormularioEnContenedor(formularioCompras);
         }
 
         private void categoriaGanancias_Click(object sender, EventArgs e)
@@ -28,5 +35,9 @@ namespace CapaPresentacion
             formGananciasPorCategoria.Show();
         }
 
+        private void Ventas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
