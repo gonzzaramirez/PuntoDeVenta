@@ -1,4 +1,5 @@
-﻿using posMate;
+﻿using CapaEntidad;
+using posMate;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,8 +14,10 @@ namespace CapaPresentacion
 {
     public partial class frmReportes : Form
     {
-        public frmReportes()
+        private Usuario usuarioActual;
+        public frmReportes(Usuario oUsuario = null)
         {
+            usuarioActual = oUsuario;
             InitializeComponent();
         }
 
@@ -37,7 +40,8 @@ namespace CapaPresentacion
 
         private void Ventas_Click(object sender, EventArgs e)
         {
-
+            frmVerVentas formularioVentas = new frmVerVentas();
+            formularioVentas.Show();
         }
     }
 }
