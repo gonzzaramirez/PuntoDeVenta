@@ -64,3 +64,39 @@ C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaNegocio\o
 C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
 C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaNegocio\obj\Debug\CapaNegocio.dll
 C:\Users\GonzaNet\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\EnvDTE.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\stdole.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\CapaNegocio.dll.config
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\CapaDatos.dll.config
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\CapaEntidad.dll.config
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\CapaNegocio\bin\Debug\Microsoft.ReportViewer.WinForms.xml
