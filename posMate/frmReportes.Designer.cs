@@ -35,12 +35,14 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.categoriaGanancias = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.Compras = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.Ventas = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.btnStock = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -408,11 +410,102 @@
             this.Ventas.UseDefaultRadiusAndThickness = true;
             this.Ventas.Click += new System.EventHandler(this.Ventas_Click);
             // 
+            // btnStock
+            // 
+            this.btnStock.AllowAnimations = true;
+            this.btnStock.AllowMouseEffects = true;
+            this.btnStock.AllowToggling = false;
+            this.btnStock.AnimationSpeed = 200;
+            this.btnStock.AutoGenerateColors = false;
+            this.btnStock.AutoRoundBorders = true;
+            this.btnStock.AutoSizeLeftIcon = true;
+            this.btnStock.AutoSizeRightIcon = true;
+            this.btnStock.BackColor = System.Drawing.Color.Transparent;
+            this.btnStock.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnStock.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnStock.BackgroundImage")));
+            this.btnStock.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnStock.ButtonText = "Stock";
+            this.btnStock.ButtonTextMarginLeft = 0;
+            this.btnStock.ColorContrastOnClick = 45;
+            this.btnStock.ColorContrastOnHover = 45;
+            this.btnStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnStock.CustomizableEdges = borderEdges4;
+            this.btnStock.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnStock.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnStock.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnStock.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnStock.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnStock.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnStock.ForeColor = System.Drawing.Color.White;
+            this.btnStock.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStock.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStock.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnStock.IconMarginLeft = 11;
+            this.btnStock.IconPadding = 10;
+            this.btnStock.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnStock.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStock.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnStock.IconSize = 25;
+            this.btnStock.IdleBorderColor = System.Drawing.Color.Black;
+            this.btnStock.IdleBorderRadius = 37;
+            this.btnStock.IdleBorderThickness = 1;
+            this.btnStock.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnStock.IdleIconLeftImage = null;
+            this.btnStock.IdleIconRightImage = null;
+            this.btnStock.IndicateFocus = false;
+            this.btnStock.Location = new System.Drawing.Point(363, 300);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnStock.OnDisabledState.BorderRadius = 1;
+            this.btnStock.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnStock.OnDisabledState.BorderThickness = 1;
+            this.btnStock.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnStock.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnStock.OnDisabledState.IconLeftImage = null;
+            this.btnStock.OnDisabledState.IconRightImage = null;
+            this.btnStock.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnStock.onHoverState.BorderRadius = 1;
+            this.btnStock.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnStock.onHoverState.BorderThickness = 1;
+            this.btnStock.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnStock.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnStock.onHoverState.IconLeftImage = null;
+            this.btnStock.onHoverState.IconRightImage = null;
+            this.btnStock.OnIdleState.BorderColor = System.Drawing.Color.Black;
+            this.btnStock.OnIdleState.BorderRadius = 1;
+            this.btnStock.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnStock.OnIdleState.BorderThickness = 1;
+            this.btnStock.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnStock.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnStock.OnIdleState.IconLeftImage = null;
+            this.btnStock.OnIdleState.IconRightImage = null;
+            this.btnStock.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnStock.OnPressedState.BorderRadius = 1;
+            this.btnStock.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnStock.OnPressedState.BorderThickness = 1;
+            this.btnStock.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnStock.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnStock.OnPressedState.IconLeftImage = null;
+            this.btnStock.OnPressedState.IconRightImage = null;
+            this.btnStock.Size = new System.Drawing.Size(150, 39);
+            this.btnStock.TabIndex = 46;
+            this.btnStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnStock.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnStock.TextMarginLeft = 0;
+            this.btnStock.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnStock.UseDefaultRadiusAndThickness = true;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
+            // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 525);
+            this.Controls.Add(this.btnStock);
             this.Controls.Add(this.Ventas);
             this.Controls.Add(this.Compras);
             this.Controls.Add(this.categoriaGanancias);
@@ -435,5 +528,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 categoriaGanancias;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 Compras;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 Ventas;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnStock;
     }
 }

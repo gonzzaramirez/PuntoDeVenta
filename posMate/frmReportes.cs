@@ -43,5 +43,11 @@ namespace CapaPresentacion
             frmVerVentas formularioVentas = new frmVerVentas();
             formularioVentas.Show();
         }
+
+        private void btnStock_Click(object sender, EventArgs e)
+        {
+            frmVerStock formularioStock = new frmVerStock();
+            formularioStock.Show();
+        }
     }
 }
