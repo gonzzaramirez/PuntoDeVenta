@@ -12,10 +12,11 @@ namespace CapaNegocio
     {
         private CD_Venta ocd_venta = new CD_Venta();
 
-        public List<Venta> ObtenerVentas()
+        public List<Venta> ObtenerVentas(int? IdUsuario = null)
         {
-            return ocd_venta.ObtenerVentas();
+            return ocd_venta.ObtenerVentas(IdUsuario);
         }
+
 
         public bool AgregarVenta(Venta venta)
         {

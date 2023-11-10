@@ -12,7 +12,7 @@ namespace CapaDatos
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["cadena_conexion"].ConnectionString;
 
-        public List<Venta> ObtenerVentas()
+        public List<Venta> ObtenerVentas(int? IdUsuario = null)
         {
             List<Venta> lista = new List<Venta>();
 
@@ -21,12 +21,24 @@ namespace CapaDatos
                 try
                 {
                     con.Open();
+                    /*
                     using (SqlCommand cmd = new SqlCommand("SELECT v.IdVenta, u.Nombre AS NombreUsuario, c.Nombre AS NombreCliente,v.MontoPago, v.MontoCambio, v.MontoTotal, v.FechaRegistro " +
                                                            "FROM Venta v " +
                                                            "INNER JOIN USUARIO u ON v.IdUsuario = u.IdUsuario " +
                                                            "INNER JOIN Cliente c ON v.IdCliente = c.IdCliente", con))
+                    */
+                    using (SqlCommand cmd = new SqlCommand("SELECT v.IdVenta, u.Nombre AS NombreUsuario, c.Nombre AS NombreCliente,v.MontoPago, v.MontoCambio, v.MontoTotal, v.FechaRegistro " +
+                                                  "FROM Venta v " +
+                                                  "INNER JOIN USUARIO u ON v.IdUsuario = u.IdUsuario " +
+                                                  "INNER JOIN Cliente c ON v.IdCliente = c.IdCliente" +
+                                                  (IdUsuario.HasValue ? " WHERE v.IdUsuario = @IdUsuario" : ""), con))
                     {
                         cmd.CommandType = CommandType.Text;
+
+                        if (IdUsuario.HasValue)
+                        {
+                            cmd.Parameters.AddWithValue("@IdUsuario", IdUsuario.Value);
+                        }
 
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {

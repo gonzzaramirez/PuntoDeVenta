@@ -22,30 +22,23 @@ namespace CapaPresentacion
 
         private void frmVerVentas_Load(object sender, EventArgs e)
         {
-            CN_Venta negocioVenta = new CN_Venta();
+            CN_Usuario negocioUsuario = new CN_Usuario();
 
-            // Obtener la lista de compras desde la capa de negocio
-            List<Venta> ventas = negocioVenta.ObtenerVentas();
+            // Obtener la lista de usuarios desde la capa de negocio
+            List<Usuario> usuarios = negocioUsuario.Listar();
 
-            // Establecer el texto de lblTotalVentas para mostrar el total de ventas
-            lblTotalVentas.Text =  ventas.Count.ToString();
-
-            dgvDataVenta.Rows.Clear();
-
-            foreach (Venta venta in ventas)
+            // Llena el control desplegable con los nombres de los usuarios
+            foreach (Usuario usuario in usuarios)
             {
-                // Accede a las propiedades Nombre de Usuario y Proveedor
-                string Vendedor = venta.oUsuario.Nombre;
-
-                dgvDataVenta.Rows.Add(
-                    venta.IdVenta,
-                    Vendedor,
-                    venta.MontoPago,
-                    venta.MontoCambio,
-                    venta.MontoTotal,
-                    venta.FechaRegistro
-                );
+                ddlUsuarios.Items.Add(usuario.Nombre);
             }
+
+            // Agrega una opción para seleccionar todas las ventas
+            ddlUsuarios.Items.Add("Todos los usuarios");
+
+
+
+            
 
         }
 
@@ -103,6 +96,78 @@ namespace CapaPresentacion
         }
 
         private void lblTotalDetalleVentas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ddlUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string usuarioSeleccionado = ddlUsuarios.SelectedItem.ToString();
+
+            if (usuarioSeleccionado == "Todos los usuarios")
+            {
+                CN_Venta negocioVenta = new CN_Venta();
+
+                // Obtener la lista de compras desde la capa de negocio
+                List<Venta> ventas = negocioVenta.ObtenerVentas();
+
+                // Establecer el texto de lblTotalVentas para mostrar el total de ventas
+                lblTotalVentas.Text = ventas.Count.ToString();
+
+                dgvDataVenta.Rows.Clear();
+
+                foreach (Venta venta in ventas)
+                {
+                    // Accede a las propiedades Nombre de Usuario y Proveedor
+                    string Vendedor = venta.oUsuario.Nombre;
+
+                    dgvDataVenta.Rows.Add(
+                        venta.IdVenta,
+                        Vendedor,
+                        venta.MontoPago,
+                        venta.MontoCambio,
+                        venta.MontoTotal,
+                        venta.FechaRegistro
+                    );
+                }
+            }
+            else
+            {
+                // Obtén el IdUsuario del usuario seleccionado
+                CN_Usuario negocioUsuario = new CN_Usuario();
+                Usuario usuario = negocioUsuario.ObtenerUsuarioPorNombre(usuarioSeleccionado);
+                int idUsuario = usuario.IdUsuario;
+
+
+
+                // Filtra las ventas por el usuario seleccionado
+                CN_Venta negocioVenta = new CN_Venta();
+                List<Venta> ventas = negocioVenta.ObtenerVentas(idUsuario);
+
+
+                // Establecer el texto de lblTotalVentas para mostrar el total de ventas
+                lblTotalVentas.Text = ventas.Count.ToString();
+
+                dgvDataVenta.Rows.Clear();
+
+                foreach (Venta venta in ventas)
+                {
+                    // Accede a las propiedades Nombre de Usuario y Proveedor
+                    string Vendedor = venta.oUsuario.Nombre;
+
+                    dgvDataVenta.Rows.Add(
+                        venta.IdVenta,
+                        Vendedor,
+                        venta.MontoPago,
+                        venta.MontoCambio,
+                        venta.MontoTotal,
+                        venta.FechaRegistro
+                    );
+                }   
+            }
+        }
+
+        private void bunifuLabel3_Click(object sender, EventArgs e)
         {
 
         }
