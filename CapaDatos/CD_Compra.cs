@@ -13,7 +13,7 @@ namespace CapaDatos
     public class CD_Compra
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["cadena_conexion"].ConnectionString;
-        public List<Compra> ObtenerCompras()
+        public List<Compra> ObtenerCompras(int? IdUsuario = null)
         {
             List<Compra> lista = new List<Compra>();
 
@@ -24,9 +24,16 @@ namespace CapaDatos
                     con.Open();
                     using (SqlCommand cmd = new SqlCommand("SELECT c.IdCompra, u.Nombre AS NombreUsuario, p.Nombre AS NombreProveedor, c.MontoTotal, c.FechaRegistro FROM COMPRA c " +
                                                            "INNER JOIN USUARIO u ON c.IdUsuario = u.IdUsuario " +
-                                                           "INNER JOIN PROVEEDOR p ON c.IdProveedor = p.IdProveedor", con))
+                                                           "INNER JOIN PROVEEDOR p ON c.IdProveedor = p.IdProveedor" +
+                                                           (IdUsuario.HasValue ? " WHERE c.IdUsuario = @IdUsuario" : ""), con))
+
                     {
                         cmd.CommandType = CommandType.Text;
+
+                        if (IdUsuario.HasValue)
+                        {
+                            cmd.Parameters.AddWithValue("@IdUsuario", IdUsuario.Value);
+                        }
 
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {

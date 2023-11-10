@@ -29,38 +29,42 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVerVentas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.laberlVenta5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.laberlVenta3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.laberlVenta4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgvDetalleVenta = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDataVenta = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.laberlVenta = new Bunifu.UI.WinForms.BunifuLabel();
-            this.laberlVenta2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.IdVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Vendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoCambio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.laberlVenta = new Bunifu.UI.WinForms.BunifuLabel();
+            this.laberlVenta2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblTotalVentas = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblTotalDetalleVentas = new Bunifu.UI.WinForms.BunifuLabel();
             this.ddlUsuarios = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblSubtotalVenta = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblTotalVentas2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataVenta)).BeginInit();
             this.SuspendLayout();
@@ -121,22 +125,22 @@
             this.dgvDetalleVenta.AllowCustomTheming = false;
             this.dgvDetalleVenta.AllowUserToAddRows = false;
             this.dgvDetalleVenta.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
-            this.dgvDetalleVenta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvDetalleVenta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDetalleVenta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDetalleVenta.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvDetalleVenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDetalleVenta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDetalleVenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetalleVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetalleVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDetalleVenta.ColumnHeadersHeight = 40;
             this.dgvDetalleVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdProducto,
@@ -162,14 +166,14 @@
             this.dgvDetalleVenta.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvDetalleVenta.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.dgvDetalleVenta.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDetalleVenta.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDetalleVenta.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDetalleVenta.EnableHeadersVisualStyles = false;
             this.dgvDetalleVenta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
             this.dgvDetalleVenta.HeaderBackColor = System.Drawing.Color.Maroon;
@@ -178,14 +182,14 @@
             this.dgvDetalleVenta.Location = new System.Drawing.Point(616, 130);
             this.dgvDetalleVenta.Name = "dgvDetalleVenta";
             this.dgvDetalleVenta.ReadOnly = true;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetalleVenta.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetalleVenta.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDetalleVenta.RowHeadersVisible = false;
             this.dgvDetalleVenta.RowTemplate.Height = 40;
             this.dgvDetalleVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -194,27 +198,67 @@
             this.dgvDetalleVenta.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Maroon;
             this.dgvDetalleVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleVenta_CellContentClick);
             // 
+            // IdProducto
+            // 
+            this.IdProducto.DataPropertyName = "IdProducto";
+            this.IdProducto.FillWeight = 35.31608F;
+            this.IdProducto.HeaderText = "IdProducto";
+            this.IdProducto.Name = "IdProducto";
+            this.IdProducto.ReadOnly = true;
+            // 
+            // NombreProducto
+            // 
+            this.NombreProducto.DataPropertyName = "NombreProducto";
+            this.NombreProducto.FillWeight = 60F;
+            this.NombreProducto.HeaderText = "NombreProducto";
+            this.NombreProducto.Name = "NombreProducto";
+            this.NombreProducto.ReadOnly = true;
+            // 
+            // PrecioVenta
+            // 
+            this.PrecioVenta.DataPropertyName = "PrecioVenta";
+            this.PrecioVenta.FillWeight = 51.49196F;
+            this.PrecioVenta.HeaderText = "PrecioVenta";
+            this.PrecioVenta.Name = "PrecioVenta";
+            this.PrecioVenta.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.DataPropertyName = "Cantidad";
+            this.Cantidad.FillWeight = 62.08146F;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // Subtotal
+            // 
+            this.Subtotal.DataPropertyName = "Subtotal";
+            this.Subtotal.FillWeight = 46.56324F;
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.ReadOnly = true;
+            // 
             // dgvDataVenta
             // 
             this.dgvDataVenta.AllowCustomTheming = false;
             this.dgvDataVenta.AllowUserToAddRows = false;
             this.dgvDataVenta.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
-            this.dgvDataVenta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.dgvDataVenta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDataVenta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDataVenta.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvDataVenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDataVenta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDataVenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDataVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDataVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvDataVenta.ColumnHeadersHeight = 40;
             this.dgvDataVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdVenta,
@@ -241,14 +285,14 @@
             this.dgvDataVenta.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvDataVenta.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.dgvDataVenta.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDataVenta.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDataVenta.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvDataVenta.EnableHeadersVisualStyles = false;
             this.dgvDataVenta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
             this.dgvDataVenta.HeaderBackColor = System.Drawing.Color.Maroon;
@@ -257,14 +301,14 @@
             this.dgvDataVenta.Location = new System.Drawing.Point(11, 130);
             this.dgvDataVenta.Name = "dgvDataVenta";
             this.dgvDataVenta.ReadOnly = true;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDataVenta.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDataVenta.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvDataVenta.RowHeadersVisible = false;
             this.dgvDataVenta.RowTemplate.Height = 40;
             this.dgvDataVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -272,40 +316,6 @@
             this.dgvDataVenta.TabIndex = 59;
             this.dgvDataVenta.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Maroon;
             this.dgvDataVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDataVenta_CellContentClick);
-            // 
-            // laberlVenta
-            // 
-            this.laberlVenta.AllowParentOverrides = false;
-            this.laberlVenta.AutoEllipsis = false;
-            this.laberlVenta.Cursor = System.Windows.Forms.Cursors.Default;
-            this.laberlVenta.CursorType = System.Windows.Forms.Cursors.Default;
-            this.laberlVenta.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laberlVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.laberlVenta.Location = new System.Drawing.Point(183, 83);
-            this.laberlVenta.Name = "laberlVenta";
-            this.laberlVenta.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.laberlVenta.Size = new System.Drawing.Size(96, 39);
-            this.laberlVenta.TabIndex = 57;
-            this.laberlVenta.Text = "Venta";
-            this.laberlVenta.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.laberlVenta.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // laberlVenta2
-            // 
-            this.laberlVenta2.AllowParentOverrides = false;
-            this.laberlVenta2.AutoEllipsis = false;
-            this.laberlVenta2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.laberlVenta2.CursorType = System.Windows.Forms.Cursors.Default;
-            this.laberlVenta2.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laberlVenta2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.laberlVenta2.Location = new System.Drawing.Point(285, 83);
-            this.laberlVenta2.Name = "laberlVenta2";
-            this.laberlVenta2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.laberlVenta2.Size = new System.Drawing.Size(166, 39);
-            this.laberlVenta2.TabIndex = 58;
-            this.laberlVenta2.Text = "realizadas";
-            this.laberlVenta2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.laberlVenta2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // IdVenta
             // 
@@ -354,45 +364,39 @@
             this.FechaRegistro.Name = "FechaRegistro";
             this.FechaRegistro.ReadOnly = true;
             // 
-            // Subtotal
+            // laberlVenta
             // 
-            this.Subtotal.DataPropertyName = "Subtotal";
-            this.Subtotal.FillWeight = 46.56324F;
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.Name = "Subtotal";
-            this.Subtotal.ReadOnly = true;
+            this.laberlVenta.AllowParentOverrides = false;
+            this.laberlVenta.AutoEllipsis = false;
+            this.laberlVenta.Cursor = System.Windows.Forms.Cursors.Default;
+            this.laberlVenta.CursorType = System.Windows.Forms.Cursors.Default;
+            this.laberlVenta.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.laberlVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.laberlVenta.Location = new System.Drawing.Point(183, 83);
+            this.laberlVenta.Name = "laberlVenta";
+            this.laberlVenta.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.laberlVenta.Size = new System.Drawing.Size(96, 39);
+            this.laberlVenta.TabIndex = 57;
+            this.laberlVenta.Text = "Venta";
+            this.laberlVenta.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.laberlVenta.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // Cantidad
+            // laberlVenta2
             // 
-            this.Cantidad.DataPropertyName = "Cantidad";
-            this.Cantidad.FillWeight = 62.08146F;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // PrecioVenta
-            // 
-            this.PrecioVenta.DataPropertyName = "PrecioVenta";
-            this.PrecioVenta.FillWeight = 51.49196F;
-            this.PrecioVenta.HeaderText = "PrecioVenta";
-            this.PrecioVenta.Name = "PrecioVenta";
-            this.PrecioVenta.ReadOnly = true;
-            // 
-            // NombreProducto
-            // 
-            this.NombreProducto.DataPropertyName = "NombreProducto";
-            this.NombreProducto.FillWeight = 60F;
-            this.NombreProducto.HeaderText = "NombreProducto";
-            this.NombreProducto.Name = "NombreProducto";
-            this.NombreProducto.ReadOnly = true;
-            // 
-            // IdProducto
-            // 
-            this.IdProducto.DataPropertyName = "IdProducto";
-            this.IdProducto.FillWeight = 35.31608F;
-            this.IdProducto.HeaderText = "IdProducto";
-            this.IdProducto.Name = "IdProducto";
-            this.IdProducto.ReadOnly = true;
+            this.laberlVenta2.AllowParentOverrides = false;
+            this.laberlVenta2.AutoEllipsis = false;
+            this.laberlVenta2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.laberlVenta2.CursorType = System.Windows.Forms.Cursors.Default;
+            this.laberlVenta2.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.laberlVenta2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.laberlVenta2.Location = new System.Drawing.Point(285, 83);
+            this.laberlVenta2.Name = "laberlVenta2";
+            this.laberlVenta2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.laberlVenta2.Size = new System.Drawing.Size(166, 39);
+            this.laberlVenta2.TabIndex = 58;
+            this.laberlVenta2.Text = "realizadas";
+            this.laberlVenta2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.laberlVenta2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuLabel1
             // 
@@ -403,7 +407,7 @@
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(12, 583);
+            this.bunifuLabel1.Location = new System.Drawing.Point(12, 579);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(241, 28);
@@ -422,14 +426,15 @@
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.bunifuLabel2.Location = new System.Drawing.Point(616, 583);
+            this.bunifuLabel2.Location = new System.Drawing.Point(616, 579);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(312, 28);
+            this.bunifuLabel2.Size = new System.Drawing.Size(269, 28);
             this.bunifuLabel2.TabIndex = 65;
-            this.bunifuLabel2.Text = "Total registros en la Venta: ";
+            this.bunifuLabel2.Text = "Cantidad de Registros:";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuLabel2.Click += new System.EventHandler(this.bunifuLabel2_Click);
             // 
             // lblTotalVentas
             // 
@@ -439,7 +444,7 @@
             this.lblTotalVentas.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblTotalVentas.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
             this.lblTotalVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.lblTotalVentas.Location = new System.Drawing.Point(259, 583);
+            this.lblTotalVentas.Location = new System.Drawing.Point(259, 579);
             this.lblTotalVentas.Name = "lblTotalVentas";
             this.lblTotalVentas.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblTotalVentas.Size = new System.Drawing.Size(13, 28);
@@ -457,7 +462,7 @@
             this.lblTotalDetalleVentas.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblTotalDetalleVentas.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
             this.lblTotalDetalleVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.lblTotalDetalleVentas.Location = new System.Drawing.Point(934, 583);
+            this.lblTotalDetalleVentas.Location = new System.Drawing.Point(895, 579);
             this.lblTotalDetalleVentas.Name = "lblTotalDetalleVentas";
             this.lblTotalDetalleVentas.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblTotalDetalleVentas.Size = new System.Drawing.Size(13, 28);
@@ -507,6 +512,7 @@
             this.ddlUsuarios.Name = "ddlUsuarios";
             this.ddlUsuarios.Size = new System.Drawing.Size(187, 32);
             this.ddlUsuarios.TabIndex = 68;
+            this.ddlUsuarios.Text = null;
             this.ddlUsuarios.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.ddlUsuarios.TextLeftMargin = 5;
             this.ddlUsuarios.SelectedIndexChanged += new System.EventHandler(this.ddlUsuarios_SelectedIndexChanged);
@@ -529,11 +535,86 @@
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.bunifuLabel3.Click += new System.EventHandler(this.bunifuLabel3_Click);
             // 
+            // lblSubtotalVenta
+            // 
+            this.lblSubtotalVenta.AllowParentOverrides = false;
+            this.lblSubtotalVenta.AutoEllipsis = false;
+            this.lblSubtotalVenta.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblSubtotalVenta.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblSubtotalVenta.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.lblSubtotalVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.lblSubtotalVenta.Location = new System.Drawing.Point(862, 613);
+            this.lblSubtotalVenta.Name = "lblSubtotalVenta";
+            this.lblSubtotalVenta.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblSubtotalVenta.Size = new System.Drawing.Size(13, 28);
+            this.lblSubtotalVenta.TabIndex = 81;
+            this.lblSubtotalVenta.Text = "0";
+            this.lblSubtotalVenta.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lblSubtotalVenta.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel11
+            // 
+            this.bunifuLabel11.AllowParentOverrides = false;
+            this.bunifuLabel11.AutoEllipsis = false;
+            this.bunifuLabel11.AutoSize = false;
+            this.bunifuLabel11.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel11.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel11.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.bunifuLabel11.Location = new System.Drawing.Point(616, 613);
+            this.bunifuLabel11.Name = "bunifuLabel11";
+            this.bunifuLabel11.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel11.Size = new System.Drawing.Size(224, 28);
+            this.bunifuLabel11.TabIndex = 80;
+            this.bunifuLabel11.Text = "Total de la Venta:";
+            this.bunifuLabel11.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel11.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuLabel11.Click += new System.EventHandler(this.bunifuLabel11_Click);
+            // 
+            // lblTotalVentas2
+            // 
+            this.lblTotalVentas2.AllowParentOverrides = false;
+            this.lblTotalVentas2.AutoEllipsis = false;
+            this.lblTotalVentas2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblTotalVentas2.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblTotalVentas2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.lblTotalVentas2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.lblTotalVentas2.Location = new System.Drawing.Point(259, 613);
+            this.lblTotalVentas2.Name = "lblTotalVentas2";
+            this.lblTotalVentas2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTotalVentas2.Size = new System.Drawing.Size(13, 28);
+            this.lblTotalVentas2.TabIndex = 79;
+            this.lblTotalVentas2.Text = "0";
+            this.lblTotalVentas2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lblTotalVentas2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel10
+            // 
+            this.bunifuLabel10.AllowParentOverrides = false;
+            this.bunifuLabel10.AutoEllipsis = false;
+            this.bunifuLabel10.AutoSize = false;
+            this.bunifuLabel10.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel10.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel10.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.bunifuLabel10.Location = new System.Drawing.Point(12, 613);
+            this.bunifuLabel10.Name = "bunifuLabel10";
+            this.bunifuLabel10.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel10.Size = new System.Drawing.Size(208, 28);
+            this.bunifuLabel10.TabIndex = 78;
+            this.bunifuLabel10.Text = "Total en Ventas:";
+            this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel10.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // frmVerVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1092, 613);
+            this.ClientSize = new System.Drawing.Size(1092, 640);
+            this.Controls.Add(this.lblSubtotalVenta);
+            this.Controls.Add(this.bunifuLabel11);
+            this.Controls.Add(this.lblTotalVentas2);
+            this.Controls.Add(this.bunifuLabel10);
             this.Controls.Add(this.bunifuLabel3);
             this.Controls.Add(this.ddlUsuarios);
             this.Controls.Add(this.lblTotalDetalleVentas);
@@ -584,5 +665,9 @@
         private Bunifu.UI.WinForms.BunifuLabel lblTotalDetalleVentas;
         private Bunifu.UI.WinForms.BunifuDropdown ddlUsuarios;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
+        private Bunifu.UI.WinForms.BunifuLabel lblSubtotalVenta;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
+        private Bunifu.UI.WinForms.BunifuLabel lblTotalVentas2;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
     }
 }

@@ -38,7 +38,14 @@ namespace CapaPresentacion
 
 
 
+                // Selecciona por defecto la opción "Todos los usuarios"
+              ddlUsuarios.SelectedIndex = ddlUsuarios.Items.Count - 1; // Si "Todos los usuarios" es el último elemento
+                                                                         // O
+              ddlUsuarios.SelectedItem = "Todos los usuarios"; // Si quieres seleccionar por el nombre del elemento
             
+
+
+
 
         }
 
@@ -59,6 +66,12 @@ namespace CapaPresentacion
 
                 // Obtén los detalles de la compra desde la capa de negocio
                 List<DetalleVenta> detallesVenta = negocioDetalleVenta.ObtenerDetallesVenta(idVenta);
+
+                // Calcula la suma total de los detalles de la compra
+                decimal subtotal = detallesVenta.Sum(dc => dc.Subtotal);
+
+                // Asigna la suma total al label
+                lblSubtotalVenta.Text = subtotal.ToString("C");
 
                 // Limpia las filas existentes en dgvDetalleCompra
                 dgvDetalleVenta.Rows.Clear();
@@ -102,6 +115,13 @@ namespace CapaPresentacion
 
         private void ddlUsuarios_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Limpia el DataGridView y los labels
+            dgvDataVenta.Rows.Clear();
+            dgvDetalleVenta.Rows.Clear();
+            //lblTotalVentas2.Text = "0";
+            lblSubtotalVenta.Text = "0";
+            lblTotalDetalleVentas.Text = "0";
+
             string usuarioSeleccionado = ddlUsuarios.SelectedItem.ToString();
 
             if (usuarioSeleccionado == "Todos los usuarios")
@@ -111,7 +131,14 @@ namespace CapaPresentacion
                 // Obtener la lista de compras desde la capa de negocio
                 List<Venta> ventas = negocioVenta.ObtenerVentas();
 
-                // Establecer el texto de lblTotalVentas para mostrar el total de ventas
+                // Calcula la suma total de las compras
+                decimal totalVentas = ventas.Sum(v => v.MontoTotal);
+
+                // Asigna la suma total al label
+                lblTotalVentas2.Text = totalVentas.ToString("C");
+
+
+                // Establecer el texto de lblTotalVentas para mostrar la cantidad de registros total de ventas
                 lblTotalVentas.Text = ventas.Count.ToString();
 
                 dgvDataVenta.Rows.Clear();
@@ -144,8 +171,14 @@ namespace CapaPresentacion
                 CN_Venta negocioVenta = new CN_Venta();
                 List<Venta> ventas = negocioVenta.ObtenerVentas(idUsuario);
 
+                // Calcula la suma total de las compras
+                decimal totalVentas = ventas.Sum(v => v.MontoTotal);
 
-                // Establecer el texto de lblTotalVentas para mostrar el total de ventas
+                // Asigna la suma total al label
+                lblTotalVentas2.Text = totalVentas.ToString("C");
+
+
+                // Establecer el texto de lblTotalVentas para mostrar la cantidad de registros total de ventas
                 lblTotalVentas.Text = ventas.Count.ToString();
 
                 dgvDataVenta.Rows.Clear();
@@ -168,6 +201,16 @@ namespace CapaPresentacion
         }
 
         private void bunifuLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel11_Click(object sender, EventArgs e)
         {
 
         }
