@@ -15,6 +15,10 @@ using CapaNegocios;
 using CapaPresentacion;
 using CapaPresentacion.Utilidades;
 using FontAwesome.Sharp;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
+using System.IO;
 
 namespace CapaPresentacion
 {
@@ -254,8 +258,6 @@ namespace CapaPresentacion
                 return;
             }
 
-            
-
             decimal montoTotal = CalcularMontoTotalDelCarrito();
             decimal montoPago = decimal.Parse(txtPago.Text);
 
@@ -265,7 +267,7 @@ namespace CapaPresentacion
                 return;
             }
 
-                Venta nuevaVenta = new Venta
+            Venta nuevaVenta = new Venta
             {
                 oUsuario = new Usuario() { IdUsuario = usuarioActual.IdUsuario },
                 oCliente = new Cliente() { IdCliente = int.Parse(txtId.Text) },
@@ -320,11 +322,64 @@ namespace CapaPresentacion
                     }
 
                     nuevaVenta.DetalleVenta = detallesVenta;
-                   
 
+
+
+                    //******FACTURA**********
+                    int idVentaFactura = negocioVenta.ObtenerUltimoIDVenta();
+                    DialogResult result = MessageBox.Show("¿Desea imprimir la factura?", "Imprimir Factura", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        SaveFileDialog savefile = new SaveFileDialog();
+                        savefile.FileName = string.Format("{0}.pdf", DateTime.Now.ToString("ddMMyyyyHHmmss"));
+
+                        string PaginaHTML_Texto = Properties.Resources.plantilla.ToString();
+
+                        PaginaHTML_Texto = PaginaHTML_Texto.Replace("@CLIENTE", txtApellido.Text + " " + txtNombre.Text);
+                        PaginaHTML_Texto = PaginaHTML_Texto.Replace("@DOCUMENTO", txtDNII.Text);
+                        PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
+                        PaginaHTML_Texto = PaginaHTML_Texto.Replace("@idventa", idVentaFactura.ToString());
+
+                        string filas = string.Empty;
+
+                        foreach (DataGridViewRow row in dgvData.Rows)
+                        {
+                            filas += "<tr>";
+                            filas += "<td>" + row.Cells["Cantidad"].Value.ToString() + "</td>";
+                            filas += "<td>" + row.Cells["Producto"].Value.ToString() + "</td>";
+                            filas += "<td>" + row.Cells["Precio"].Value.ToString() + "</td>";
+                            filas += "<td>" + row.Cells["Total"].Value.ToString() + "</td>";
+                            filas += "</tr>";
+                        }
+
+                        PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FILAS", filas);
+
+                        // Reemplazar la etiqueta @TOTAL con el monto total de la venta
+                        PaginaHTML_Texto = PaginaHTML_Texto.Replace("@TOTAL", montoTotal.ToString("C"));
+
+                        if (savefile.ShowDialog() == DialogResult.OK)
+                        {
+                            using (FileStream stream = new FileStream(savefile.FileName, FileMode.Create))
+                            {
+                                Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
+                                PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+                                pdfDoc.Open();
+                                pdfDoc.Add(new Phrase(""));
+
+                                using (StringReader sr = new StringReader(PaginaHTML_Texto))
+                                {
+                                    XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                                }
+
+                                pdfDoc.Close();
+                                stream.Close();
+                            }
+                        }
+                    }
+
+                    MessageBox.Show("Venta confirmada con éxito.");
                     dgvData.Rows.Clear();
                     carrito.Clear();
-                    MessageBox.Show("venta confirmada con éxito.");
                     resultadoTotal.Text = " ";
                     verificarCheck();
                 }

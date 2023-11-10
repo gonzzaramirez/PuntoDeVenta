@@ -117,4 +117,56 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="Categoría.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Ganancias.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnMañana.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAHAAAAA8CAYAAAC+ej5cAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC8SURBVHhe7dGxCYBAAMBAJ3EIJxWcywkc40sL9cElAlcc
+        pM+yHuNa9+ch6Hu3zNjOjaD5zsAwA+MMjDMwzsA4A+MMjDMwzsA4A+MMjDMwzsA4A+MMjDMwzsA4A+MM
+        jDMwzsA4A+MMjDMwzsA4A+MMjDMwzsA4A+MMjDMwzsA4A+MMjDMwzsA4A+MMjDMwzsA4A+MMjDMwzsA4
+        A+MMjDMwzsA4A+MMjDMwzsA4A+MMjDMwzsC4f+A9ZlB0jxdHmBOdlDBmzwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnTarde.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAHAAAAA8CAYAAAC+ej5cAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADBSURBVHhe7dGxDYNAAMBAJkF0mS3LALOlzRhfUoCeLU5y
+        cZJ7L599/NfzvuOZ75YZv+8a0HzXQFgDcQ3ENRDXQFwDcQ3ENRDXQFwDcQ3ENRDXQFwDcQ3ENRDXQFwD
+        cQ3ENRDXQFwDcQ3ENRDXQFwDcQ3ENRDXQFwDcQ3ENRDXQFwDcQ3ENRDXQFwDcQ3ENRDXQFwDcQ3ENRDX
+        QFwDcQ3ENRDXQFwDcQ3ENRDXQFwDcQ3ENRDXQNw7cDuuMSOe7bjGA8pZ+LRjMJ4VAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnNoche.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAHAAAAA8CAYAAAC+ej5cAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVHhe7dHBCYNAAADB60O0XiEI6S9l+BIEw9nFwD4G
+        9r9j2a/f9n2eeOa7MWOMT0Dvuwa6GohrIK6BuAbiGohrIK6BuAbiGohrIK6BuAbiGohrIK6BuAbiGohr
+        IK6BuAbiGohrIK6BuAbiGohrIK6BuAbiGohrIK6BuAbiGohrIK6BuAbiGohrIK6BuAbiGohrIK6BuAbi
+        GohrIK6BuAbiGohrIK6BuAbiGohrIK6BuAbi3nfrcZ8z4lmP+/wDVbHpgJmDIYIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnTotal.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAHAAAAA8CAYAAAC+ej5cAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVHhe7dHBCYNAAABBK1FIpdfBpT/L8JOHoFy6GNjH
+        wP53+8zfuX+fJ571blsxxghovWsgrIG4BuIaiGsgroG4BuIaiGsgroG4BuIaiGsgroG4BuIaiGsgroG4
+        BuIaiGsgroG4BuIaiGsgroG4BuIaiGsgroG4BuIaiGsgroG4BuIaiGsgroG4BuIaiGsgroG4BuIaiGsg
+        roG4BuIaiGsgroG4BuIaiGsgroG4BuIaiGsg7j/wmPe1Ip5j3tcLIAjE5p7P8fUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 26,25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(178, 8, 55); text-align: center; }</value>
+  </data>
+  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 26,25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(178, 8, 55); text-align: center; }</value>
+  </data>
+  <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 26,25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(178, 8, 55); text-align: center; }</value>
+  </data>
 </root>

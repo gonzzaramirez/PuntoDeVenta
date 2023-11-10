@@ -23,9 +23,9 @@ namespace CapaNegocio
             return ocd_venta.AgregarDetalleVenta(detalleVenta);
         }
 
-        public Dictionary<string, decimal> ObtenerGananciasPorCategoria()
+        public Dictionary<string, decimal> ObtenerGananciasPorCategoria(FranjaHoraria franjaHoraria)
         {
-            return ocd_venta.ObtenerGananciasPorCategoria();
+            return ocd_venta.ObtenerGananciasPorCategoria(franjaHoraria);
         }
 
     }

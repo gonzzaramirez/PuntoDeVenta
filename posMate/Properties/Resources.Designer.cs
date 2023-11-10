@@ -79,5 +79,21 @@ namespace CapaPresentacion.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///	&lt;title&gt; Factura &lt;/title&gt;
+        ///&lt;/head&gt;
+        ///&lt;body&gt;
+        ///&lt;/body&gt;
+        ///&lt;/html&gt;.
+        /// </summary>
+        internal static string plantilla {
+            get {
+                return ResourceManager.GetString("plantilla", resourceCulture);
+            }
+        }
     }
 }

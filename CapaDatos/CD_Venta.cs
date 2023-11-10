@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 using CapaEntidad;
 
 namespace CapaDatos
@@ -36,11 +37,11 @@ namespace CapaDatos
                                     IdVenta = Convert.ToInt32(reader["IdVenta"]),
                                     oUsuario = new Usuario
                                     {
-                                        Nombre = reader["Nombre"].ToString()
+                                        Nombre = reader["NombreUsuario"].ToString()
                                     },
                                     oCliente = new Cliente
                                     {
-                                        Nombre = reader["Nombre"].ToString()
+                                        Nombre = reader["NombreCliente"].ToString()
                                     },
                                    
                                     MontoPago = Convert.ToDecimal(reader["MontoPago"]),
@@ -56,6 +57,7 @@ namespace CapaDatos
                 {
                     // Manejo de errores aquí
                     lista = new List<Venta>();
+                    MessageBox.Show("Se produjo un error: " + ex.Message);
                 }
             }
 
