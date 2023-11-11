@@ -27,7 +27,7 @@ namespace CapaDatos
                                                            "INNER JOIN USUARIO u ON v.IdUsuario = u.IdUsuario " +
                                                            "INNER JOIN Cliente c ON v.IdCliente = c.IdCliente", con))
                     */
-                    using (SqlCommand cmd = new SqlCommand("SELECT v.IdVenta, u.Nombre AS NombreUsuario, c.Nombre AS NombreCliente,v.MontoPago, v.MontoCambio, v.MontoTotal, v.FechaRegistro " +
+                    using (SqlCommand cmd = new SqlCommand("SELECT v.IdVenta, u.IdUsuario, u.Nombre AS NombreUsuario, c.Nombre AS NombreCliente,v.MontoPago, v.MontoCambio, v.MontoTotal, v.FechaRegistro " +
                                                   "FROM Venta v " +
                                                   "INNER JOIN USUARIO u ON v.IdUsuario = u.IdUsuario " +
                                                   "INNER JOIN Cliente c ON v.IdCliente = c.IdCliente" +
@@ -49,6 +49,7 @@ namespace CapaDatos
                                     IdVenta = Convert.ToInt32(reader["IdVenta"]),
                                     oUsuario = new Usuario
                                     {
+                                        IdUsuario = Convert.ToInt32(reader["IdUsuario"]),
                                         Nombre = reader["NombreUsuario"].ToString()
                                     },
                                     oCliente = new Cliente

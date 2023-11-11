@@ -287,3 +287,4 @@ C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\obj\Debu
 C:\Users\Gonza\Desktop\Nueva carpeta\Trabajo_Integrador_Grupo11\posMate\bin\Debug\itextsharp.xml
 C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\bin\Debug\itextsharp.xml
 C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.frmVerStock.resources
+C:\Users\Franck50\Documents\Proyecto Taller de  Programacion\Trabajo_Integrador_Grupo11\posMate\obj\Debug\CapaPresentacion.frmVerGananciasVendedor.resources

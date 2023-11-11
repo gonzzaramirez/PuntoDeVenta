@@ -49,5 +49,13 @@ namespace CapaPresentacion
             frmVerStock formularioStock = new frmVerStock();
             formularioStock.Show();
         }
+
+        private void gananciasVendedor_Click(object sender, EventArgs e)
+        {
+            {
+                frmVerGananciasVendedor formularioGananciasVendedor = new frmVerGananciasVendedor();
+                formularioGananciasVendedor.Show();
+            }
+        }
     }
 }

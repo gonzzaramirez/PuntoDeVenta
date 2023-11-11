@@ -36,6 +36,7 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
@@ -43,6 +44,7 @@
             this.Compras = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.Ventas = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnStock = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.gananciasVendedor = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -500,11 +502,102 @@
             this.btnStock.UseDefaultRadiusAndThickness = true;
             this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
             // 
+            // gananciasVendedor
+            // 
+            this.gananciasVendedor.AllowAnimations = true;
+            this.gananciasVendedor.AllowMouseEffects = true;
+            this.gananciasVendedor.AllowToggling = false;
+            this.gananciasVendedor.AnimationSpeed = 200;
+            this.gananciasVendedor.AutoGenerateColors = false;
+            this.gananciasVendedor.AutoRoundBorders = true;
+            this.gananciasVendedor.AutoSizeLeftIcon = true;
+            this.gananciasVendedor.AutoSizeRightIcon = true;
+            this.gananciasVendedor.BackColor = System.Drawing.Color.Transparent;
+            this.gananciasVendedor.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gananciasVendedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gananciasVendedor.BackgroundImage")));
+            this.gananciasVendedor.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.gananciasVendedor.ButtonText = "Ganancias por Vendedor";
+            this.gananciasVendedor.ButtonTextMarginLeft = 0;
+            this.gananciasVendedor.ColorContrastOnClick = 45;
+            this.gananciasVendedor.ColorContrastOnHover = 45;
+            this.gananciasVendedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.gananciasVendedor.CustomizableEdges = borderEdges5;
+            this.gananciasVendedor.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gananciasVendedor.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.gananciasVendedor.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.gananciasVendedor.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.gananciasVendedor.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.gananciasVendedor.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gananciasVendedor.ForeColor = System.Drawing.Color.White;
+            this.gananciasVendedor.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.gananciasVendedor.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.gananciasVendedor.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.gananciasVendedor.IconMarginLeft = 11;
+            this.gananciasVendedor.IconPadding = 10;
+            this.gananciasVendedor.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.gananciasVendedor.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.gananciasVendedor.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.gananciasVendedor.IconSize = 25;
+            this.gananciasVendedor.IdleBorderColor = System.Drawing.Color.Black;
+            this.gananciasVendedor.IdleBorderRadius = 37;
+            this.gananciasVendedor.IdleBorderThickness = 1;
+            this.gananciasVendedor.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gananciasVendedor.IdleIconLeftImage = null;
+            this.gananciasVendedor.IdleIconRightImage = null;
+            this.gananciasVendedor.IndicateFocus = false;
+            this.gananciasVendedor.Location = new System.Drawing.Point(712, 380);
+            this.gananciasVendedor.Name = "gananciasVendedor";
+            this.gananciasVendedor.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.gananciasVendedor.OnDisabledState.BorderRadius = 1;
+            this.gananciasVendedor.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.gananciasVendedor.OnDisabledState.BorderThickness = 1;
+            this.gananciasVendedor.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.gananciasVendedor.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.gananciasVendedor.OnDisabledState.IconLeftImage = null;
+            this.gananciasVendedor.OnDisabledState.IconRightImage = null;
+            this.gananciasVendedor.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.gananciasVendedor.onHoverState.BorderRadius = 1;
+            this.gananciasVendedor.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.gananciasVendedor.onHoverState.BorderThickness = 1;
+            this.gananciasVendedor.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.gananciasVendedor.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.gananciasVendedor.onHoverState.IconLeftImage = null;
+            this.gananciasVendedor.onHoverState.IconRightImage = null;
+            this.gananciasVendedor.OnIdleState.BorderColor = System.Drawing.Color.Black;
+            this.gananciasVendedor.OnIdleState.BorderRadius = 1;
+            this.gananciasVendedor.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.gananciasVendedor.OnIdleState.BorderThickness = 1;
+            this.gananciasVendedor.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gananciasVendedor.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.gananciasVendedor.OnIdleState.IconLeftImage = null;
+            this.gananciasVendedor.OnIdleState.IconRightImage = null;
+            this.gananciasVendedor.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.gananciasVendedor.OnPressedState.BorderRadius = 1;
+            this.gananciasVendedor.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.gananciasVendedor.OnPressedState.BorderThickness = 1;
+            this.gananciasVendedor.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.gananciasVendedor.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.gananciasVendedor.OnPressedState.IconLeftImage = null;
+            this.gananciasVendedor.OnPressedState.IconRightImage = null;
+            this.gananciasVendedor.Size = new System.Drawing.Size(150, 39);
+            this.gananciasVendedor.TabIndex = 47;
+            this.gananciasVendedor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gananciasVendedor.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gananciasVendedor.TextMarginLeft = 0;
+            this.gananciasVendedor.TextPadding = new System.Windows.Forms.Padding(0);
+            this.gananciasVendedor.UseDefaultRadiusAndThickness = true;
+            this.gananciasVendedor.Click += new System.EventHandler(this.gananciasVendedor_Click);
+            // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 525);
+            this.Controls.Add(this.gananciasVendedor);
             this.Controls.Add(this.btnStock);
             this.Controls.Add(this.Ventas);
             this.Controls.Add(this.Compras);
@@ -529,5 +622,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 Compras;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 Ventas;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnStock;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 gananciasVendedor;
     }
 }
