@@ -255,5 +255,15 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void txtBusqueda_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboBusqueda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

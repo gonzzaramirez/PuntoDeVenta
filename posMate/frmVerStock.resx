@@ -153,10 +153,21 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txtStockMin.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAFkAAAAcCAYAAAAKnhNwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB4SURBVGhD7dCxDcAwDMRA7T+VDI2RMTJADAFq0tusSOCb
-        Ly8MqqqezPzc2bXrEEf0Yedr1yEW+VYiA4kMJDKQyEAiA4kMJDKQyEAiA4kMJDKQyEAiA4kMJDKQyEAi
-        A4kMJDKQyEAiA4kM9ENea719uLNr1yG2u0VsnGKSeYU6JvgAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAADUAAAAcCAYAAADBRfeOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABZSURBVFhH7c/BCcBADMRA91+VD5eRMlJADoOLiIwE+9nf
+        xNqq6snMj752DCmijw21Y0iifp0oSqIoiaIkipIoSqIoiaIkipIoSqIo7Uedc94+6GvHkLYVcQHtxzVv
+        khYwvwAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="txtBusqueda.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIEAAAAWCAYAAADnw/+rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABlSURBVGhD7dKxDcAwCEVB9p/KFmNkjAyQQOQmM3An/YaW
+        F/DJzGut9dis9d9PAhF9YJ7++0lABFOJABEgAooIEAEioIgAESACiggQASKgiAARIAKKCPhHsPe++2Cz
+        1n8/CTBbxAseR7QpUC004gAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bunifuLabel5.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Tahoma'; font-size: 10,1pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
 </root>
