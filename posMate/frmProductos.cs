@@ -83,8 +83,8 @@ namespace CapaPresentacion
                     producto.Stock,
                     producto.FechaRegistro,
                     producto.oCategoria.Descripcion,
-                    producto.Estado ? "Activo" : "Inactivo"
-                   
+                    producto.Estado ? "Activo" : "Inactivo",
+                    producto.codigoProducto
                 );
 
 
@@ -210,8 +210,8 @@ namespace CapaPresentacion
                    producto.Stock,
                    producto.FechaRegistro,
                    producto.oCategoria.Descripcion,
-                   producto.Estado ? "Activo" : "Inactivo"
-
+                   producto.Estado ? "Activo" : "Inactivo",
+                   producto.codigoProducto
                );
             }
 

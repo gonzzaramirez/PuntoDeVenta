@@ -46,15 +46,9 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.dgvStock = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.laberlVenta5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgvStockMin = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -62,6 +56,14 @@
             this.btnLimpiar = new FontAwesome.Sharp.IconButton();
             this.txtBusqueda = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStockMin)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +92,7 @@
             this.dgvStock.ColumnHeadersHeight = 40;
             this.dgvStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdProducto,
+            this.Codigo,
             this.NombreProducto,
             this.Cantidad});
             this.dgvStock.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -123,7 +126,7 @@
             this.dgvStock.HeaderBackColor = System.Drawing.Color.Maroon;
             this.dgvStock.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvStock.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvStock.Location = new System.Drawing.Point(12, 148);
+            this.dgvStock.Location = new System.Drawing.Point(6, 148);
             this.dgvStock.Name = "dgvStock";
             this.dgvStock.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -137,39 +140,9 @@
             this.dgvStock.RowHeadersVisible = false;
             this.dgvStock.RowTemplate.Height = 40;
             this.dgvStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStock.Size = new System.Drawing.Size(371, 445);
+            this.dgvStock.Size = new System.Drawing.Size(457, 397);
             this.dgvStock.TabIndex = 61;
             this.dgvStock.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Maroon;
-            // 
-            // IdProducto
-            // 
-            this.IdProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.IdProducto.DataPropertyName = "IdProducto";
-            this.IdProducto.FillWeight = 37.66825F;
-            this.IdProducto.HeaderText = "IdProducto";
-            this.IdProducto.Name = "IdProducto";
-            this.IdProducto.ReadOnly = true;
-            this.IdProducto.Width = 116;
-            // 
-            // NombreProducto
-            // 
-            this.NombreProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.NombreProducto.DataPropertyName = "NombreProducto";
-            this.NombreProducto.FillWeight = 62.13072F;
-            this.NombreProducto.HeaderText = "NombreProducto";
-            this.NombreProducto.Name = "NombreProducto";
-            this.NombreProducto.ReadOnly = true;
-            this.NombreProducto.Width = 162;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Cantidad.DataPropertyName = "Cantidad";
-            this.Cantidad.FillWeight = 22.59855F;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 98;
             // 
             // laberlVenta5
             // 
@@ -179,7 +152,7 @@
             this.laberlVenta5.CursorType = System.Windows.Forms.Cursors.Default;
             this.laberlVenta5.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.laberlVenta5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.laberlVenta5.Location = new System.Drawing.Point(12, 12);
+            this.laberlVenta5.Location = new System.Drawing.Point(6, 12);
             this.laberlVenta5.Name = "laberlVenta5";
             this.laberlVenta5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.laberlVenta5.Size = new System.Drawing.Size(125, 39);
@@ -196,7 +169,7 @@
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.Indigo;
-            this.bunifuLabel1.Location = new System.Drawing.Point(12, 105);
+            this.bunifuLabel1.Location = new System.Drawing.Point(6, 90);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(225, 28);
@@ -229,6 +202,7 @@
             this.dgvStockMin.ColumnHeadersHeight = 40;
             this.dgvStockMin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
+            this.Codigo2,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.dgvStockMin.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -262,7 +236,7 @@
             this.dgvStockMin.HeaderBackColor = System.Drawing.Color.Maroon;
             this.dgvStockMin.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvStockMin.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvStockMin.Location = new System.Drawing.Point(417, 148);
+            this.dgvStockMin.Location = new System.Drawing.Point(477, 148);
             this.dgvStockMin.Name = "dgvStockMin";
             this.dgvStockMin.ReadOnly = true;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -276,39 +250,9 @@
             this.dgvStockMin.RowHeadersVisible = false;
             this.dgvStockMin.RowTemplate.Height = 40;
             this.dgvStockMin.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStockMin.Size = new System.Drawing.Size(371, 445);
+            this.dgvStockMin.Size = new System.Drawing.Size(447, 397);
             this.dgvStockMin.TabIndex = 66;
             this.dgvStockMin.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Maroon;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdProducto";
-            this.dataGridViewTextBoxColumn1.FillWeight = 37.66825F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "IdProducto";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 116;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NombreProducto";
-            this.dataGridViewTextBoxColumn2.FillWeight = 62.13072F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "NombreProducto";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 162;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Cantidad";
-            this.dataGridViewTextBoxColumn3.FillWeight = 22.59855F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Cantidad";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 98;
             // 
             // bunifuLabel2
             // 
@@ -318,7 +262,7 @@
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel2.ForeColor = System.Drawing.Color.Indigo;
-            this.bunifuLabel2.Location = new System.Drawing.Point(417, 105);
+            this.bunifuLabel2.Location = new System.Drawing.Point(543, 90);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(304, 28);
@@ -354,7 +298,7 @@
             this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.Font = new System.Drawing.Font("Century Gothic", 17F);
             this.bunifuLabel4.ForeColor = System.Drawing.Color.Indigo;
-            this.bunifuLabel4.Location = new System.Drawing.Point(413, 24);
+            this.bunifuLabel4.Location = new System.Drawing.Point(598, 24);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(249, 27);
@@ -394,7 +338,7 @@
             this.txtStockMin.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtStockMin.Lines = new string[] {
         "5"};
-            this.txtStockMin.Location = new System.Drawing.Point(668, 24);
+            this.txtStockMin.Location = new System.Drawing.Point(853, 24);
             this.txtStockMin.MaxLength = 32767;
             this.txtStockMin.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtStockMin.Modified = false;
@@ -430,7 +374,7 @@
             this.txtStockMin.SelectionLength = 0;
             this.txtStockMin.SelectionStart = 0;
             this.txtStockMin.ShortcutsEnabled = true;
-            this.txtStockMin.Size = new System.Drawing.Size(53, 28);
+            this.txtStockMin.Size = new System.Drawing.Size(71, 28);
             this.txtStockMin.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtStockMin.TabIndex = 70;
             this.txtStockMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -453,7 +397,7 @@
             this.btnLimpiar.IconColor = System.Drawing.Color.White;
             this.btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiar.IconSize = 18;
-            this.btnLimpiar.Location = new System.Drawing.Point(319, 79);
+            this.btnLimpiar.Location = new System.Drawing.Point(439, 124);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(24, 20);
             this.btnLimpiar.TabIndex = 71;
@@ -490,7 +434,7 @@
             this.txtBusqueda.IconRight = null;
             this.txtBusqueda.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBusqueda.Lines = new string[0];
-            this.txtBusqueda.Location = new System.Drawing.Point(184, 77);
+            this.txtBusqueda.Location = new System.Drawing.Point(304, 122);
             this.txtBusqueda.MaxLength = 32767;
             this.txtBusqueda.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtBusqueda.Modified = false;
@@ -544,7 +488,7 @@
             this.bunifuLabel5.AutoEllipsis = false;
             this.bunifuLabel5.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel5.Font = new System.Drawing.Font("Tahoma", 10.1F);
-            this.bunifuLabel5.Location = new System.Drawing.Point(67, 79);
+            this.bunifuLabel5.Location = new System.Drawing.Point(187, 124);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel5.Size = new System.Drawing.Size(111, 18);
@@ -554,11 +498,87 @@
             this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.bunifuLabel5.Click += new System.EventHandler(this.bunifuLabel5_Click_1);
             // 
+            // IdProducto
+            // 
+            this.IdProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.IdProducto.DataPropertyName = "IdProducto";
+            this.IdProducto.FillWeight = 37.66825F;
+            this.IdProducto.HeaderText = "IdProducto";
+            this.IdProducto.Name = "IdProducto";
+            this.IdProducto.ReadOnly = true;
+            this.IdProducto.Width = 116;
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "Codigo";
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // NombreProducto
+            // 
+            this.NombreProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.NombreProducto.DataPropertyName = "NombreProducto";
+            this.NombreProducto.FillWeight = 62.13072F;
+            this.NombreProducto.HeaderText = "NombreProducto";
+            this.NombreProducto.Name = "NombreProducto";
+            this.NombreProducto.ReadOnly = true;
+            this.NombreProducto.Width = 162;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Cantidad.DataPropertyName = "Cantidad";
+            this.Cantidad.FillWeight = 22.59855F;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 98;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdProducto";
+            this.dataGridViewTextBoxColumn1.FillWeight = 37.66825F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "IdProducto";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 116;
+            // 
+            // Codigo2
+            // 
+            this.Codigo2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Codigo2.DataPropertyName = "Codigo2";
+            this.Codigo2.HeaderText = "Codigo";
+            this.Codigo2.Name = "Codigo2";
+            this.Codigo2.ReadOnly = true;
+            this.Codigo2.Width = 87;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NombreProducto";
+            this.dataGridViewTextBoxColumn2.FillWeight = 62.13072F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "NombreProducto";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 162;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Cantidad";
+            this.dataGridViewTextBoxColumn3.FillWeight = 22.59855F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Cantidad";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 98;
+            // 
             // frmVerStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 599);
+            this.ClientSize = new System.Drawing.Size(928, 546);
             this.Controls.Add(this.bunifuLabel5);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.txtBusqueda);
@@ -584,15 +604,9 @@
         #endregion
 
         private Bunifu.UI.WinForms.BunifuDataGridView dgvStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private Bunifu.UI.WinForms.BunifuLabel laberlVenta5;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvStockMin;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
@@ -600,5 +614,13 @@
         private FontAwesome.Sharp.IconButton btnLimpiar;
         private Bunifu.UI.WinForms.BunifuTextBox txtBusqueda;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }

@@ -27,9 +27,10 @@ namespace CapaPresentacion
             foreach (Producto producto in productos)
             {
                 dgvStock.Rows.Add(
-                    producto.IdProducto,
-                    producto.Nombre,
-                    producto.Stock
+                        producto.IdProducto,
+                        producto.codigoProducto,
+                        producto.Nombre,
+                        producto.Stock
                 );
             }
 
@@ -83,7 +84,8 @@ namespace CapaPresentacion
                 {
                     dgvStockMin.Rows.Add(
                         producto.IdProducto,
-                        producto.Nombre,
+                        producto.codigoProducto,
+                        producto.Nombre,                      
                         producto.Stock
                     );
                 }
