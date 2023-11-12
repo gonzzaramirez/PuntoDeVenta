@@ -28,5 +28,15 @@ namespace CapaNegocio
         {
             return ocd_venta.ObtenerUltimoIDVenta();
         }
+
+        public List<Venta> ObtenerVentasPorIdUsuario(int usuario)
+        {
+            return ocd_venta.ObtenerVentasPorIdUsuario(usuario);
+        }
+
+        public List<Venta> ObtenerVentasPorIntervaloDeTiempo(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            return ocd_venta.ObtenerVentasPorIntervaloDeTiempo(fechaDesde, fechaHasta);
+        }
     }
 }

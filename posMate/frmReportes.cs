@@ -40,7 +40,7 @@ namespace CapaPresentacion
 
         private void Ventas_Click(object sender, EventArgs e)
         {
-            frmVerVentas formularioVentas = new frmVerVentas();
+            frmVerVentas formularioVentas = new frmVerVentas(usuarioActual);
             formularioVentas.Show();
         }
 
@@ -56,6 +56,26 @@ namespace CapaPresentacion
                 frmVerGananciasVendedor formularioGananciasVendedor = new frmVerGananciasVendedor();
                 formularioGananciasVendedor.Show();
             }
+        }
+
+        private void frmReportes_Load(object sender, EventArgs e)
+        {
+            bunifuButton21.Visible = false;
+            if (usuarioActual.oRol.IdRol == 2)
+            {
+                Compras.Visible = false;
+                btnStock.Visible = false;
+                gananciasVendedor.Visible = false;
+                Ventas.Visible = false;
+                categoriaGanancias.Visible = false;
+                bunifuButton21.Visible = true;
+            }
+        }
+
+        private void bunifuButton21_Click(object sender, EventArgs e)
+        {
+            frmVerVentasVendedor formularioVentas = new frmVerVentasVendedor(usuarioActual);
+            formularioVentas.Show();
         }
     }
 }

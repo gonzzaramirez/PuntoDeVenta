@@ -15,8 +15,10 @@ namespace CapaPresentacion
 {
     public partial class frmVerVentas : Form
     {
-        public frmVerVentas()
+        private static Usuario usuarioActual;
+        public frmVerVentas(Usuario objUsuario = null)
         {
+            usuarioActual = objUsuario;
             InitializeComponent();
         }
 
@@ -35,12 +37,9 @@ namespace CapaPresentacion
 
             // Agrega una opción para seleccionar todas las ventas
             ddlUsuarios.Items.Add("Todos los usuarios");
-
-
-
-                // Selecciona por defecto la opción "Todos los usuarios"
+             // Selecciona por defecto la opción "Todos los usuarios"
               ddlUsuarios.SelectedIndex = ddlUsuarios.Items.Count - 1; // Si "Todos los usuarios" es el último elemento
-                                                                         // O
+                                                                      // O
               ddlUsuarios.SelectedItem = "Todos los usuarios"; // Si quieres seleccionar por el nombre del elemento
             
 
