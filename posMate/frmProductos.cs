@@ -14,10 +14,13 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
+
     public partial class frmProductos : Form
     {
-        public frmProductos()
+        private static Usuario usuarioActual;
+        public frmProductos(Usuario objUsuario = null)
         {
+            usuarioActual = objUsuario;
             InitializeComponent();
             dgvData.CellFormatting += dgvData_CellFormatting;
             txtBusqueda.TextChanged += new EventHandler(txtBusqueda_TextChanged);
@@ -26,6 +29,12 @@ namespace CapaPresentacion
 
         private void frmProductos_Load(object sender, EventArgs e)
         {
+            if(usuarioActual.oRol.IdRol == 2)
+            {
+                bunifuGradientPanel1.Visible = false;
+            }
+
+
             // Agregar opciones "Activo" y "No Activo" al ComboBox cboEstado
             cboEstado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
             cboEstado.Items.Add(new OpcionCombo() { Valor = 0, Texto = "No Activo" });

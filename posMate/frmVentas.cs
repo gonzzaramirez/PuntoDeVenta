@@ -213,12 +213,13 @@ namespace CapaPresentacion
                 // Agregar los datos del producto al DataGridView
                 dgvData.Rows.Add(new object[]
                 {
+                    producto.IdProducto,
                      txtDNII.Text, // DNI del cliente
-                     producto.Nombre, 
-                     producto.PrecioVenta, 
-                     cantidad, 
-                     producto.PrecioVenta * cantidad 
-                });
+                     producto.Nombre,
+                     producto.PrecioVenta,
+                     cantidad,
+                     producto.PrecioVenta * cantidad
+                }); ;
 
                 // Limpiar los campos después de agregar el producto al carrito
                 txtCantidad.Clear();
@@ -390,6 +391,49 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CN_Producto cnProducto = new CN_Producto();
+            if (e.ColumnIndex == dgvData.Columns["Eliminar"].Index && e.RowIndex >= 0)
+            {
+                // Obtén el ID del producto que se está eliminando
+                int idProducto = Convert.ToInt32(dgvData.Rows[e.RowIndex].Cells["productoid"].Value);
+
+                // Busca el producto en la lista carrito y elimínalo
+                Producto productoEliminado = carrito.FirstOrDefault(p => p.IdProducto == idProducto);
+                if (productoEliminado != null)
+                {
+                    carrito.Remove(productoEliminado);
+                }
+
+                // Llama a la función de la capa de negocio para actualizar el stock del producto
+                int cantidadEliminada = Convert.ToInt32(dgvData.Rows[e.RowIndex].Cells["Cantidad"].Value);
+                if (cnProducto.ActualizarStockProducto(idProducto, cantidadEliminada))
+                {
+                    // Actualiza el monto total restando el total del producto eliminado
+                    montoTotal -= Convert.ToDecimal(dgvData.Rows[e.RowIndex].Cells["Total"].Value);
+                    resultadoTotal.Text = montoTotal.ToString("C");
+
+                    // Elimina la fila del DataGridView
+                    dgvData.Rows.RemoveAt(e.RowIndex);
+
+                    // Verifica si el carrito está vacío
+                    if (dgvData.Rows.Count == 0)
+                    {
+                        btnConfirmarCompra.Enabled = false;
+                        btnConfirmarCompra.BackColor = SystemColors.Control;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Error al actualizar el stock del producto.");
+                }
+            }
+        }
+
+
+
     }
 
 }

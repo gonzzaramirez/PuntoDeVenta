@@ -55,7 +55,7 @@ namespace CapaDatos
                         }
                     }
                 }
-                catch (Exception ex)    
+                catch (Exception ex)
                 {
                     // Manejo de errores aquí
                     lista = new List<Producto>();
@@ -135,7 +135,7 @@ namespace CapaDatos
             }
         }
 
-        
+
         public Producto ObtenerProductoPorCodigoProducto(string codigoProducto)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -290,5 +290,6 @@ namespace CapaDatos
             }
         }
 
+        
     }
 }
