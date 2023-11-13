@@ -591,6 +591,7 @@
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.laberlVenta5);
             this.Controls.Add(this.dgvStock);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmVerStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVerStock";

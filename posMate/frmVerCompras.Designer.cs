@@ -612,6 +612,7 @@
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.bunifuLabel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmVerCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVerCompras";

@@ -69,6 +69,7 @@ namespace CapaPresentacion
                 Ventas.Visible = false;
                 categoriaGanancias.Visible = false;
                 bunifuButton21.Visible = true;
+                btnProductoMasVendido.Visible = false;
             }
         }
 

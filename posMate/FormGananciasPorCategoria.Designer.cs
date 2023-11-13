@@ -571,6 +571,7 @@
             this.Controls.Add(this.btnMañana);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.chart1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormGananciasPorCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";

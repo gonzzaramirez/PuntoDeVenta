@@ -232,6 +232,7 @@
             this.Controls.Add(this.la2);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmProductosMasVendidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProductosMasVendidos";

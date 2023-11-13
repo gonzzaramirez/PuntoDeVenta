@@ -628,6 +628,7 @@
             this.Controls.Add(this.dgvDataVenta);
             this.Controls.Add(this.laberlVenta);
             this.Controls.Add(this.laberlVenta2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmVerVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVerVentas";
