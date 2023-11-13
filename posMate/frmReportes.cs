@@ -61,15 +61,32 @@ namespace CapaPresentacion
         private void frmReportes_Load(object sender, EventArgs e)
         {
             bunifuButton21.Visible = false;
+            btnProductoMasVendido.Visible = false;
+            bunifuButton22.Visible = false;
+            btnStock.Visible = false;
+
+
             if (usuarioActual.oRol.IdRol == 2)
             {
-                Compras.Visible = false;
-                btnStock.Visible = false;
+                bunifuButton21.Visible = true;
+                Compras.Visible = false;          
                 gananciasVendedor.Visible = false;
                 Ventas.Visible = false;
                 categoriaGanancias.Visible = false;
-                bunifuButton21.Visible = true;
-                btnProductoMasVendido.Visible = false;
+                          
+                bunifuButton22.Visible = false;
+            }
+
+            if(usuarioActual.oRol.IdRol == 3)
+            {
+                btnProductoMasVendido.Visible = true;
+                btnStock.Visible = true;
+                Compras.Visible = false;
+                gananciasVendedor.Visible = false;
+                Ventas.Visible = false;
+                categoriaGanancias.Visible = false;
+                bunifuButton22.Visible = true;
+
             }
         }
 
@@ -83,6 +100,13 @@ namespace CapaPresentacion
         {
             frmProductosMasVendidos formulario = new frmProductosMasVendidos(usuarioActual);
             formulario.Show();
+        }
+
+        private void bunifuButton22_Click_1(object sender, EventArgs e)
+        {
+            verCategoriaMasVendidas formulario = new verCategoriaMasVendidas();
+            formulario.Show();
+
         }
     }
 }
