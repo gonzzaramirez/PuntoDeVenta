@@ -55,6 +55,14 @@ namespace CapaPresentacion
         // Botón de filtrar
         private void button1_Click(object sender, EventArgs e)
         {
+            DateTime fechaDesde = dtpFechaDesde.Value;
+            DateTime fechaHasta = dtpFechaHasta.Value;
+
+            if (fechaDesde > fechaHasta)
+            {
+                MessageBox.Show("La fecha 'Desde' debe ser menor o igual a la fecha 'Hasta'.");
+                return;
+            }
             if (int.TryParse(txtCantidad.Text, out int cantidad))
             {
                 CargarProductosMasVendidos(cantidad);
@@ -68,6 +76,7 @@ namespace CapaPresentacion
         private void frmProductosMasVendidos_Load(object sender, EventArgs e)
         {
 
+            
         }
     }
 }

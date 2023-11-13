@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaEntidad;
+using System.Windows.Forms;
 
 namespace CapaDatos
 {
@@ -123,6 +124,40 @@ namespace CapaDatos
             }
 
             return ultimoID;
+        }
+
+        public decimal CalcularMontoTotalComprasPorFecha(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            decimal montoTotal = 0;
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand("SELECT SUM(MontoTotal) AS MontoTotal FROM COMPRA " +
+                                                          "WHERE FechaRegistro >= @FechaDesde AND FechaRegistro <= @FechaHasta", con))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Parameters.AddWithValue("@FechaDesde", fechaDesde);
+                        cmd.Parameters.AddWithValue("@FechaHasta", fechaHasta);
+
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null && result != DBNull.Value)
+                        {
+                            montoTotal = Convert.ToDecimal(result);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Manejo de errores aquí
+                    MessageBox.Show("Se produjo un error: " + ex.Message);
+                }
+            }
+
+            return montoTotal;
         }
     }
 }

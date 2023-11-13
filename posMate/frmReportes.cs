@@ -73,7 +73,9 @@ namespace CapaPresentacion
                 gananciasVendedor.Visible = false;
                 Ventas.Visible = false;
                 categoriaGanancias.Visible = false;
-                          
+                ResumenFinanciero.Visible = false;
+
+
                 bunifuButton22.Visible = false;
             }
 
@@ -82,6 +84,7 @@ namespace CapaPresentacion
                 btnProductoMasVendido.Visible = true;
                 btnStock.Visible = true;
                 Compras.Visible = false;
+                ResumenFinanciero.Visible=false;
                 gananciasVendedor.Visible = false;
                 Ventas.Visible = false;
                 categoriaGanancias.Visible = false;
@@ -107,6 +110,12 @@ namespace CapaPresentacion
             verCategoriaMasVendidas formulario = new verCategoriaMasVendidas();
             formulario.Show();
 
+        }
+
+        private void ResumenFinanciero_Click(object sender, EventArgs e)
+        {
+            frmResumenFinanciero formulario = new frmResumenFinanciero();
+            formulario.Show();
         }
     }
 }

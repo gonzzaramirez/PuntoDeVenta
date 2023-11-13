@@ -38,5 +38,10 @@ namespace CapaNegocio
         {
             return ocd_venta.ObtenerVentasPorIntervaloDeTiempo(fechaDesde, fechaHasta);
         }
+
+        public decimal CalcularMontoTotalVentasPorFecha(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            return ocd_venta.CalcularMontoTotalVentasPorFecha(fechaDesde,fechaHasta);
+        }
     }
 }

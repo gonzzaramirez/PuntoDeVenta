@@ -37,6 +37,7 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.categoriaGanancias = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -47,6 +48,7 @@
             this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnProductoMasVendido = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuButton22 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.ResumenFinanciero = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.SuspendLayout();
             // 
             // bunifuLabel1
@@ -130,7 +132,7 @@
             this.categoriaGanancias.IdleIconLeftImage = null;
             this.categoriaGanancias.IdleIconRightImage = null;
             this.categoriaGanancias.IndicateFocus = false;
-            this.categoriaGanancias.Location = new System.Drawing.Point(32, 169);
+            this.categoriaGanancias.Location = new System.Drawing.Point(117, 170);
             this.categoriaGanancias.Name = "categoriaGanancias";
             this.categoriaGanancias.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.categoriaGanancias.OnDisabledState.BorderRadius = 1;
@@ -220,7 +222,7 @@
             this.Compras.IdleIconLeftImage = null;
             this.Compras.IdleIconRightImage = null;
             this.Compras.IndicateFocus = false;
-            this.Compras.Location = new System.Drawing.Point(188, 169);
+            this.Compras.Location = new System.Drawing.Point(273, 169);
             this.Compras.Name = "Compras";
             this.Compras.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.Compras.OnDisabledState.BorderRadius = 1;
@@ -310,7 +312,7 @@
             this.Ventas.IdleIconLeftImage = null;
             this.Ventas.IdleIconRightImage = null;
             this.Ventas.IndicateFocus = false;
-            this.Ventas.Location = new System.Drawing.Point(357, 169);
+            this.Ventas.Location = new System.Drawing.Point(435, 170);
             this.Ventas.Name = "Ventas";
             this.Ventas.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.Ventas.OnDisabledState.BorderRadius = 1;
@@ -490,7 +492,7 @@
             this.gananciasVendedor.IdleIconLeftImage = null;
             this.gananciasVendedor.IdleIconRightImage = null;
             this.gananciasVendedor.IndicateFocus = false;
-            this.gananciasVendedor.Location = new System.Drawing.Point(534, 169);
+            this.gananciasVendedor.Location = new System.Drawing.Point(601, 170);
             this.gananciasVendedor.Name = "gananciasVendedor";
             this.gananciasVendedor.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.gananciasVendedor.OnDisabledState.BorderRadius = 1;
@@ -803,11 +805,102 @@
             this.bunifuButton22.UseDefaultRadiusAndThickness = true;
             this.bunifuButton22.Click += new System.EventHandler(this.bunifuButton22_Click_1);
             // 
+            // ResumenFinanciero
+            // 
+            this.ResumenFinanciero.AllowAnimations = true;
+            this.ResumenFinanciero.AllowMouseEffects = true;
+            this.ResumenFinanciero.AllowToggling = false;
+            this.ResumenFinanciero.AnimationSpeed = 200;
+            this.ResumenFinanciero.AutoGenerateColors = false;
+            this.ResumenFinanciero.AutoRoundBorders = true;
+            this.ResumenFinanciero.AutoSizeLeftIcon = true;
+            this.ResumenFinanciero.AutoSizeRightIcon = true;
+            this.ResumenFinanciero.BackColor = System.Drawing.Color.Transparent;
+            this.ResumenFinanciero.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ResumenFinanciero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ResumenFinanciero.BackgroundImage")));
+            this.ResumenFinanciero.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.ResumenFinanciero.ButtonText = "Resumen financiero";
+            this.ResumenFinanciero.ButtonTextMarginLeft = 0;
+            this.ResumenFinanciero.ColorContrastOnClick = 45;
+            this.ResumenFinanciero.ColorContrastOnHover = 45;
+            this.ResumenFinanciero.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges9.BottomLeft = true;
+            borderEdges9.BottomRight = true;
+            borderEdges9.TopLeft = true;
+            borderEdges9.TopRight = true;
+            this.ResumenFinanciero.CustomizableEdges = borderEdges9;
+            this.ResumenFinanciero.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ResumenFinanciero.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.ResumenFinanciero.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ResumenFinanciero.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.ResumenFinanciero.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.ResumenFinanciero.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ResumenFinanciero.ForeColor = System.Drawing.Color.White;
+            this.ResumenFinanciero.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ResumenFinanciero.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.ResumenFinanciero.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.ResumenFinanciero.IconMarginLeft = 11;
+            this.ResumenFinanciero.IconPadding = 10;
+            this.ResumenFinanciero.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ResumenFinanciero.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.ResumenFinanciero.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.ResumenFinanciero.IconSize = 25;
+            this.ResumenFinanciero.IdleBorderColor = System.Drawing.Color.Black;
+            this.ResumenFinanciero.IdleBorderRadius = 37;
+            this.ResumenFinanciero.IdleBorderThickness = 1;
+            this.ResumenFinanciero.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ResumenFinanciero.IdleIconLeftImage = null;
+            this.ResumenFinanciero.IdleIconRightImage = null;
+            this.ResumenFinanciero.IndicateFocus = false;
+            this.ResumenFinanciero.Location = new System.Drawing.Point(357, 304);
+            this.ResumenFinanciero.Name = "ResumenFinanciero";
+            this.ResumenFinanciero.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.ResumenFinanciero.OnDisabledState.BorderRadius = 1;
+            this.ResumenFinanciero.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.ResumenFinanciero.OnDisabledState.BorderThickness = 1;
+            this.ResumenFinanciero.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ResumenFinanciero.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.ResumenFinanciero.OnDisabledState.IconLeftImage = null;
+            this.ResumenFinanciero.OnDisabledState.IconRightImage = null;
+            this.ResumenFinanciero.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.ResumenFinanciero.onHoverState.BorderRadius = 1;
+            this.ResumenFinanciero.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.ResumenFinanciero.onHoverState.BorderThickness = 1;
+            this.ResumenFinanciero.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.ResumenFinanciero.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.ResumenFinanciero.onHoverState.IconLeftImage = null;
+            this.ResumenFinanciero.onHoverState.IconRightImage = null;
+            this.ResumenFinanciero.OnIdleState.BorderColor = System.Drawing.Color.Black;
+            this.ResumenFinanciero.OnIdleState.BorderRadius = 1;
+            this.ResumenFinanciero.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.ResumenFinanciero.OnIdleState.BorderThickness = 1;
+            this.ResumenFinanciero.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ResumenFinanciero.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.ResumenFinanciero.OnIdleState.IconLeftImage = null;
+            this.ResumenFinanciero.OnIdleState.IconRightImage = null;
+            this.ResumenFinanciero.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.ResumenFinanciero.OnPressedState.BorderRadius = 1;
+            this.ResumenFinanciero.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.ResumenFinanciero.OnPressedState.BorderThickness = 1;
+            this.ResumenFinanciero.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.ResumenFinanciero.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.ResumenFinanciero.OnPressedState.IconLeftImage = null;
+            this.ResumenFinanciero.OnPressedState.IconRightImage = null;
+            this.ResumenFinanciero.Size = new System.Drawing.Size(150, 39);
+            this.ResumenFinanciero.TabIndex = 51;
+            this.ResumenFinanciero.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ResumenFinanciero.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ResumenFinanciero.TextMarginLeft = 0;
+            this.ResumenFinanciero.TextPadding = new System.Windows.Forms.Padding(0);
+            this.ResumenFinanciero.UseDefaultRadiusAndThickness = true;
+            this.ResumenFinanciero.Click += new System.EventHandler(this.ResumenFinanciero_Click);
+            // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 525);
+            this.Controls.Add(this.ResumenFinanciero);
             this.Controls.Add(this.bunifuButton22);
             this.Controls.Add(this.btnProductoMasVendido);
             this.Controls.Add(this.bunifuButton21);
@@ -838,5 +931,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton21;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnProductoMasVendido;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton22;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 ResumenFinanciero;
     }
 }

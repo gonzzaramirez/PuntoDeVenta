@@ -26,7 +26,7 @@ namespace CapaPresentacion
 
         private void verCategoriaMasVendidas_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void txtCantidad_TextChanged(object sender, EventArgs e)
@@ -63,6 +63,15 @@ namespace CapaPresentacion
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
+            DateTime fechaDesde = dtpFechaDesde.Value;
+            DateTime fechaHasta = dtpFechaHasta.Value;
+
+            if (fechaDesde > fechaHasta)
+            {
+                MessageBox.Show("La fecha 'Desde' debe ser menor o igual a la fecha 'Hasta'.");
+                return;
+            }
+
             if (int.TryParse(txtCantidad.Text, out int cantidad))
             {
                 CargarCategoriasMasVendidas(cantidad);
