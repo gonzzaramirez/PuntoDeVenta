@@ -312,7 +312,7 @@ namespace CapaPresentacion
                                 PrecioVenta = productoEnCarrito.PrecioVenta,
                                 Cantidad = cantidad,    // Usar la cantidad del DataGridView
                                 Subtotal = subtotal,    // Calcular el subtotal
-                                FechaRegistro = productoEnCarrito.FechaRegistro
+                                FechaRegistro = dtpFecha.Value
                             };
 
                             if (negocioDetalle.AgregarDetalleVenta(detalle))
