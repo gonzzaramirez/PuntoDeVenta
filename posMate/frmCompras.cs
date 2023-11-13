@@ -360,5 +360,17 @@ namespace CapaPresentacion
 
         }
 
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            txtCodigoBarra.Clear();
+            txtCodigoBarra.Enabled = true;
+            txtNombree.Clear();
+            txtDesc.Clear();
+            txtCantidad.Clear();
+            txtPrecioCompra.Clear();
+            txtPrecioVenta.Clear();
+
+            verificarCheck();
+        }
     }
 }

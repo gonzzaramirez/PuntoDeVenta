@@ -274,5 +274,34 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void btnAlta_Click(object sender, EventArgs e)
+        {
+            Filtrar(true);
+        }
+
+        private void btnBaja_Click(object sender, EventArgs e)
+        {
+            Filtrar(false);
+        }
+
+        private void Filtrar(bool estadoActivo)
+        {
+            txtBusqueda.Clear();
+
+            foreach (DataGridViewRow row in dgvData.Rows)
+            {
+                int estadoFila = row.Cells["Estado"].Value.ToString() == "Activo" ? 1 : 0;
+
+                if ((estadoActivo && estadoFila == 1) || (!estadoActivo && estadoFila == 0))
+                {
+                    row.Visible = true;
+                }
+                else
+                {
+                    row.Visible = false;
+                }
+            }
+        }
     }
 }
