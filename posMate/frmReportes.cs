@@ -77,5 +77,11 @@ namespace CapaPresentacion
             frmVerVentasVendedor formularioVentas = new frmVerVentasVendedor(usuarioActual);
             formularioVentas.Show();
         }
+
+        private void btnProductoMasVendido_Click(object sender, EventArgs e)
+        {
+            frmProductosMasVendidos formulario = new frmProductosMasVendidos(usuarioActual);
+            formulario.Show();
+        }
     }
 }
