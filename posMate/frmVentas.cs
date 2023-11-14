@@ -356,7 +356,7 @@ namespace CapaPresentacion
                         PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FILAS", filas);
 
                         // Reemplazar la etiqueta @TOTAL con el monto total de la venta
-                        PaginaHTML_Texto = PaginaHTML_Texto.Replace("@TOTAL", montoTotal.ToString("C"));
+                        PaginaHTML_Texto = PaginaHTML_Texto.Replace("@TOTAL", resultadoTotal.Text);
 
                         if (savefile.ShowDialog() == DialogResult.OK)
                         {
