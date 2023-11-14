@@ -465,12 +465,12 @@
             this.bunifuLabel8.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel8.Font = new System.Drawing.Font("Century Gothic", 14.21F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.bunifuLabel8.Location = new System.Drawing.Point(549, 21);
+            this.bunifuLabel8.Location = new System.Drawing.Point(495, 21);
             this.bunifuLabel8.Name = "bunifuLabel8";
             this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel8.Size = new System.Drawing.Size(269, 34);
+            this.bunifuLabel8.Size = new System.Drawing.Size(323, 34);
             this.bunifuLabel8.TabIndex = 73;
-            this.bunifuLabel8.Text = "Seleccionar usuario";
+            this.bunifuLabel8.Text = "Seleccionar encargado";
             this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 

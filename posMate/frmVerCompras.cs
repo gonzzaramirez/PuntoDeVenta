@@ -30,7 +30,11 @@ namespace CapaPresentacion
             // Llena el control desplegable con los nombres de los usuarios
             foreach (Usuario usuario in usuarios)
             {
-                ddlUsuarios.Items.Add(usuario.Nombre);
+                if(usuario.oRol.IdRol == 3)
+                {
+                    ddlUsuarios.Items.Add(usuario.Nombre);
+                }
+               
             }
 
             // Agrega una opción para seleccionar todas las ventas
