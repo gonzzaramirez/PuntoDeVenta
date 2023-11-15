@@ -353,6 +353,7 @@ namespace CapaPresentacion
 
                         string PaginaHTML_Texto = Properties.Resources.plantilla.ToString();
 
+                        PaginaHTML_Texto = PaginaHTML_Texto.Replace("@TITULO", "Factura" + " " + txtApellido.Text + " " + txtNombre.Text + " " + "Compra N" + idVentaFactura.ToString());
                         PaginaHTML_Texto = PaginaHTML_Texto.Replace("@CLIENTE", txtApellido.Text + " " + txtNombre.Text);
                         PaginaHTML_Texto = PaginaHTML_Texto.Replace("@DOCUMENTO", txtDNII.Text);
                         PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
