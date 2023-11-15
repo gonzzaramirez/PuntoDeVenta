@@ -140,6 +140,7 @@
             // 
             // iconButton2
             // 
+            this.iconButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -171,9 +172,11 @@
             // 
             // login
             // 
+            this.AcceptButton = this.iconButton1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.CancelButton = this.iconButton2;
             this.ClientSize = new System.Drawing.Size(308, 427);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

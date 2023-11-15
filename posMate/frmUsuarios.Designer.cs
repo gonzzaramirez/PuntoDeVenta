@@ -121,6 +121,7 @@ namespace CapaPresentacion
             this.txtId.TabIndex = 24;
             this.txtId.Text = "0";
             this.txtId.Visible = false;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // txtIndice
             // 

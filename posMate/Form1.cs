@@ -51,12 +51,17 @@ namespace posMate
             Inicio Inicio = new Inicio();
             MostrarFormularioEnContenedor(Inicio);
         }
+        
 
+        //venta
         private void iconButton3_Click(object sender, EventArgs e)
         {
             SidePanel.Top = btnVentas.Top;
-            frmVentas formularioVT = new frmVentas();
-            MostrarFormularioEnContenedor(formularioVT);
+
+            frmVentas formularioVentas = new frmVentas(usuarioActual);
+            MostrarFormularioEnContenedor(formularioVentas);
+
+
 
         }
 
@@ -107,7 +112,7 @@ namespace posMate
         private void btnReportes_Click_2(object sender, EventArgs e)
         {
             SidePanel.Top = btnReportes.Top;
-            frmReportes formularioRP = new frmReportes();
+            frmReportes formularioRP = new frmReportes(usuarioActual);
             MostrarFormularioEnContenedor(formularioRP);
         }
 
@@ -122,15 +127,20 @@ namespace posMate
         private void btnProductos_Click_2(object sender, EventArgs e)
         {
             SidePanel.Top = btnProductos.Top;
-            frmProductos formularioPD = new frmProductos();
+            frmProductos formularioPD = new frmProductos(usuarioActual);
             MostrarFormularioEnContenedor(formularioPD);
         }
 
+        //Compra
         private void btnCompras_Click(object sender, EventArgs e)
         {
             SidePanel.Top = btnCompras.Top;
-            frmCompras formularioCP = new frmCompras();
-            MostrarFormularioEnContenedor(formularioCP);
+            // Crear una instancia del formulario de compras (frmCompras)
+            frmCompras formularioCompras = new frmCompras(usuarioActual);
+
+            // Mostrar el formulario de compras en el contenedor de Form1
+            MostrarFormularioEnContenedor(formularioCompras);
+
         }
 
         private void btnCategorias_Click_1(object sender, EventArgs e)
@@ -164,7 +174,7 @@ namespace posMate
             MostrarFormularioEnContenedor(frmInicio);
         }
 
-        private void MostrarFormularioEnContenedor(Form formulario)
+        public void MostrarFormularioEnContenedor(Form formulario)
         {
             // Borra cualquier control existente en el panel "contenedor"
             contenedor.Controls.Clear();
