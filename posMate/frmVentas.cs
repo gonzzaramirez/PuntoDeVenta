@@ -68,6 +68,8 @@ namespace CapaPresentacion
 
                 btnConfirmarCompra.Enabled = true;
                 btnConfirmarCompra.BackColor = Color.Green;
+
+
             }
             else
             {
@@ -93,6 +95,8 @@ namespace CapaPresentacion
             txtCantidad.Enabled = false;
             txtPago.Enabled = false;
             cboProducto.Enabled = false;
+            montoTotal = 0;
+            resultadoTotal.Text = montoTotal.ToString("C");
         }
 
         private void verifiado()
@@ -392,10 +396,14 @@ namespace CapaPresentacion
                         }
                     }
 
+                    
+
                     MessageBox.Show("Venta confirmada con éxito.");
                     dgvData.Rows.Clear();
                     carrito.Clear();
-                    resultadoTotal.Text = " ";
+
+                    
+
                     verificarCheck();
                 }
             }
