@@ -42,6 +42,8 @@ namespace CapaPresentacion
 
         private void frmVentas_Load(object sender, EventArgs e)
         {
+
+            //La fecha siempre la actual
             dtpFecha.Value = DateTime.Now;
             verificarCheck();
 
@@ -59,6 +61,8 @@ namespace CapaPresentacion
 
         private void verificarCheck()
         {
+            //Metodo para tengamos que primero cargar dni del cliente
+            //si hay mas de un producto en el carrito podemos comprar
             if (carrito.Count > 0)
             {
 
@@ -115,9 +119,14 @@ namespace CapaPresentacion
                 return;
             }
 
+            //Se verifica
             verifiado();
+
             CN_Cliente negocioCliente = new CN_Cliente();
+
             int dni = int.Parse(txtDNII.Text);
+
+            //Buscamos el cliente por su dni, si existe se rellenan los txt con sus datos, evitamos que hayan registros repetidos en la bd
             Cliente clienteCargado = negocioCliente.BuscarClientePorDNI(dni);
             if(clienteCargado != null)
             {
@@ -138,6 +147,7 @@ namespace CapaPresentacion
             }
             else
             {
+                //Si no existe en la bd creamos
                 MessageBox.Show("Cliente inexistente, cargue sus datos");
                 limpiarVerdificado();
                 
@@ -177,6 +187,7 @@ namespace CapaPresentacion
             };
 
             negocioCliente.AgregarCliente(nuevoCliente);
+
 
             if (txtId.Text == "0")
             {
@@ -395,6 +406,8 @@ namespace CapaPresentacion
 
         }
 
+
+        //Eliminar
         private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             CN_Producto cnProducto = new CN_Producto();
