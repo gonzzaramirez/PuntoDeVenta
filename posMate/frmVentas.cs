@@ -51,7 +51,11 @@ namespace CapaPresentacion
             List <Producto> listaProducto = new CN_Producto().ObtenerProductos();
             foreach (var producto in listaProducto)
             {
-                cboProducto.Items.Add(new OpcionCombo() { Valor = producto.IdProducto, Texto = producto.Nombre });
+                if(producto.Estado != false)
+                {
+                    cboProducto.Items.Add(new OpcionCombo() { Valor = producto.IdProducto, Texto = producto.Nombre });
+                }
+               
             }
             cboProducto.DisplayMember = "Texto";
             cboProducto.ValueMember = "Valor";

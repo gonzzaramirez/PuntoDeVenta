@@ -109,7 +109,11 @@ namespace CapaPresentacion
             List<Proveedor> listaProveedor = new CN_Proveedor().ObtenerProveedores();
             foreach (var item in listaProveedor)
             {
-                cboProveedor.Items.Add(new OpcionCombo() { Valor = item.IdProveedor, Texto = item.Nombre });
+                if (item.Estado != false)
+                {
+                    cboProveedor.Items.Add(new OpcionCombo() { Valor = item.IdProveedor, Texto = item.Nombre });
+                }
+                    
             }
             cboProveedor.DisplayMember = "Texto";
             cboProveedor.ValueMember = "Valor"; 
@@ -120,8 +124,12 @@ namespace CapaPresentacion
             List<Categoria> listaCategoria = new CN_Categoria().ObtenerCategorias();
             foreach (var item in listaCategoria)
             {
-                cboCategoria.Items.Add(new OpcionCombo() { Valor = item.IdCategoria, Texto = item.Descripcion });
-            }        
+                if (item.estado != false)
+                {
+                    cboCategoria.Items.Add(new OpcionCombo() { Valor = item.IdCategoria, Texto = item.Descripcion });
+                }                                      
+            }   
+            
             cboCategoria.DisplayMember = "Texto";
             cboCategoria.ValueMember = "Valor";           
             cboCategoria.SelectedIndex = 0;
@@ -385,6 +393,7 @@ namespace CapaPresentacion
                 txtDesc.Enabled = false;
                 txtPrecioVenta.Text = productoCargado.PrecioVenta.ToString();
                 txtPrecioVenta.Enabled = false;
+               
                 cboCategoria.Enabled = false;
                 cboEstadoo.Enabled = false;
 
