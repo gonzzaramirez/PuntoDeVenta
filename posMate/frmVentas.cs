@@ -328,11 +328,13 @@ namespace CapaPresentacion
 
                     //******FACTURA**********
                     int idVentaFactura = negocioVenta.ObtenerUltimoIDVenta();
+
                     DialogResult result = MessageBox.Show("¿Desea imprimir la factura?", "Imprimir Factura", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
                         SaveFileDialog savefile = new SaveFileDialog();
-                        savefile.FileName = string.Format("{0}.pdf", DateTime.Now.ToString("ddMMyyyyHHmmss"));
+
+                        savefile.FileName = string.Format("{0}.pdf", DateTime.Now.ToString("ddMMyyyyHHmm"));
 
                         string PaginaHTML_Texto = Properties.Resources.plantilla.ToString();
 
@@ -369,6 +371,7 @@ namespace CapaPresentacion
 
                                 using (StringReader sr = new StringReader(PaginaHTML_Texto))
                                 {
+                                    
                                     XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
                                 }
 

@@ -42,6 +42,7 @@ namespace CapaPresentacion
 
         private void verificarCheck()
         {
+            
             if (carrito.Count > 0)
             {
 
@@ -120,6 +121,18 @@ namespace CapaPresentacion
         //boton agregar carrito
         private void btnCarrito_Click(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrWhiteSpace(txtCodigoBarra.Text) ||
+                string.IsNullOrWhiteSpace(txtNombree.Text) ||
+                string.IsNullOrWhiteSpace(txtDesc.Text) ||
+                string.IsNullOrWhiteSpace(txtCantidad.Text) ||
+                string.IsNullOrWhiteSpace(txtPrecioCompra.Text) ||
+                string.IsNullOrWhiteSpace(txtPrecioVenta.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos de texto.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Sale del método si algún campo de texto está vacío
+            }
+
             verificarCheck();
 
             Producto nuevoProducto = new Producto
@@ -195,7 +208,7 @@ namespace CapaPresentacion
 
         private void btnConfirmarCompra_Click(object sender, EventArgs e)
         {
-            verificarCheck();
+           
             int idProveedor = Convert.ToInt32(((OpcionCombo)cboProveedor.SelectedItem).Valor);
             decimal montoTotal = CalcularMontoTotalDelCarrito();
             Compra nuevoCompra = new Compra
@@ -248,6 +261,7 @@ namespace CapaPresentacion
                     carrito.Clear();
                     ActualizarDataGridView(carrito);
                     MessageBox.Show("Compra confirmada con éxito.");
+                    verificarCheck();
                 }
             }
         }
@@ -297,6 +311,12 @@ namespace CapaPresentacion
         //BOTON VERIFICAR
         private void iconButton2_Click(object sender, EventArgs e)
         {
+          if(string.IsNullOrWhiteSpace(txtCodigoBarra.Text))
+            {
+
+                MessageBox.Show("Por favor, ingrese un código de barras ", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             verificado();
             CN_Producto negocioProducto = new CN_Producto();
             string codigoProducto = txtCodigoBarra.Text;
